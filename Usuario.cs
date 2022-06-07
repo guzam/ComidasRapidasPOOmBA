@@ -8,7 +8,7 @@ namespace ComidasRapidasPOOmBA
 {
     class Usuario
     {
-        string Nombre;
+        string nombre;
         int idUsuario;
         static int idUsuarioGeneral;
         string tipoUsuario;
@@ -16,8 +16,13 @@ namespace ComidasRapidasPOOmBA
         string password;
         bool ingresoPermitido;
 
-        public Usuario(string nom, int idUs, )
+        public Usuario(string nom, int idUs, string tipoU, string em, string pass, bool ingP)
         {
+            nombre = nom;
+            idUsuario = idUs;
+            tipoUsuario = tipoU;
+
+
 
         }
 
