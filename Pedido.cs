@@ -9,6 +9,5 @@ namespace ComidasRapidasPOOmBA
     internal class Pedido
     {
         int idPedido;
-        int cantidad;
     }
 }
