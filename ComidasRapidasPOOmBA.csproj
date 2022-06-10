@@ -7,8 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Formularios\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="TicketsImpresos\" />
   </ItemGroup>
 
