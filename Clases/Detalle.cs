@@ -4,11 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ComidasRapidasPOOmBA
+namespace ComidasRapidasPOOmBA.Clases
 {
     public class Detalle
     {
         DateTime fecha;
         int cantidad;
+        Producto item;
+
+        public void cantidadXProducto()
+        {
+
+        }
     }
 }

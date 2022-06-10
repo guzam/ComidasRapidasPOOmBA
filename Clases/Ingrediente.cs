@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ComidasRapidasPOOmBA
+namespace ComidasRapidasPOOmBA.Clases
 {
-    public class Guarnicion : Comida
+    public class Ingrediente
     {
-        bool sal;
+        string nombre;
+        int cantidad;
     }
 }

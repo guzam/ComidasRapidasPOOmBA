@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ComidasRapidasPOOmBA
+namespace ComidasRapidasPOOmBA.Clases
 {
-    internal class Postre
+    public class Hamburguesa : Comida
     {
+        int cantHambuerguesas;
     }
 }
