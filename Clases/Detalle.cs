@@ -12,6 +12,22 @@ namespace ComidasRapidasPOOmBA.Clases
         int cantidad;
         Producto item;
 
+        public DateTime Fecha
+        {
+            get => fecha;
+            set => fecha = value;
+        }
+        public int Cantidad
+        {
+            get => cantidad;
+            set => cantidad = value;
+        }
+        public Producto Item
+        {
+            get => item;
+            set => item = value;
+        }
+
         public void cantidadXProducto()
         {
 
