@@ -37,5 +37,10 @@ namespace ComidasRapidasPOOmBA
             var menu = new Menu();
             menu.Show();
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

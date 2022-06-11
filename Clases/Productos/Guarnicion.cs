@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ComidasRapidasPOOmBA.Clases
 {
-    public abstract class Producto
+    public class Guarnicion : Comida
     {
-        int codigo;
-        string nombre;
-        int stock;
-        double precio;
-        string tipo;
-        string tamanio;
+        bool sal;
+        public bool Sal
+        {
+            get => sal;
+            set => sal = value;
+        }
     }
 }

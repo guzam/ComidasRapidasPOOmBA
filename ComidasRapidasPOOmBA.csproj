@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Formularios\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="TicketsImpresos\" />
+    <Compile Remove="TicketsImpresos\**" />
+    <EmbeddedResource Remove="TicketsImpresos\**" />
+    <None Remove="TicketsImpresos\**" />
   </ItemGroup>
 
 </Project>
