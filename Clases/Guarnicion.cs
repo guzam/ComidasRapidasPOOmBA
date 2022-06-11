@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace ComidasRapidasPOOmBA.Clases
 {
-    public class Ensalada : Comida
+    public class Guarnicion : Comida
     {
         bool sal;
-        public bool Sal
-        {
-            get => sal;
-            set => sal = value;
-        }
     }
 }

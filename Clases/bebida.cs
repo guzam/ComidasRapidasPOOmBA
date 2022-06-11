@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ComidasRapidasPOOmBA.Clases
 {
-    internal class Postre : Producto
+    public class bebida : Producto
     {
+        bool conHielo;
+        bool diet;
+        bool alcoholica;
     }
 }

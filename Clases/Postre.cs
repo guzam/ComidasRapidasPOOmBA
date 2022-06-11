@@ -6,15 +6,7 @@ using System.Threading.Tasks;
 
 namespace ComidasRapidasPOOmBA.Clases
 {
-    public class Detalle
+    internal class Postre
     {
-        DateTime fecha;
-        int cantidad;
-        Producto item;
-
-        public void cantidadXProducto()
-        {
-
-        }
     }
 }
