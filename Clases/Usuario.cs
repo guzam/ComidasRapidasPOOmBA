@@ -22,6 +22,8 @@ namespace ComidasRapidasPOOmBA.Clases
             idUsuario = idUs;
             tipoUsuario = tipoU;
             email = em;
+            string password = pass;
+            bool ingresoPermitido = ingP;
 
 
 
