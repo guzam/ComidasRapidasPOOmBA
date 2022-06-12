@@ -8,14 +8,15 @@ namespace ComidasRapidasPOOmBA.Clases
 {
     public class Detalle
     {
-        DateTime fecha;
         int cantidad;
         Producto item;
+        double subtotal;
 
-        public DateTime Fecha
+        public Detalle(int cant, Producto item)
         {
-            get => fecha;
-            set => fecha = value;
+            Cantidad = cant;
+            Item = item;
+            Subtotal = subtotalPorProducto(cant, item);
         }
         public int Cantidad
         {
@@ -28,9 +29,14 @@ namespace ComidasRapidasPOOmBA.Clases
             set => item = value;
         }
 
-        public void cantidadXProducto()
+        public double Subtotal
         {
-
+            get => subtotal;
+            set => subtotal = value;
+        }
+        public double subtotalPorProducto(int cantidad, Producto item)
+        {
+           return item.Precio * cantidad;
         }
     }
 }
