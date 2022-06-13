@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComidasRapidasPOOmBA.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +11,8 @@ using System.Windows.Forms;
 
 namespace ComidasRapidasPOOmBA
 {
+    //var usuarios = new List<Usuario>();
+    
     public partial class Login : Form
     {
         public Login()
@@ -32,10 +35,29 @@ namespace ComidasRapidasPOOmBA
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        /*private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+        */
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            var registroUno = new registro();
+            registroUno.Show();
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
         {
             var menu = new Menu();
             menu.Show();
         }
+        
+
     }
+
 }
