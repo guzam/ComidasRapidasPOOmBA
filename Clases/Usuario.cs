@@ -17,8 +17,12 @@ namespace ComidasRapidasPOOmBA.Clases
         int idUsuario;
         static int idUsuarioGeneral;
         string tipoUsuario;
-        
 
+        
+        public Usuario()
+        {
+            
+        }
         public Usuario(string nom, string usu, string tipoU, string em, string pass)
         {
             nombre = nom;
@@ -46,10 +50,10 @@ namespace ComidasRapidasPOOmBA.Clases
         // if (us == null){ entonces puede seguir registrandose}
         // else "el usuario ya existe, ingrese otro nombre de usuario"
 
-        // var usarios = new List<Usuario>();
-        // var us1 = new Usuario("Lucas", "lucas123", "comun", "lucas@poomba.com", "che1234");
-        // usuarios.Add(us1);
-        // usuarios.Add ( new Usuario("Juan"; "juanca23", "comun", juancarlos@hotmail.com", "juan2020"));
+       // List<Usuario> usuarios = new List<Usuario>();
+         //Usuario us1 = new Usuario("Lucas", "lucas123", "comun", "lucas@poomba.com", "che1234");
+         //usuarios.Add(us1);
+        //usuarios.Add ( new Usuario("Juan"; "juanca23", "comun", juancarlos@hotmail.com", "juan2020"));
 
         /*para validad usuario cuando esta ingresando
          * var usarioPorPantalla = txtUsuario;
@@ -61,7 +65,10 @@ namespace ComidasRapidasPOOmBA.Clases
          *        else MessageBox.Show "Usuario/Password incorrecto.Cod 2";  //por cartel
          * 
          */
-        //var usuarios = new List<Usuario>();
+        //var usuarios = new List<Usuario>();     hhkñlñlk
+
+
+
     }
 
 

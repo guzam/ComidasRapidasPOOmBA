@@ -1,4 +1,5 @@
-﻿using ComidasRapidasPOOmBA.Forms;
+﻿using ComidasRapidasPOOmBA.Clases;
+using ComidasRapidasPOOmBA.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,6 +39,8 @@ namespace ComidasRapidasPOOmBA
         /*private void button1_Click(object sender, EventArgs e)
         {
             
+
+
         }
         */
         private void label2_Click(object sender, EventArgs e)
@@ -54,7 +57,12 @@ namespace ComidasRapidasPOOmBA
         private void btnOk_Click(object sender, EventArgs e)
         {
             var menu = new Menu();
-            menu.Show();
+            var usuarioNuevo = new Usuario();
+            usuarioNuevo.user = txtUsuario.Text;
+            //validarUsuario()
+            //menu.Show(); 
+            txtPass.Text = usuarioNuevo.user.ToString();
+            
         }
         
 
