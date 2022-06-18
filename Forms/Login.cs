@@ -34,8 +34,11 @@ namespace ComidasRapidasPOOmBA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var menu = new Menu();
-            menu.Show();
+            //var menuCompleto = new FormularioMenu();
+            //menuCompleto.Show();
+            var PantallaInicial = new FormularioMenu();
+            PantallaInicial.Show();
+            
         }
     }
 }
