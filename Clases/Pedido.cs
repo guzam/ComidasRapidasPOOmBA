@@ -9,15 +9,27 @@ namespace ComidasRapidasPOOmBA.Clases
     internal class Pedido
     {
         int idPedido;
-        double suma;
-
+        List<Detalle> listaDetalle;
+        double totalAPagar;
         public Pedido(int id)
         {
-            idPedido = id;
+            IdPedido = id;
         }
-        public void ingresarAPedido()
+        public Pedido(int id, List<Detalle> lista)
         {
+            IdPedido = id;
+            ListaDetalle = lista;
+        }
 
+
+        public int IdPedido { get => idPedido; set => idPedido = value; }
+        public List<Detalle> ListaDetalle { get => listaDetalle; set => listaDetalle = value; }
+        public double TotalAPagar { get => totalAPagar; set => totalAPagar = value; }
+
+
+        public void ingresarAPedido(Detalle item)
+        {
+            ListaDetalle.Add(item);
         }
 
         public void confirmarPedido()
@@ -30,9 +42,15 @@ namespace ComidasRapidasPOOmBA.Clases
 
         }
 
-        public double sumaTotal()
+        public double sumaTotal(Pedido pedido)
         {
-            return suma;
+            var aux = 0d;
+
+            foreach (var item in pedido.listaDetalle)
+            {
+                aux += item.Subtotal;
+            }
+            return aux;
         }
 
     }
