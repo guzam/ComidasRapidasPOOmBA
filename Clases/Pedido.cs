@@ -11,9 +11,18 @@ namespace ComidasRapidasPOOmBA.Clases
         int idPedido;
         List<Detalle> listaDetalle;
         double totalAPagar;
+        public Pedido()
+        {
+            pedidoNuevo();
+        }
         public Pedido(int id)
         {
             IdPedido = id;
+        }
+        public Pedido(List<Detalle> lista)
+        {
+            pedidoNuevo();
+            ListaDetalle = lista;
         }
         public Pedido(int id, List<Detalle> lista)
         {
@@ -22,10 +31,15 @@ namespace ComidasRapidasPOOmBA.Clases
         }
 
 
+
         public int IdPedido { get => idPedido; set => idPedido = value; }
         public List<Detalle> ListaDetalle { get => listaDetalle; set => listaDetalle = value; }
         public double TotalAPagar { get => totalAPagar; set => totalAPagar = value; }
 
+        public void pedidoNuevo()
+        {
+            idPedido++;
+        }
 
         public void ingresarAPedido(Detalle item)
         {

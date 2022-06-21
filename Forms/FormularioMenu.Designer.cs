@@ -30,912 +30,1108 @@ namespace ComidasRapidasPOOmBA
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioMenu));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.btn_Hamburguesas = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown14 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown15 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown16 = new System.Windows.Forms.NumericUpDown();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.button15 = new System.Windows.Forms.Button();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown13 = new System.Windows.Forms.NumericUpDown();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.button14 = new System.Windows.Forms.Button();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.button12 = new System.Windows.Forms.Button();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.button13 = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button9 = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox8.SuspendLayout();
-            this.groupBox10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).BeginInit();
-            this.groupBox9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
-            this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
-            this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.gbMenuCompleto = new System.Windows.Forms.GroupBox();
+            this.lblGuarniciones = new System.Windows.Forms.Label();
+            this.btnGuarniciones = new System.Windows.Forms.Button();
+            this.lblPostres = new System.Windows.Forms.Label();
+            this.lblBebidas = new System.Windows.Forms.Label();
+            this.btnPostres = new System.Windows.Forms.Button();
+            this.btnBebidas = new System.Windows.Forms.Button();
+            this.lblEnsaladas = new System.Windows.Forms.Label();
+            this.lblHamburgesas = new System.Windows.Forms.Label();
+            this.btnEnsalada = new System.Windows.Forms.Button();
+            this.btnHamburguesas = new System.Windows.Forms.Button();
+            this.gbPostres = new System.Windows.Forms.GroupBox();
+            this.numericUpDownQueremosFlan = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownBudinDePan = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownHelado = new System.Windows.Forms.NumericUpDown();
+            this.lblQueremosFlan = new System.Windows.Forms.Label();
+            this.lblBudinDePan = new System.Windows.Forms.Label();
+            this.lblHelado = new System.Windows.Forms.Label();
+            this.btnAgregarPostres = new System.Windows.Forms.Button();
+            this.gbBebidas = new System.Windows.Forms.GroupBox();
+            this.numericUpDownCerveza = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownAguaMineral = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownGaseosa = new System.Windows.Forms.NumericUpDown();
+            this.lblCerveza = new System.Windows.Forms.Label();
+            this.lblAguaMineral = new System.Windows.Forms.Label();
+            this.lblGaseosa = new System.Windows.Forms.Label();
+            this.btnAgregarBebidas = new System.Windows.Forms.Button();
+            this.gbGuarniciones = new System.Windows.Forms.GroupBox();
+            this.numericUpDownPapasFritasPoomba = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownPapasFritasConCheddar = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownPapasFritas = new System.Windows.Forms.NumericUpDown();
+            this.lblPapasFritasPoomba = new System.Windows.Forms.Label();
+            this.lblPapasFritasConCheddar = new System.Windows.Forms.Label();
+            this.lblPapasFritas = new System.Windows.Forms.Label();
+            this.btnAgregarGuarniciones = new System.Windows.Forms.Button();
+            this.gbEnsaladas = new System.Windows.Forms.GroupBox();
+            this.numericUpDownensaladaItalianaVegana = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownensaladaGriega = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownEnsaladaCaprese = new System.Windows.Forms.NumericUpDown();
+            this.lblEnsaladaItalianaVegana = new System.Windows.Forms.Label();
+            this.lblEnsaladaGriega = new System.Windows.Forms.Label();
+            this.lblEnsaladaCaprese = new System.Windows.Forms.Label();
+            this.btnAgregarEnsaladas = new System.Windows.Forms.Button();
+            this.gbHamburguesas = new System.Windows.Forms.GroupBox();
+            this.lblHdeVeggan = new System.Windows.Forms.Label();
+            this.lblHdePollo = new System.Windows.Forms.Label();
+            this.lblHdeCarne = new System.Windows.Forms.Label();
+            this.txtCodigoHdeVeggie = new System.Windows.Forms.TextBox();
+            this.lblCodigoHdeVeggie = new System.Windows.Forms.Label();
+            this.txtCodigoHdePollo = new System.Windows.Forms.TextBox();
+            this.lblCodigoHdePollo = new System.Windows.Forms.Label();
+            this.txtCodigoHdeCarne = new System.Windows.Forms.TextBox();
+            this.lblCodigoHdeCarne = new System.Windows.Forms.Label();
+            this.txtHamburguesadoble = new System.Windows.Forms.TextBox();
+            this.txtHamburguesaSimple = new System.Windows.Forms.TextBox();
+            this.lblHamburguesaDoble = new System.Windows.Forms.Label();
+            this.lblHamburguesaSimple = new System.Windows.Forms.Label();
+            this.lblPreciosHamburguesas = new System.Windows.Forms.Label();
+            this.checkBoxDobleHdeVeggie = new System.Windows.Forms.CheckBox();
+            this.checkBoxDobleHdePollo = new System.Windows.Forms.CheckBox();
+            this.checkBoxDobleHdeCarne = new System.Windows.Forms.CheckBox();
+            this.checkBoxAderezoHdeVeggie = new System.Windows.Forms.CheckBox();
+            this.checkBoxAderezoHdePollo = new System.Windows.Forms.CheckBox();
+            this.checkBoxAderezoHdeCarne = new System.Windows.Forms.CheckBox();
+            this.numericUpDownHamburguesaVeggie = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownHamburguesaDePollo = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownHamburguesaDeCarne = new System.Windows.Forms.NumericUpDown();
+            this.btnAgregarHamburguesas = new System.Windows.Forms.Button();
+            this.gbSugerencia2 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownSugerencia = new System.Windows.Forms.NumericUpDown();
+            this.lblSugerencia2 = new System.Windows.Forms.Label();
+            this.btnAgregarSugerencia = new System.Windows.Forms.Button();
+            this.gbPedido = new System.Windows.Forms.GroupBox();
+            this.listBoxPedido = new System.Windows.Forms.ListBox();
+            this.btnConfirmarPedido = new System.Windows.Forms.Button();
+            this.gbSugerencia1 = new System.Windows.Forms.GroupBox();
+            this.lblSugerencia1 = new System.Windows.Forms.Label();
+            this.btnSugerencia = new System.Windows.Forms.Button();
+            this.gbMenuCompleto.SuspendLayout();
+            this.gbPostres.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQueremosFlan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBudinDePan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHelado)).BeginInit();
+            this.gbBebidas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCerveza)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAguaMineral)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGaseosa)).BeginInit();
+            this.gbGuarniciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPapasFritasPoomba)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPapasFritasConCheddar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPapasFritas)).BeginInit();
+            this.gbEnsaladas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownensaladaItalianaVegana)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownensaladaGriega)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEnsaladaCaprese)).BeginInit();
+            this.gbHamburguesas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHamburguesaVeggie)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHamburguesaDePollo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHamburguesaDeCarne)).BeginInit();
+            this.gbSugerencia2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSugerencia)).BeginInit();
+            this.gbPedido.SuspendLayout();
+            this.gbSugerencia1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.label26);
-            this.groupBox1.Controls.Add(this.label25);
-            this.groupBox1.Controls.Add(this.button17);
-            this.groupBox1.Controls.Add(this.button16);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.btn_Hamburguesas);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(367, 658);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Menu Completo";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(167, 570);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(92, 28);
-            this.label26.TabIndex = 13;
-            this.label26.Text = "POSTRES";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(167, 450);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(87, 28);
-            this.label25.TabIndex = 12;
-            this.label25.Text = "BEBIDAS";
-            // 
-            // button17
-            // 
-            this.button17.AutoSize = true;
-            this.button17.BackgroundImage = global::ComidasRapidasPOOmBA.Properties.Resources.Postres;
-            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button17.Location = new System.Drawing.Point(6, 531);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(144, 113);
-            this.button17.TabIndex = 11;
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.AutoSize = true;
-            this.button16.BackgroundImage = global::ComidasRapidasPOOmBA.Properties.Resources.Bebidas;
-            this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button16.Location = new System.Drawing.Point(6, 414);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(144, 101);
-            this.button16.TabIndex = 10;
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(167, 332);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(153, 28);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "GUARNICIONES";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(167, 217);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 28);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "ENSALADAS";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(167, 106);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(167, 28);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "HAMBURGUESAS";
-            // 
-            // button7
-            // 
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.Location = new System.Drawing.Point(6, 181);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(144, 100);
-            this.button7.TabIndex = 5;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // btn_Hamburguesas
-            // 
-            this.btn_Hamburguesas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Hamburguesas.BackgroundImage")));
-            this.btn_Hamburguesas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Hamburguesas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Hamburguesas.Location = new System.Drawing.Point(6, 74);
-            this.btn_Hamburguesas.Name = "btn_Hamburguesas";
-            this.btn_Hamburguesas.Size = new System.Drawing.Size(144, 101);
-            this.btn_Hamburguesas.TabIndex = 4;
-            this.btn_Hamburguesas.UseVisualStyleBackColor = true;
-            this.btn_Hamburguesas.Click += new System.EventHandler(this.btn_Hamburguesas_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(6, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(303, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "¿Que te gustaria comer?";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.groupBox8);
-            this.groupBox2.Controls.Add(this.groupBox7);
-            this.groupBox2.Controls.Add(this.groupBox6);
-            this.groupBox2.Controls.Add(this.groupBox5);
-            this.groupBox2.Controls.Add(this.groupBox4);
-            this.groupBox2.Controls.Add(this.button8);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox2.Location = new System.Drawing.Point(384, 12);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(576, 658);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "SUGERENCIA DEL CHEF";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.groupBox10);
-            this.groupBox8.Controls.Add(this.groupBox9);
-            this.groupBox8.Controls.Add(this.numericUpDown8);
-            this.groupBox8.Controls.Add(this.numericUpDown9);
-            this.groupBox8.Controls.Add(this.numericUpDown10);
-            this.groupBox8.Controls.Add(this.label16);
-            this.groupBox8.Controls.Add(this.label17);
-            this.groupBox8.Controls.Add(this.label18);
-            this.groupBox8.Controls.Add(this.button12);
-            this.groupBox8.Location = new System.Drawing.Point(0, 0);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(575, 652);
-            this.groupBox8.TabIndex = 11;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Postres";
-            this.groupBox8.Visible = false;
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.numericUpDown14);
-            this.groupBox10.Controls.Add(this.numericUpDown15);
-            this.groupBox10.Controls.Add(this.numericUpDown16);
-            this.groupBox10.Controls.Add(this.label22);
-            this.groupBox10.Controls.Add(this.label23);
-            this.groupBox10.Controls.Add(this.label24);
-            this.groupBox10.Controls.Add(this.button15);
-            this.groupBox10.Location = new System.Drawing.Point(12, 0);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(564, 652);
-            this.groupBox10.TabIndex = 13;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Bebidas";
-            this.groupBox10.Visible = false;
-            // 
-            // numericUpDown14
-            // 
-            this.numericUpDown14.Location = new System.Drawing.Point(363, 400);
-            this.numericUpDown14.Name = "numericUpDown14";
-            this.numericUpDown14.Size = new System.Drawing.Size(120, 34);
-            this.numericUpDown14.TabIndex = 8;
-            // 
-            // numericUpDown15
-            // 
-            this.numericUpDown15.Location = new System.Drawing.Point(363, 249);
-            this.numericUpDown15.Name = "numericUpDown15";
-            this.numericUpDown15.Size = new System.Drawing.Size(120, 34);
-            this.numericUpDown15.TabIndex = 7;
-            // 
-            // numericUpDown16
-            // 
-            this.numericUpDown16.Location = new System.Drawing.Point(363, 100);
-            this.numericUpDown16.Name = "numericUpDown16";
-            this.numericUpDown16.Size = new System.Drawing.Size(120, 34);
-            this.numericUpDown16.TabIndex = 6;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(100, 406);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(88, 28);
-            this.label22.TabIndex = 5;
-            this.label22.Text = "Bebida 3";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(100, 253);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(88, 28);
-            this.label23.TabIndex = 4;
-            this.label23.Text = "Bebida 2";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(99, 102);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(88, 28);
-            this.label24.TabIndex = 3;
-            this.label24.Text = "Bebida 1";
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(244, 553);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(141, 37);
-            this.button15.TabIndex = 2;
-            this.button15.Text = "Agregar";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.numericUpDown11);
-            this.groupBox9.Controls.Add(this.numericUpDown12);
-            this.groupBox9.Controls.Add(this.numericUpDown13);
-            this.groupBox9.Controls.Add(this.label19);
-            this.groupBox9.Controls.Add(this.label20);
-            this.groupBox9.Controls.Add(this.label21);
-            this.groupBox9.Controls.Add(this.button14);
-            this.groupBox9.Location = new System.Drawing.Point(6, 0);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(575, 652);
-            this.groupBox9.TabIndex = 12;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Guarniciones";
-            this.groupBox9.Visible = false;
-            // 
-            // numericUpDown11
-            // 
-            this.numericUpDown11.Location = new System.Drawing.Point(384, 406);
-            this.numericUpDown11.Name = "numericUpDown11";
-            this.numericUpDown11.Size = new System.Drawing.Size(120, 34);
-            this.numericUpDown11.TabIndex = 8;
-            // 
-            // numericUpDown12
-            // 
-            this.numericUpDown12.Location = new System.Drawing.Point(384, 253);
-            this.numericUpDown12.Name = "numericUpDown12";
-            this.numericUpDown12.Size = new System.Drawing.Size(120, 34);
-            this.numericUpDown12.TabIndex = 7;
-            // 
-            // numericUpDown13
-            // 
-            this.numericUpDown13.Location = new System.Drawing.Point(384, 96);
-            this.numericUpDown13.Name = "numericUpDown13";
-            this.numericUpDown13.Size = new System.Drawing.Size(120, 34);
-            this.numericUpDown13.TabIndex = 6;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(100, 406);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(123, 28);
-            this.label19.TabIndex = 5;
-            this.label19.Text = "Guarnicion 3";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(100, 253);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(123, 28);
-            this.label20.TabIndex = 4;
-            this.label20.Text = "Guarnicion 2";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(99, 102);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(123, 28);
-            this.label21.TabIndex = 3;
-            this.label21.Text = "Guarnicion 1";
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(244, 553);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(141, 37);
-            this.button14.TabIndex = 2;
-            this.button14.Text = "Agregar";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDown8
-            // 
-            this.numericUpDown8.Location = new System.Drawing.Point(384, 406);
-            this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(120, 34);
-            this.numericUpDown8.TabIndex = 8;
-            // 
-            // numericUpDown9
-            // 
-            this.numericUpDown9.Location = new System.Drawing.Point(384, 253);
-            this.numericUpDown9.Name = "numericUpDown9";
-            this.numericUpDown9.Size = new System.Drawing.Size(120, 34);
-            this.numericUpDown9.TabIndex = 7;
-            // 
-            // numericUpDown10
-            // 
-            this.numericUpDown10.Location = new System.Drawing.Point(384, 96);
-            this.numericUpDown10.Name = "numericUpDown10";
-            this.numericUpDown10.Size = new System.Drawing.Size(120, 34);
-            this.numericUpDown10.TabIndex = 6;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(100, 406);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(83, 28);
-            this.label16.TabIndex = 5;
-            this.label16.Text = "Postre 3";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(100, 253);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(83, 28);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "Postre 2";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(99, 102);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(83, 28);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "Postre 1";
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(244, 553);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(141, 37);
-            this.button12.TabIndex = 2;
-            this.button12.Text = "Agregar";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.numericUpDown5);
-            this.groupBox7.Controls.Add(this.numericUpDown6);
-            this.groupBox7.Controls.Add(this.numericUpDown7);
-            this.groupBox7.Controls.Add(this.label13);
-            this.groupBox7.Controls.Add(this.label14);
-            this.groupBox7.Controls.Add(this.label15);
-            this.groupBox7.Controls.Add(this.button11);
-            this.groupBox7.Location = new System.Drawing.Point(1, 6);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(575, 652);
-            this.groupBox7.TabIndex = 10;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Ensaladas";
-            this.groupBox7.Visible = false;
-            // 
-            // numericUpDown5
-            // 
-            this.numericUpDown5.Location = new System.Drawing.Point(384, 406);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(120, 34);
-            this.numericUpDown5.TabIndex = 8;
-            // 
-            // numericUpDown6
-            // 
-            this.numericUpDown6.Location = new System.Drawing.Point(384, 253);
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(120, 34);
-            this.numericUpDown6.TabIndex = 7;
-            // 
-            // numericUpDown7
-            // 
-            this.numericUpDown7.Location = new System.Drawing.Point(384, 96);
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(120, 34);
-            this.numericUpDown7.TabIndex = 6;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(114, 412);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(152, 28);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "Ensalada veggie";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(100, 253);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(166, 28);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Ensalada de pollo";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(99, 102);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(167, 28);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "Ensalada de carne";
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(244, 553);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(141, 37);
-            this.button11.TabIndex = 2;
-            this.button11.Text = "Agregar";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.numericUpDown4);
-            this.groupBox6.Controls.Add(this.numericUpDown3);
-            this.groupBox6.Controls.Add(this.numericUpDown2);
-            this.groupBox6.Controls.Add(this.label12);
-            this.groupBox6.Controls.Add(this.label11);
-            this.groupBox6.Controls.Add(this.label10);
-            this.groupBox6.Controls.Add(this.button13);
-            this.groupBox6.Location = new System.Drawing.Point(6, 6);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(575, 652);
-            this.groupBox6.TabIndex = 9;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Hamburguesas";
-            this.groupBox6.Visible = false;
-            // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.Location = new System.Drawing.Point(384, 406);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(120, 34);
-            this.numericUpDown4.TabIndex = 8;
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Location = new System.Drawing.Point(384, 253);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 34);
-            this.numericUpDown3.TabIndex = 7;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(384, 96);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 34);
-            this.numericUpDown2.TabIndex = 6;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(114, 412);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(198, 28);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "Hamburguesa veggie";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(100, 253);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(212, 28);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "Hamburguesa de pollo";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(99, 102);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(213, 28);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Hamburguesa de carne";
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(244, 553);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(141, 37);
-            this.button13.TabIndex = 2;
-            this.button13.Text = "Agregar";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.button10);
-            this.groupBox5.Controls.Add(this.label9);
-            this.groupBox5.Controls.Add(this.numericUpDown1);
-            this.groupBox5.Controls.Add(this.button9);
-            this.groupBox5.Location = new System.Drawing.Point(6, 10);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(576, 658);
-            this.groupBox5.TabIndex = 7;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "groupBox5";
-            this.groupBox5.Visible = false;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(195, 463);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(216, 41);
-            this.button10.TabIndex = 8;
-            this.button10.Text = "Agregar a mi pedido";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(168, 364);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 28);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Cantidad";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(306, 362);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(105, 34);
-            this.numericUpDown1.TabIndex = 6;
-            // 
-            // button9
-            // 
-            this.button9.AutoSize = true;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button9.Location = new System.Drawing.Point(94, 33);
-            this.button9.Name = "button9";
-            this.button9.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(371, 273);
-            this.button9.TabIndex = 5;
-            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox4.Location = new System.Drawing.Point(87, 412);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(371, 62);
-            this.groupBox4.TabIndex = 6;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "INGREDIENTES";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(58, 31);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(288, 17);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Hamburguesa con queso. Papas y gaseosa.";
-            // 
-            // button8
-            // 
-            this.button8.AutoSize = true;
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button8.Location = new System.Drawing.Point(87, 123);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(371, 273);
-            this.button8.TabIndex = 4;
-            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(51, 74);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(420, 28);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "¡¡¡Este es nuestro plato recomendado de hoy!!!";
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(462, 601);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(90, 51);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Continuar";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(6, 601);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 51);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Volver";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(32, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 25);
-            this.label2.TabIndex = 1;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox3.Location = new System.Drawing.Point(972, 12);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(290, 658);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Pedido";
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(81, 249);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(105, 32);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "CONFIRMAR";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(81, 43);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 28);
-            this.label3.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::ComidasRapidasPOOmBA.Properties.Resources.Guarniciones;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(6, 296);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 100);
-            this.button1.TabIndex = 14;
-            this.button1.UseVisualStyleBackColor = true;
+            // gbMenuCompleto
+            // 
+            this.gbMenuCompleto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gbMenuCompleto.Controls.Add(this.lblGuarniciones);
+            this.gbMenuCompleto.Controls.Add(this.btnGuarniciones);
+            this.gbMenuCompleto.Controls.Add(this.lblPostres);
+            this.gbMenuCompleto.Controls.Add(this.lblBebidas);
+            this.gbMenuCompleto.Controls.Add(this.btnPostres);
+            this.gbMenuCompleto.Controls.Add(this.btnBebidas);
+            this.gbMenuCompleto.Controls.Add(this.lblEnsaladas);
+            this.gbMenuCompleto.Controls.Add(this.lblHamburgesas);
+            this.gbMenuCompleto.Controls.Add(this.btnEnsalada);
+            this.gbMenuCompleto.Controls.Add(this.btnHamburguesas);
+            this.gbMenuCompleto.Dock = System.Windows.Forms.DockStyle.Left;
+            this.gbMenuCompleto.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbMenuCompleto.Location = new System.Drawing.Point(0, 0);
+            this.gbMenuCompleto.Name = "gbMenuCompleto";
+            this.gbMenuCompleto.Size = new System.Drawing.Size(204, 758);
+            this.gbMenuCompleto.TabIndex = 0;
+            this.gbMenuCompleto.TabStop = false;
+            this.gbMenuCompleto.Text = "Menu Completo";
+            // 
+            // lblGuarniciones
+            // 
+            this.lblGuarniciones.AutoSize = true;
+            this.lblGuarniciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblGuarniciones.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblGuarniciones.Location = new System.Drawing.Point(31, 339);
+            this.lblGuarniciones.Name = "lblGuarniciones";
+            this.lblGuarniciones.Size = new System.Drawing.Size(130, 21);
+            this.lblGuarniciones.TabIndex = 15;
+            this.lblGuarniciones.Text = "GUARNICIONES";
+            // 
+            // btnGuarniciones
+            // 
+            this.btnGuarniciones.BackgroundImage = global::ComidasRapidasPOOmBA.Properties.Resources.Guarniciones;
+            this.btnGuarniciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGuarniciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuarniciones.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuarniciones.Location = new System.Drawing.Point(0, 348);
+            this.btnGuarniciones.Name = "btnGuarniciones";
+            this.btnGuarniciones.Size = new System.Drawing.Size(189, 112);
+            this.btnGuarniciones.TabIndex = 14;
+            this.btnGuarniciones.UseVisualStyleBackColor = true;
+            this.btnGuarniciones.Click += new System.EventHandler(this.btnGuarniciones_Click);
+            // 
+            // lblPostres
+            // 
+            this.lblPostres.AutoSize = true;
+            this.lblPostres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblPostres.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPostres.Location = new System.Drawing.Point(54, 613);
+            this.lblPostres.Name = "lblPostres";
+            this.lblPostres.Size = new System.Drawing.Size(78, 21);
+            this.lblPostres.TabIndex = 13;
+            this.lblPostres.Text = "POSTRES";
+            // 
+            // lblBebidas
+            // 
+            this.lblBebidas.AutoSize = true;
+            this.lblBebidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblBebidas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblBebidas.Location = new System.Drawing.Point(60, 475);
+            this.lblBebidas.Name = "lblBebidas";
+            this.lblBebidas.Size = new System.Drawing.Size(76, 21);
+            this.lblBebidas.TabIndex = 12;
+            this.lblBebidas.Text = "BEBIDAS";
+            // 
+            // btnPostres
+            // 
+            this.btnPostres.AutoSize = true;
+            this.btnPostres.BackgroundImage = global::ComidasRapidasPOOmBA.Properties.Resources.Postres;
+            this.btnPostres.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPostres.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPostres.Location = new System.Drawing.Point(0, 624);
+            this.btnPostres.Name = "btnPostres";
+            this.btnPostres.Size = new System.Drawing.Size(189, 122);
+            this.btnPostres.TabIndex = 11;
+            this.btnPostres.UseVisualStyleBackColor = true;
+            this.btnPostres.Click += new System.EventHandler(this.btnPostres_Click);
+            // 
+            // btnBebidas
+            // 
+            this.btnBebidas.AutoSize = true;
+            this.btnBebidas.BackgroundImage = global::ComidasRapidasPOOmBA.Properties.Resources.Bebidas;
+            this.btnBebidas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBebidas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBebidas.Location = new System.Drawing.Point(6, 485);
+            this.btnBebidas.Name = "btnBebidas";
+            this.btnBebidas.Size = new System.Drawing.Size(189, 119);
+            this.btnBebidas.TabIndex = 10;
+            this.btnBebidas.UseVisualStyleBackColor = true;
+            this.btnBebidas.Click += new System.EventHandler(this.btnBebidas_Click);
+            // 
+            // lblEnsaladas
+            // 
+            this.lblEnsaladas.AutoSize = true;
+            this.lblEnsaladas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblEnsaladas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEnsaladas.Location = new System.Drawing.Point(42, 197);
+            this.lblEnsaladas.Name = "lblEnsaladas";
+            this.lblEnsaladas.Size = new System.Drawing.Size(103, 21);
+            this.lblEnsaladas.TabIndex = 8;
+            this.lblEnsaladas.Text = "ENSALADAS";
+            // 
+            // lblHamburgesas
+            // 
+            this.lblHamburgesas.AutoSize = true;
+            this.lblHamburgesas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblHamburgesas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHamburgesas.Location = new System.Drawing.Point(20, 62);
+            this.lblHamburgesas.Name = "lblHamburgesas";
+            this.lblHamburgesas.Size = new System.Drawing.Size(141, 21);
+            this.lblHamburgesas.TabIndex = 7;
+            this.lblHamburgesas.Text = "HAMBURGUESAS";
+            // 
+            // btnEnsalada
+            // 
+            this.btnEnsalada.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEnsalada.BackgroundImage")));
+            this.btnEnsalada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEnsalada.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEnsalada.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEnsalada.Location = new System.Drawing.Point(0, 206);
+            this.btnEnsalada.Name = "btnEnsalada";
+            this.btnEnsalada.Size = new System.Drawing.Size(189, 119);
+            this.btnEnsalada.TabIndex = 5;
+            this.btnEnsalada.UseVisualStyleBackColor = true;
+            this.btnEnsalada.Click += new System.EventHandler(this.btnEnsalada_Click);
+            // 
+            // btnHamburguesas
+            // 
+            this.btnHamburguesas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHamburguesas.BackgroundImage")));
+            this.btnHamburguesas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHamburguesas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHamburguesas.Location = new System.Drawing.Point(0, 62);
+            this.btnHamburguesas.Name = "btnHamburguesas";
+            this.btnHamburguesas.Size = new System.Drawing.Size(189, 127);
+            this.btnHamburguesas.TabIndex = 4;
+            this.btnHamburguesas.UseVisualStyleBackColor = true;
+            this.btnHamburguesas.Click += new System.EventHandler(this.btnHamburguesas_Click);
+            // 
+            // gbPostres
+            // 
+            this.gbPostres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gbPostres.Controls.Add(this.numericUpDownQueremosFlan);
+            this.gbPostres.Controls.Add(this.numericUpDownBudinDePan);
+            this.gbPostres.Controls.Add(this.numericUpDownHelado);
+            this.gbPostres.Controls.Add(this.lblQueremosFlan);
+            this.gbPostres.Controls.Add(this.lblBudinDePan);
+            this.gbPostres.Controls.Add(this.lblHelado);
+            this.gbPostres.Controls.Add(this.btnAgregarPostres);
+            this.gbPostres.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbPostres.Location = new System.Drawing.Point(260, 619);
+            this.gbPostres.Name = "gbPostres";
+            this.gbPostres.Size = new System.Drawing.Size(280, 139);
+            this.gbPostres.TabIndex = 11;
+            this.gbPostres.TabStop = false;
+            this.gbPostres.Text = "Postres";
+            this.gbPostres.Visible = false;
+            // 
+            // numericUpDownQueremosFlan
+            // 
+            this.numericUpDownQueremosFlan.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDownQueremosFlan.Location = new System.Drawing.Point(219, 69);
+            this.numericUpDownQueremosFlan.Name = "numericUpDownQueremosFlan";
+            this.numericUpDownQueremosFlan.Size = new System.Drawing.Size(48, 25);
+            this.numericUpDownQueremosFlan.TabIndex = 8;
+            // 
+            // numericUpDownBudinDePan
+            // 
+            this.numericUpDownBudinDePan.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDownBudinDePan.Location = new System.Drawing.Point(219, 48);
+            this.numericUpDownBudinDePan.Name = "numericUpDownBudinDePan";
+            this.numericUpDownBudinDePan.Size = new System.Drawing.Size(48, 25);
+            this.numericUpDownBudinDePan.TabIndex = 7;
+            // 
+            // numericUpDownHelado
+            // 
+            this.numericUpDownHelado.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDownHelado.Location = new System.Drawing.Point(219, 27);
+            this.numericUpDownHelado.Name = "numericUpDownHelado";
+            this.numericUpDownHelado.Size = new System.Drawing.Size(48, 25);
+            this.numericUpDownHelado.TabIndex = 6;
+            // 
+            // lblQueremosFlan
+            // 
+            this.lblQueremosFlan.AutoSize = true;
+            this.lblQueremosFlan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblQueremosFlan.Location = new System.Drawing.Point(16, 72);
+            this.lblQueremosFlan.Name = "lblQueremosFlan";
+            this.lblQueremosFlan.Size = new System.Drawing.Size(127, 21);
+            this.lblQueremosFlan.TabIndex = 5;
+            this.lblQueremosFlan.Text = "Queremos flan!";
+            // 
+            // lblBudinDePan
+            // 
+            this.lblBudinDePan.AutoSize = true;
+            this.lblBudinDePan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblBudinDePan.Location = new System.Drawing.Point(16, 51);
+            this.lblBudinDePan.Name = "lblBudinDePan";
+            this.lblBudinDePan.Size = new System.Drawing.Size(111, 21);
+            this.lblBudinDePan.TabIndex = 4;
+            this.lblBudinDePan.Text = "Budin de pan";
+            // 
+            // lblHelado
+            // 
+            this.lblHelado.AutoSize = true;
+            this.lblHelado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHelado.Location = new System.Drawing.Point(15, 30);
+            this.lblHelado.Name = "lblHelado";
+            this.lblHelado.Size = new System.Drawing.Size(65, 21);
+            this.lblHelado.TabIndex = 3;
+            this.lblHelado.Text = "Helado";
+            // 
+            // btnAgregarPostres
+            // 
+            this.btnAgregarPostres.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarPostres.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAgregarPostres.Location = new System.Drawing.Point(56, 96);
+            this.btnAgregarPostres.Name = "btnAgregarPostres";
+            this.btnAgregarPostres.Size = new System.Drawing.Size(104, 31);
+            this.btnAgregarPostres.TabIndex = 2;
+            this.btnAgregarPostres.Text = "Agregar";
+            this.btnAgregarPostres.UseVisualStyleBackColor = true;
+            // 
+            // gbBebidas
+            // 
+            this.gbBebidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gbBebidas.Controls.Add(this.numericUpDownCerveza);
+            this.gbBebidas.Controls.Add(this.numericUpDownAguaMineral);
+            this.gbBebidas.Controls.Add(this.numericUpDownGaseosa);
+            this.gbBebidas.Controls.Add(this.lblCerveza);
+            this.gbBebidas.Controls.Add(this.lblAguaMineral);
+            this.gbBebidas.Controls.Add(this.lblGaseosa);
+            this.gbBebidas.Controls.Add(this.btnAgregarBebidas);
+            this.gbBebidas.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbBebidas.Location = new System.Drawing.Point(261, 477);
+            this.gbBebidas.Name = "gbBebidas";
+            this.gbBebidas.Size = new System.Drawing.Size(279, 136);
+            this.gbBebidas.TabIndex = 13;
+            this.gbBebidas.TabStop = false;
+            this.gbBebidas.Text = "Bebidas";
+            this.gbBebidas.Visible = false;
+            // 
+            // numericUpDownCerveza
+            // 
+            this.numericUpDownCerveza.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDownCerveza.Location = new System.Drawing.Point(218, 73);
+            this.numericUpDownCerveza.Name = "numericUpDownCerveza";
+            this.numericUpDownCerveza.Size = new System.Drawing.Size(48, 25);
+            this.numericUpDownCerveza.TabIndex = 8;
+            // 
+            // numericUpDownAguaMineral
+            // 
+            this.numericUpDownAguaMineral.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDownAguaMineral.Location = new System.Drawing.Point(218, 50);
+            this.numericUpDownAguaMineral.Name = "numericUpDownAguaMineral";
+            this.numericUpDownAguaMineral.Size = new System.Drawing.Size(48, 25);
+            this.numericUpDownAguaMineral.TabIndex = 7;
+            // 
+            // numericUpDownGaseosa
+            // 
+            this.numericUpDownGaseosa.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDownGaseosa.Location = new System.Drawing.Point(218, 29);
+            this.numericUpDownGaseosa.Name = "numericUpDownGaseosa";
+            this.numericUpDownGaseosa.Size = new System.Drawing.Size(48, 25);
+            this.numericUpDownGaseosa.TabIndex = 6;
+            // 
+            // lblCerveza
+            // 
+            this.lblCerveza.AutoSize = true;
+            this.lblCerveza.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCerveza.Location = new System.Drawing.Point(27, 72);
+            this.lblCerveza.Name = "lblCerveza";
+            this.lblCerveza.Size = new System.Drawing.Size(70, 21);
+            this.lblCerveza.TabIndex = 5;
+            this.lblCerveza.Text = "Cerveza";
+            // 
+            // lblAguaMineral
+            // 
+            this.lblAguaMineral.AutoSize = true;
+            this.lblAguaMineral.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAguaMineral.Location = new System.Drawing.Point(25, 51);
+            this.lblAguaMineral.Name = "lblAguaMineral";
+            this.lblAguaMineral.Size = new System.Drawing.Size(113, 21);
+            this.lblAguaMineral.TabIndex = 4;
+            this.lblAguaMineral.Text = "Agua Mineral";
+            // 
+            // lblGaseosa
+            // 
+            this.lblGaseosa.AutoSize = true;
+            this.lblGaseosa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblGaseosa.Location = new System.Drawing.Point(25, 30);
+            this.lblGaseosa.Name = "lblGaseosa";
+            this.lblGaseosa.Size = new System.Drawing.Size(72, 21);
+            this.lblGaseosa.TabIndex = 3;
+            this.lblGaseosa.Text = "Gaseosa";
+            // 
+            // btnAgregarBebidas
+            // 
+            this.btnAgregarBebidas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarBebidas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAgregarBebidas.Location = new System.Drawing.Point(54, 96);
+            this.btnAgregarBebidas.Name = "btnAgregarBebidas";
+            this.btnAgregarBebidas.Size = new System.Drawing.Size(105, 31);
+            this.btnAgregarBebidas.TabIndex = 2;
+            this.btnAgregarBebidas.Text = "Agregar";
+            this.btnAgregarBebidas.UseVisualStyleBackColor = true;
+            // 
+            // gbGuarniciones
+            // 
+            this.gbGuarniciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gbGuarniciones.Controls.Add(this.numericUpDownPapasFritasPoomba);
+            this.gbGuarniciones.Controls.Add(this.numericUpDownPapasFritasConCheddar);
+            this.gbGuarniciones.Controls.Add(this.numericUpDownPapasFritas);
+            this.gbGuarniciones.Controls.Add(this.lblPapasFritasPoomba);
+            this.gbGuarniciones.Controls.Add(this.lblPapasFritasConCheddar);
+            this.gbGuarniciones.Controls.Add(this.lblPapasFritas);
+            this.gbGuarniciones.Controls.Add(this.btnAgregarGuarniciones);
+            this.gbGuarniciones.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbGuarniciones.Location = new System.Drawing.Point(261, 322);
+            this.gbGuarniciones.Name = "gbGuarniciones";
+            this.gbGuarniciones.Size = new System.Drawing.Size(280, 149);
+            this.gbGuarniciones.TabIndex = 12;
+            this.gbGuarniciones.TabStop = false;
+            this.gbGuarniciones.Text = "Guarniciones";
+            this.gbGuarniciones.Visible = false;
+            // 
+            // numericUpDownPapasFritasPoomba
+            // 
+            this.numericUpDownPapasFritasPoomba.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDownPapasFritasPoomba.Location = new System.Drawing.Point(219, 75);
+            this.numericUpDownPapasFritasPoomba.Name = "numericUpDownPapasFritasPoomba";
+            this.numericUpDownPapasFritasPoomba.Size = new System.Drawing.Size(48, 25);
+            this.numericUpDownPapasFritasPoomba.TabIndex = 8;
+            // 
+            // numericUpDownPapasFritasConCheddar
+            // 
+            this.numericUpDownPapasFritasConCheddar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDownPapasFritasConCheddar.Location = new System.Drawing.Point(219, 55);
+            this.numericUpDownPapasFritasConCheddar.Name = "numericUpDownPapasFritasConCheddar";
+            this.numericUpDownPapasFritasConCheddar.Size = new System.Drawing.Size(48, 25);
+            this.numericUpDownPapasFritasConCheddar.TabIndex = 7;
+            // 
+            // numericUpDownPapasFritas
+            // 
+            this.numericUpDownPapasFritas.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDownPapasFritas.Location = new System.Drawing.Point(219, 33);
+            this.numericUpDownPapasFritas.Name = "numericUpDownPapasFritas";
+            this.numericUpDownPapasFritas.Size = new System.Drawing.Size(48, 25);
+            this.numericUpDownPapasFritas.TabIndex = 6;
+            // 
+            // lblPapasFritasPoomba
+            // 
+            this.lblPapasFritasPoomba.AutoSize = true;
+            this.lblPapasFritasPoomba.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPapasFritasPoomba.Location = new System.Drawing.Point(17, 72);
+            this.lblPapasFritasPoomba.Name = "lblPapasFritasPoomba";
+            this.lblPapasFritasPoomba.Size = new System.Drawing.Size(174, 21);
+            this.lblPapasFritasPoomba.TabIndex = 5;
+            this.lblPapasFritasPoomba.Text = "Papas Fritas POOmBA";
+            // 
+            // lblPapasFritasConCheddar
+            // 
+            this.lblPapasFritasConCheddar.AutoSize = true;
+            this.lblPapasFritasConCheddar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPapasFritasConCheddar.Location = new System.Drawing.Point(17, 51);
+            this.lblPapasFritasConCheddar.Name = "lblPapasFritasConCheddar";
+            this.lblPapasFritasConCheddar.Size = new System.Drawing.Size(198, 21);
+            this.lblPapasFritasConCheddar.TabIndex = 4;
+            this.lblPapasFritasConCheddar.Text = "Papas Fritas con cheddar";
+            // 
+            // lblPapasFritas
+            // 
+            this.lblPapasFritas.AutoSize = true;
+            this.lblPapasFritas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPapasFritas.Location = new System.Drawing.Point(17, 30);
+            this.lblPapasFritas.Name = "lblPapasFritas";
+            this.lblPapasFritas.Size = new System.Drawing.Size(100, 21);
+            this.lblPapasFritas.TabIndex = 3;
+            this.lblPapasFritas.Text = "Papas Fritas";
+            // 
+            // btnAgregarGuarniciones
+            // 
+            this.btnAgregarGuarniciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarGuarniciones.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAgregarGuarniciones.Location = new System.Drawing.Point(55, 96);
+            this.btnAgregarGuarniciones.Name = "btnAgregarGuarniciones";
+            this.btnAgregarGuarniciones.Size = new System.Drawing.Size(104, 29);
+            this.btnAgregarGuarniciones.TabIndex = 2;
+            this.btnAgregarGuarniciones.Text = "Agregar";
+            this.btnAgregarGuarniciones.UseVisualStyleBackColor = true;
+            // 
+            // gbEnsaladas
+            // 
+            this.gbEnsaladas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.gbEnsaladas.Controls.Add(this.numericUpDownensaladaItalianaVegana);
+            this.gbEnsaladas.Controls.Add(this.numericUpDownensaladaGriega);
+            this.gbEnsaladas.Controls.Add(this.numericUpDownEnsaladaCaprese);
+            this.gbEnsaladas.Controls.Add(this.lblEnsaladaItalianaVegana);
+            this.gbEnsaladas.Controls.Add(this.lblEnsaladaGriega);
+            this.gbEnsaladas.Controls.Add(this.lblEnsaladaCaprese);
+            this.gbEnsaladas.Controls.Add(this.btnAgregarEnsaladas);
+            this.gbEnsaladas.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbEnsaladas.Location = new System.Drawing.Point(261, 174);
+            this.gbEnsaladas.Name = "gbEnsaladas";
+            this.gbEnsaladas.Size = new System.Drawing.Size(287, 142);
+            this.gbEnsaladas.TabIndex = 10;
+            this.gbEnsaladas.TabStop = false;
+            this.gbEnsaladas.Text = "Ensaladas";
+            this.gbEnsaladas.Visible = false;
+            // 
+            // numericUpDownensaladaItalianaVegana
+            // 
+            this.numericUpDownensaladaItalianaVegana.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDownensaladaItalianaVegana.Location = new System.Drawing.Point(219, 68);
+            this.numericUpDownensaladaItalianaVegana.Name = "numericUpDownensaladaItalianaVegana";
+            this.numericUpDownensaladaItalianaVegana.Size = new System.Drawing.Size(52, 25);
+            this.numericUpDownensaladaItalianaVegana.TabIndex = 8;
+            // 
+            // numericUpDownensaladaGriega
+            // 
+            this.numericUpDownensaladaGriega.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDownensaladaGriega.Location = new System.Drawing.Point(219, 47);
+            this.numericUpDownensaladaGriega.Name = "numericUpDownensaladaGriega";
+            this.numericUpDownensaladaGriega.Size = new System.Drawing.Size(52, 25);
+            this.numericUpDownensaladaGriega.TabIndex = 7;
+            // 
+            // numericUpDownEnsaladaCaprese
+            // 
+            this.numericUpDownEnsaladaCaprese.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDownEnsaladaCaprese.Location = new System.Drawing.Point(219, 25);
+            this.numericUpDownEnsaladaCaprese.Name = "numericUpDownEnsaladaCaprese";
+            this.numericUpDownEnsaladaCaprese.Size = new System.Drawing.Size(52, 25);
+            this.numericUpDownEnsaladaCaprese.TabIndex = 6;
+            // 
+            // lblEnsaladaItalianaVegana
+            // 
+            this.lblEnsaladaItalianaVegana.AutoSize = true;
+            this.lblEnsaladaItalianaVegana.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEnsaladaItalianaVegana.Location = new System.Drawing.Point(17, 67);
+            this.lblEnsaladaItalianaVegana.Name = "lblEnsaladaItalianaVegana";
+            this.lblEnsaladaItalianaVegana.Size = new System.Drawing.Size(202, 21);
+            this.lblEnsaladaItalianaVegana.TabIndex = 5;
+            this.lblEnsaladaItalianaVegana.Text = "Ensalada Italiana Vegana";
+            // 
+            // lblEnsaladaGriega
+            // 
+            this.lblEnsaladaGriega.AutoSize = true;
+            this.lblEnsaladaGriega.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEnsaladaGriega.Location = new System.Drawing.Point(17, 47);
+            this.lblEnsaladaGriega.Name = "lblEnsaladaGriega";
+            this.lblEnsaladaGriega.Size = new System.Drawing.Size(132, 21);
+            this.lblEnsaladaGriega.TabIndex = 4;
+            this.lblEnsaladaGriega.Text = "Ensalada Griega";
+            // 
+            // lblEnsaladaCaprese
+            // 
+            this.lblEnsaladaCaprese.AutoSize = true;
+            this.lblEnsaladaCaprese.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEnsaladaCaprese.Location = new System.Drawing.Point(17, 25);
+            this.lblEnsaladaCaprese.Name = "lblEnsaladaCaprese";
+            this.lblEnsaladaCaprese.Size = new System.Drawing.Size(142, 21);
+            this.lblEnsaladaCaprese.TabIndex = 3;
+            this.lblEnsaladaCaprese.Text = "Ensalada Caprese";
+            // 
+            // btnAgregarEnsaladas
+            // 
+            this.btnAgregarEnsaladas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarEnsaladas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAgregarEnsaladas.Location = new System.Drawing.Point(55, 91);
+            this.btnAgregarEnsaladas.Name = "btnAgregarEnsaladas";
+            this.btnAgregarEnsaladas.Size = new System.Drawing.Size(104, 31);
+            this.btnAgregarEnsaladas.TabIndex = 2;
+            this.btnAgregarEnsaladas.Text = "Agregar";
+            this.btnAgregarEnsaladas.UseVisualStyleBackColor = true;
+            // 
+            // gbHamburguesas
+            // 
+            this.gbHamburguesas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.gbHamburguesas.Controls.Add(this.lblHdeVeggan);
+            this.gbHamburguesas.Controls.Add(this.lblHdePollo);
+            this.gbHamburguesas.Controls.Add(this.lblHdeCarne);
+            this.gbHamburguesas.Controls.Add(this.txtCodigoHdeVeggie);
+            this.gbHamburguesas.Controls.Add(this.lblCodigoHdeVeggie);
+            this.gbHamburguesas.Controls.Add(this.txtCodigoHdePollo);
+            this.gbHamburguesas.Controls.Add(this.lblCodigoHdePollo);
+            this.gbHamburguesas.Controls.Add(this.txtCodigoHdeCarne);
+            this.gbHamburguesas.Controls.Add(this.lblCodigoHdeCarne);
+            this.gbHamburguesas.Controls.Add(this.txtHamburguesadoble);
+            this.gbHamburguesas.Controls.Add(this.txtHamburguesaSimple);
+            this.gbHamburguesas.Controls.Add(this.lblHamburguesaDoble);
+            this.gbHamburguesas.Controls.Add(this.lblHamburguesaSimple);
+            this.gbHamburguesas.Controls.Add(this.lblPreciosHamburguesas);
+            this.gbHamburguesas.Controls.Add(this.checkBoxDobleHdeVeggie);
+            this.gbHamburguesas.Controls.Add(this.checkBoxDobleHdePollo);
+            this.gbHamburguesas.Controls.Add(this.checkBoxDobleHdeCarne);
+            this.gbHamburguesas.Controls.Add(this.checkBoxAderezoHdeVeggie);
+            this.gbHamburguesas.Controls.Add(this.checkBoxAderezoHdePollo);
+            this.gbHamburguesas.Controls.Add(this.checkBoxAderezoHdeCarne);
+            this.gbHamburguesas.Controls.Add(this.numericUpDownHamburguesaVeggie);
+            this.gbHamburguesas.Controls.Add(this.numericUpDownHamburguesaDePollo);
+            this.gbHamburguesas.Controls.Add(this.numericUpDownHamburguesaDeCarne);
+            this.gbHamburguesas.Controls.Add(this.btnAgregarHamburguesas);
+            this.gbHamburguesas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbHamburguesas.Location = new System.Drawing.Point(210, 36);
+            this.gbHamburguesas.Name = "gbHamburguesas";
+            this.gbHamburguesas.Size = new System.Drawing.Size(635, 132);
+            this.gbHamburguesas.TabIndex = 9;
+            this.gbHamburguesas.TabStop = false;
+            this.gbHamburguesas.Text = "Hamburguesas";
+            this.gbHamburguesas.Visible = false;
+            // 
+            // lblHdeVeggan
+            // 
+            this.lblHdeVeggan.AutoSize = true;
+            this.lblHdeVeggan.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHdeVeggan.Location = new System.Drawing.Point(31, 84);
+            this.lblHdeVeggan.Name = "lblHdeVeggan";
+            this.lblHdeVeggan.Size = new System.Drawing.Size(60, 19);
+            this.lblHdeVeggan.TabIndex = 29;
+            this.lblHdeVeggan.Text = "Veggan";
+            // 
+            // lblHdePollo
+            // 
+            this.lblHdePollo.AutoSize = true;
+            this.lblHdePollo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHdePollo.Location = new System.Drawing.Point(31, 64);
+            this.lblHdePollo.Name = "lblHdePollo";
+            this.lblHdePollo.Size = new System.Drawing.Size(44, 19);
+            this.lblHdePollo.TabIndex = 28;
+            this.lblHdePollo.Text = "Pollo";
+            // 
+            // lblHdeCarne
+            // 
+            this.lblHdeCarne.AutoSize = true;
+            this.lblHdeCarne.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHdeCarne.Location = new System.Drawing.Point(31, 38);
+            this.lblHdeCarne.Name = "lblHdeCarne";
+            this.lblHdeCarne.Size = new System.Drawing.Size(48, 19);
+            this.lblHdeCarne.TabIndex = 27;
+            this.lblHdeCarne.Text = "Carne";
+            // 
+            // txtCodigoHdeVeggie
+            // 
+            this.txtCodigoHdeVeggie.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtCodigoHdeVeggie.Location = new System.Drawing.Point(388, 88);
+            this.txtCodigoHdeVeggie.Name = "txtCodigoHdeVeggie";
+            this.txtCodigoHdeVeggie.Size = new System.Drawing.Size(46, 25);
+            this.txtCodigoHdeVeggie.TabIndex = 26;
+            this.txtCodigoHdeVeggie.Text = "003";
+            // 
+            // lblCodigoHdeVeggie
+            // 
+            this.lblCodigoHdeVeggie.AutoSize = true;
+            this.lblCodigoHdeVeggie.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCodigoHdeVeggie.Location = new System.Drawing.Point(316, 90);
+            this.lblCodigoHdeVeggie.Name = "lblCodigoHdeVeggie";
+            this.lblCodigoHdeVeggie.Size = new System.Drawing.Size(66, 19);
+            this.lblCodigoHdeVeggie.TabIndex = 25;
+            this.lblCodigoHdeVeggie.Text = "Codigo: ";
+            // 
+            // txtCodigoHdePollo
+            // 
+            this.txtCodigoHdePollo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtCodigoHdePollo.Location = new System.Drawing.Point(388, 62);
+            this.txtCodigoHdePollo.Name = "txtCodigoHdePollo";
+            this.txtCodigoHdePollo.Size = new System.Drawing.Size(46, 25);
+            this.txtCodigoHdePollo.TabIndex = 24;
+            this.txtCodigoHdePollo.Text = "002";
+            // 
+            // lblCodigoHdePollo
+            // 
+            this.lblCodigoHdePollo.AutoSize = true;
+            this.lblCodigoHdePollo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCodigoHdePollo.Location = new System.Drawing.Point(316, 65);
+            this.lblCodigoHdePollo.Name = "lblCodigoHdePollo";
+            this.lblCodigoHdePollo.Size = new System.Drawing.Size(66, 19);
+            this.lblCodigoHdePollo.TabIndex = 23;
+            this.lblCodigoHdePollo.Text = "Codigo: ";
+            // 
+            // txtCodigoHdeCarne
+            // 
+            this.txtCodigoHdeCarne.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtCodigoHdeCarne.Location = new System.Drawing.Point(388, 36);
+            this.txtCodigoHdeCarne.Name = "txtCodigoHdeCarne";
+            this.txtCodigoHdeCarne.Size = new System.Drawing.Size(46, 25);
+            this.txtCodigoHdeCarne.TabIndex = 22;
+            this.txtCodigoHdeCarne.Text = "001";
+            // 
+            // lblCodigoHdeCarne
+            // 
+            this.lblCodigoHdeCarne.AutoSize = true;
+            this.lblCodigoHdeCarne.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCodigoHdeCarne.Location = new System.Drawing.Point(316, 36);
+            this.lblCodigoHdeCarne.Name = "lblCodigoHdeCarne";
+            this.lblCodigoHdeCarne.Size = new System.Drawing.Size(66, 19);
+            this.lblCodigoHdeCarne.TabIndex = 21;
+            this.lblCodigoHdeCarne.Text = "Codigo: ";
+            // 
+            // txtHamburguesadoble
+            // 
+            this.txtHamburguesadoble.Location = new System.Drawing.Point(519, 68);
+            this.txtHamburguesadoble.Name = "txtHamburguesadoble";
+            this.txtHamburguesadoble.Size = new System.Drawing.Size(46, 29);
+            this.txtHamburguesadoble.TabIndex = 20;
+            this.txtHamburguesadoble.Text = "800";
+            // 
+            // txtHamburguesaSimple
+            // 
+            this.txtHamburguesaSimple.Location = new System.Drawing.Point(519, 38);
+            this.txtHamburguesaSimple.Name = "txtHamburguesaSimple";
+            this.txtHamburguesaSimple.Size = new System.Drawing.Size(46, 29);
+            this.txtHamburguesaSimple.TabIndex = 19;
+            this.txtHamburguesaSimple.Text = "500";
+            // 
+            // lblHamburguesaDoble
+            // 
+            this.lblHamburguesaDoble.AutoSize = true;
+            this.lblHamburguesaDoble.Location = new System.Drawing.Point(446, 67);
+            this.lblHamburguesaDoble.Name = "lblHamburguesaDoble";
+            this.lblHamburguesaDoble.Size = new System.Drawing.Size(60, 21);
+            this.lblHamburguesaDoble.TabIndex = 18;
+            this.lblHamburguesaDoble.Text = "Doble:";
+            // 
+            // lblHamburguesaSimple
+            // 
+            this.lblHamburguesaSimple.AutoSize = true;
+            this.lblHamburguesaSimple.Location = new System.Drawing.Point(446, 46);
+            this.lblHamburguesaSimple.Name = "lblHamburguesaSimple";
+            this.lblHamburguesaSimple.Size = new System.Drawing.Size(67, 21);
+            this.lblHamburguesaSimple.TabIndex = 17;
+            this.lblHamburguesaSimple.Text = "Simple:";
+            // 
+            // lblPreciosHamburguesas
+            // 
+            this.lblPreciosHamburguesas.AutoSize = true;
+            this.lblPreciosHamburguesas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lblPreciosHamburguesas.Location = new System.Drawing.Point(510, 14);
+            this.lblPreciosHamburguesas.Name = "lblPreciosHamburguesas";
+            this.lblPreciosHamburguesas.Size = new System.Drawing.Size(65, 21);
+            this.lblPreciosHamburguesas.TabIndex = 16;
+            this.lblPreciosHamburguesas.Text = "Precios";
+            // 
+            // checkBoxDobleHdeVeggie
+            // 
+            this.checkBoxDobleHdeVeggie.AutoSize = true;
+            this.checkBoxDobleHdeVeggie.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxDobleHdeVeggie.Location = new System.Drawing.Point(248, 87);
+            this.checkBoxDobleHdeVeggie.Name = "checkBoxDobleHdeVeggie";
+            this.checkBoxDobleHdeVeggie.Size = new System.Drawing.Size(68, 23);
+            this.checkBoxDobleHdeVeggie.TabIndex = 15;
+            this.checkBoxDobleHdeVeggie.Text = "Doble";
+            this.checkBoxDobleHdeVeggie.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxDobleHdePollo
+            // 
+            this.checkBoxDobleHdePollo.AutoSize = true;
+            this.checkBoxDobleHdePollo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxDobleHdePollo.Location = new System.Drawing.Point(248, 60);
+            this.checkBoxDobleHdePollo.Name = "checkBoxDobleHdePollo";
+            this.checkBoxDobleHdePollo.Size = new System.Drawing.Size(68, 23);
+            this.checkBoxDobleHdePollo.TabIndex = 14;
+            this.checkBoxDobleHdePollo.Text = "Doble";
+            this.checkBoxDobleHdePollo.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxDobleHdeCarne
+            // 
+            this.checkBoxDobleHdeCarne.AutoSize = true;
+            this.checkBoxDobleHdeCarne.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxDobleHdeCarne.Location = new System.Drawing.Point(248, 36);
+            this.checkBoxDobleHdeCarne.Name = "checkBoxDobleHdeCarne";
+            this.checkBoxDobleHdeCarne.Size = new System.Drawing.Size(68, 23);
+            this.checkBoxDobleHdeCarne.TabIndex = 13;
+            this.checkBoxDobleHdeCarne.Text = "Doble";
+            this.checkBoxDobleHdeCarne.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxAderezoHdeVeggie
+            // 
+            this.checkBoxAderezoHdeVeggie.AutoSize = true;
+            this.checkBoxAderezoHdeVeggie.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxAderezoHdeVeggie.Location = new System.Drawing.Point(157, 87);
+            this.checkBoxAderezoHdeVeggie.Name = "checkBoxAderezoHdeVeggie";
+            this.checkBoxAderezoHdeVeggie.Size = new System.Drawing.Size(85, 23);
+            this.checkBoxAderezoHdeVeggie.TabIndex = 12;
+            this.checkBoxAderezoHdeVeggie.Text = "Aderezo";
+            this.checkBoxAderezoHdeVeggie.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxAderezoHdePollo
+            // 
+            this.checkBoxAderezoHdePollo.AutoSize = true;
+            this.checkBoxAderezoHdePollo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxAderezoHdePollo.Location = new System.Drawing.Point(157, 60);
+            this.checkBoxAderezoHdePollo.Name = "checkBoxAderezoHdePollo";
+            this.checkBoxAderezoHdePollo.Size = new System.Drawing.Size(85, 23);
+            this.checkBoxAderezoHdePollo.TabIndex = 11;
+            this.checkBoxAderezoHdePollo.Text = "Aderezo";
+            this.checkBoxAderezoHdePollo.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxAderezoHdeCarne
+            // 
+            this.checkBoxAderezoHdeCarne.AutoSize = true;
+            this.checkBoxAderezoHdeCarne.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxAderezoHdeCarne.Location = new System.Drawing.Point(157, 36);
+            this.checkBoxAderezoHdeCarne.Name = "checkBoxAderezoHdeCarne";
+            this.checkBoxAderezoHdeCarne.Size = new System.Drawing.Size(85, 23);
+            this.checkBoxAderezoHdeCarne.TabIndex = 10;
+            this.checkBoxAderezoHdeCarne.Text = "Aderezo";
+            this.checkBoxAderezoHdeCarne.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDownHamburguesaVeggie
+            // 
+            this.numericUpDownHamburguesaVeggie.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDownHamburguesaVeggie.Location = new System.Drawing.Point(103, 87);
+            this.numericUpDownHamburguesaVeggie.Name = "numericUpDownHamburguesaVeggie";
+            this.numericUpDownHamburguesaVeggie.Size = new System.Drawing.Size(48, 25);
+            this.numericUpDownHamburguesaVeggie.TabIndex = 8;
+            // 
+            // numericUpDownHamburguesaDePollo
+            // 
+            this.numericUpDownHamburguesaDePollo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDownHamburguesaDePollo.Location = new System.Drawing.Point(103, 62);
+            this.numericUpDownHamburguesaDePollo.Name = "numericUpDownHamburguesaDePollo";
+            this.numericUpDownHamburguesaDePollo.Size = new System.Drawing.Size(48, 25);
+            this.numericUpDownHamburguesaDePollo.TabIndex = 7;
+            // 
+            // numericUpDownHamburguesaDeCarne
+            // 
+            this.numericUpDownHamburguesaDeCarne.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDownHamburguesaDeCarne.Location = new System.Drawing.Point(103, 38);
+            this.numericUpDownHamburguesaDeCarne.Name = "numericUpDownHamburguesaDeCarne";
+            this.numericUpDownHamburguesaDeCarne.Size = new System.Drawing.Size(48, 25);
+            this.numericUpDownHamburguesaDeCarne.TabIndex = 6;
+            // 
+            // btnAgregarHamburguesas
+            // 
+            this.btnAgregarHamburguesas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarHamburguesas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAgregarHamburguesas.Location = new System.Drawing.Point(548, 103);
+            this.btnAgregarHamburguesas.Name = "btnAgregarHamburguesas";
+            this.btnAgregarHamburguesas.Size = new System.Drawing.Size(87, 29);
+            this.btnAgregarHamburguesas.TabIndex = 2;
+            this.btnAgregarHamburguesas.Text = "Agregar";
+            this.btnAgregarHamburguesas.UseVisualStyleBackColor = true;
+            this.btnAgregarHamburguesas.Click += new System.EventHandler(this.btnAgregarHamburguesas_Click);
+            // 
+            // gbSugerencia2
+            // 
+            this.gbSugerencia2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.gbSugerencia2.Controls.Add(this.numericUpDownSugerencia);
+            this.gbSugerencia2.Controls.Add(this.lblSugerencia2);
+            this.gbSugerencia2.Controls.Add(this.btnAgregarSugerencia);
+            this.gbSugerencia2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbSugerencia2.Location = new System.Drawing.Point(273, 453);
+            this.gbSugerencia2.Name = "gbSugerencia2";
+            this.gbSugerencia2.Size = new System.Drawing.Size(227, 112);
+            this.gbSugerencia2.TabIndex = 11;
+            this.gbSugerencia2.TabStop = false;
+            this.gbSugerencia2.Text = "Sugerencia";
+            this.gbSugerencia2.Visible = false;
+            // 
+            // numericUpDownSugerencia
+            // 
+            this.numericUpDownSugerencia.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDownSugerencia.Location = new System.Drawing.Point(169, 33);
+            this.numericUpDownSugerencia.Name = "numericUpDownSugerencia";
+            this.numericUpDownSugerencia.Size = new System.Drawing.Size(49, 25);
+            this.numericUpDownSugerencia.TabIndex = 7;
+            // 
+            // lblSugerencia2
+            // 
+            this.lblSugerencia2.AutoSize = true;
+            this.lblSugerencia2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblSugerencia2.Location = new System.Drawing.Point(6, 34);
+            this.lblSugerencia2.Name = "lblSugerencia2";
+            this.lblSugerencia2.Size = new System.Drawing.Size(129, 21);
+            this.lblSugerencia2.TabIndex = 4;
+            this.lblSugerencia2.Text = "Papas POOmBA";
+            // 
+            // btnAgregarSugerencia
+            // 
+            this.btnAgregarSugerencia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarSugerencia.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAgregarSugerencia.Location = new System.Drawing.Point(20, 58);
+            this.btnAgregarSugerencia.Name = "btnAgregarSugerencia";
+            this.btnAgregarSugerencia.Size = new System.Drawing.Size(103, 29);
+            this.btnAgregarSugerencia.TabIndex = 2;
+            this.btnAgregarSugerencia.Text = "Agregar";
+            this.btnAgregarSugerencia.UseVisualStyleBackColor = true;
+            // 
+            // gbPedido
+            // 
+            this.gbPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gbPedido.Controls.Add(this.listBoxPedido);
+            this.gbPedido.Controls.Add(this.btnConfirmarPedido);
+            this.gbPedido.Dock = System.Windows.Forms.DockStyle.Right;
+            this.gbPedido.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbPedido.Location = new System.Drawing.Point(851, 0);
+            this.gbPedido.Name = "gbPedido";
+            this.gbPedido.Size = new System.Drawing.Size(333, 758);
+            this.gbPedido.TabIndex = 2;
+            this.gbPedido.TabStop = false;
+            this.gbPedido.Text = "Pedido";
+            // 
+            // listBoxPedido
+            // 
+            this.listBoxPedido.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listBoxPedido.FormattingEnabled = true;
+            this.listBoxPedido.ItemHeight = 17;
+            this.listBoxPedido.Location = new System.Drawing.Point(6, 108);
+            this.listBoxPedido.Name = "listBoxPedido";
+            this.listBoxPedido.Size = new System.Drawing.Size(321, 310);
+            this.listBoxPedido.TabIndex = 4;
+            // 
+            // btnConfirmarPedido
+            // 
+            this.btnConfirmarPedido.BackColor = System.Drawing.Color.Lime;
+            this.btnConfirmarPedido.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnConfirmarPedido.Location = new System.Drawing.Point(126, 439);
+            this.btnConfirmarPedido.Name = "btnConfirmarPedido";
+            this.btnConfirmarPedido.Size = new System.Drawing.Size(105, 32);
+            this.btnConfirmarPedido.TabIndex = 3;
+            this.btnConfirmarPedido.Text = "CONFIRMAR";
+            this.btnConfirmarPedido.UseVisualStyleBackColor = false;
+            // 
+            // gbSugerencia1
+            // 
+            this.gbSugerencia1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gbSugerencia1.Controls.Add(this.lblSugerencia1);
+            this.gbSugerencia1.Controls.Add(this.btnSugerencia);
+            this.gbSugerencia1.Controls.Add(this.gbSugerencia2);
+            this.gbSugerencia1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gbSugerencia1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbSugerencia1.Location = new System.Drawing.Point(327, 96);
+            this.gbSugerencia1.Name = "gbSugerencia1";
+            this.gbSugerencia1.Size = new System.Drawing.Size(500, 565);
+            this.gbSugerencia1.TabIndex = 3;
+            this.gbSugerencia1.TabStop = false;
+            this.gbSugerencia1.Text = "Sugerencia del Cheff";
+            // 
+            // lblSugerencia1
+            // 
+            this.lblSugerencia1.AutoSize = true;
+            this.lblSugerencia1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblSugerencia1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblSugerencia1.Location = new System.Drawing.Point(23, 123);
+            this.lblSugerencia1.Name = "lblSugerencia1";
+            this.lblSugerencia1.Size = new System.Drawing.Size(471, 37);
+            this.lblSugerencia1.TabIndex = 1;
+            this.lblSugerencia1.Text = "¡¡¡Probá nuestras Papas POOmBA!!!";
+            // 
+            // btnSugerencia
+            // 
+            this.btnSugerencia.BackgroundImage = global::ComidasRapidasPOOmBA.Properties.Resources.Papas_POOmBA_ParaSugerencia;
+            this.btnSugerencia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSugerencia.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSugerencia.ForeColor = System.Drawing.Color.Lime;
+            this.btnSugerencia.Location = new System.Drawing.Point(82, 123);
+            this.btnSugerencia.Name = "btnSugerencia";
+            this.btnSugerencia.Size = new System.Drawing.Size(349, 255);
+            this.btnSugerencia.TabIndex = 0;
+            this.btnSugerencia.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSugerencia.UseVisualStyleBackColor = true;
+            this.btnSugerencia.Click += new System.EventHandler(this.btnSugerencia_Click);
             // 
             // FormularioMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 692);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(1184, 758);
+            this.Controls.Add(this.gbGuarniciones);
+            this.Controls.Add(this.gbPostres);
+            this.Controls.Add(this.gbBebidas);
+            this.Controls.Add(this.gbEnsaladas);
+            this.Controls.Add(this.gbHamburguesas);
+            this.Controls.Add(this.gbPedido);
+            this.Controls.Add(this.gbMenuCompleto);
+            this.Controls.Add(this.gbSugerencia1);
             this.Name = "FormularioMenu";
-            this.Text = "FormularioPrueba";
-            this.Load += new System.EventHandler(this.FormularioMenu_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).EndInit();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.Text = "FormularioMenu";
+            this.gbMenuCompleto.ResumeLayout(false);
+            this.gbMenuCompleto.PerformLayout();
+            this.gbPostres.ResumeLayout(false);
+            this.gbPostres.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQueremosFlan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBudinDePan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHelado)).EndInit();
+            this.gbBebidas.ResumeLayout(false);
+            this.gbBebidas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCerveza)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAguaMineral)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGaseosa)).EndInit();
+            this.gbGuarniciones.ResumeLayout(false);
+            this.gbGuarniciones.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPapasFritasPoomba)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPapasFritasConCheddar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPapasFritas)).EndInit();
+            this.gbEnsaladas.ResumeLayout(false);
+            this.gbEnsaladas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownensaladaItalianaVegana)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownensaladaGriega)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEnsaladaCaprese)).EndInit();
+            this.gbHamburguesas.ResumeLayout(false);
+            this.gbHamburguesas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHamburguesaVeggie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHamburguesaDePollo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHamburguesaDeCarne)).EndInit();
+            this.gbSugerencia2.ResumeLayout(false);
+            this.gbSugerencia2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSugerencia)).EndInit();
+            this.gbPedido.ResumeLayout(false);
+            this.gbSugerencia1.ResumeLayout(false);
+            this.gbSugerencia1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_Hamburguesas;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.NumericUpDown numericUpDown14;
-        private System.Windows.Forms.NumericUpDown numericUpDown15;
-        private System.Windows.Forms.NumericUpDown numericUpDown16;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.NumericUpDown numericUpDown11;
-        private System.Windows.Forms.NumericUpDown numericUpDown12;
-        private System.Windows.Forms.NumericUpDown numericUpDown13;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.NumericUpDown numericUpDown8;
-        private System.Windows.Forms.NumericUpDown numericUpDown9;
-        private System.Windows.Forms.NumericUpDown numericUpDown10;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
-        private System.Windows.Forms.NumericUpDown numericUpDown7;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox gbMenuCompleto;
+        private System.Windows.Forms.GroupBox gbPedido;
+        private System.Windows.Forms.Button btnHamburguesas;
+        private System.Windows.Forms.Button btnEnsalada;
+        private System.Windows.Forms.Button btnConfirmarPedido;
+        private System.Windows.Forms.Label lblEnsaladas;
+        private System.Windows.Forms.Label lblHamburgesas;
+        private System.Windows.Forms.GroupBox gbHamburguesas;
+        private System.Windows.Forms.Button btnAgregarHamburguesas;
+        private System.Windows.Forms.NumericUpDown numericUpDownHamburguesaVeggie;
+        private System.Windows.Forms.NumericUpDown numericUpDownHamburguesaDePollo;
+        private System.Windows.Forms.NumericUpDown numericUpDownHamburguesaDeCarne;
+        private System.Windows.Forms.Button btnPostres;
+        private System.Windows.Forms.Button btnBebidas;
+        private System.Windows.Forms.GroupBox gbGuarniciones;
+        private System.Windows.Forms.GroupBox gbBebidas;
+        private System.Windows.Forms.NumericUpDown numericUpDownCerveza;
+        private System.Windows.Forms.NumericUpDown numericUpDownAguaMineral;
+        private System.Windows.Forms.NumericUpDown numericUpDownGaseosa;
+        private System.Windows.Forms.Label lblCerveza;
+        private System.Windows.Forms.Label lblAguaMineral;
+        private System.Windows.Forms.Label lblGaseosa;
+        private System.Windows.Forms.Button btnAgregarBebidas;
+        private System.Windows.Forms.NumericUpDown numericUpDownPapasFritasPoomba;
+        private System.Windows.Forms.NumericUpDown numericUpDownPapasFritasConCheddar;
+        private System.Windows.Forms.NumericUpDown numericUpDownPapasFritas;
+        private System.Windows.Forms.Label lblPapasFritasPoomba;
+        private System.Windows.Forms.Label lblPapasFritasConCheddar;
+        private System.Windows.Forms.Label lblPapasFritas;
+        private System.Windows.Forms.GroupBox gbEnsaladas;
+        private System.Windows.Forms.GroupBox gbPostres;
+        private System.Windows.Forms.NumericUpDown numericUpDownQueremosFlan;
+        private System.Windows.Forms.NumericUpDown numericUpDownBudinDePan;
+        private System.Windows.Forms.NumericUpDown numericUpDownHelado;
+        private System.Windows.Forms.Label lblQueremosFlan;
+        private System.Windows.Forms.Label lblBudinDePan;
+        private System.Windows.Forms.Label lblHelado;
+        private System.Windows.Forms.Button btnAgregarPostres;
+        private System.Windows.Forms.NumericUpDown numericUpDownensaladaItalianaVegana;
+        private System.Windows.Forms.NumericUpDown numericUpDownensaladaGriega;
+        private System.Windows.Forms.NumericUpDown numericUpDownEnsaladaCaprese;
+        private System.Windows.Forms.Label lblEnsaladaItalianaVegana;
+        private System.Windows.Forms.Label lblEnsaladaGriega;
+        private System.Windows.Forms.Label lblEnsaladaCaprese;
+        private System.Windows.Forms.Button btnAgregarEnsaladas;
+        private System.Windows.Forms.Label lblPostres;
+        private System.Windows.Forms.Label lblBebidas;
+        private System.Windows.Forms.Button btnGuarniciones;
+        private System.Windows.Forms.Button btnAgregarGuarniciones;
+        private System.Windows.Forms.Label lblGuarniciones;
+        private System.Windows.Forms.GroupBox gbSugerencia1;
+        private System.Windows.Forms.Button btnSugerencia;
+        private System.Windows.Forms.Label lblSugerencia1;
+        private System.Windows.Forms.GroupBox gbSugerencia2;
+        private System.Windows.Forms.NumericUpDown numericUpDownSugerencia;
+        private System.Windows.Forms.Label lblSugerencia2;
+        private System.Windows.Forms.Button btnAgregarSugerencia;
+        private System.Windows.Forms.ListBox listBoxPedido;
+        private System.Windows.Forms.CheckBox checkBoxAderezoHdeVeggie;
+        private System.Windows.Forms.CheckBox checkBoxAderezoHdePollo;
+        private System.Windows.Forms.CheckBox checkBoxAderezoHdeCarne;
+        private System.Windows.Forms.Label lblHamburguesaSimple;
+        private System.Windows.Forms.Label lblPreciosHamburguesas;
+        private System.Windows.Forms.CheckBox checkBoxDobleHdeVeggie;
+        private System.Windows.Forms.CheckBox checkBoxDobleHdePollo;
+        private System.Windows.Forms.CheckBox checkBoxDobleHdeCarne;
+        private System.Windows.Forms.TextBox txtHamburguesadoble;
+        private System.Windows.Forms.TextBox txtHamburguesaSimple;
+        private System.Windows.Forms.Label lblHamburguesaDoble;
+        private System.Windows.Forms.TextBox txtCodigoHdeCarne;
+        private System.Windows.Forms.Label lblCodigoHdeCarne;
+        private System.Windows.Forms.TextBox txtCodigoHdeVeggie;
+        private System.Windows.Forms.Label lblCodigoHdeVeggie;
+        private System.Windows.Forms.TextBox txtCodigoHdePollo;
+        private System.Windows.Forms.Label lblCodigoHdePollo;
+        private System.Windows.Forms.Label lblHdeVeggan;
+        private System.Windows.Forms.Label lblHdePollo;
+        private System.Windows.Forms.Label lblHdeCarne;
     }
 }

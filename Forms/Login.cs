@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComidasRapidasPOOmBA.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,29 +17,26 @@ namespace ComidasRapidasPOOmBA
         {
             InitializeComponent();
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        
+        private void button1_Click(object sender, EventArgs e)
         {
+           
+            var PantallaInicial = new FormularioMenu();
+            PantallaInicial.Show();
 
+        //List<Detalle> ListaD = new List<Detalle>();
+        //Pedido pedido = new Pedido(1, ListaD);
+            
+            
+            
         }
-
+        
+        
+        //*******************ver de que es esto
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //var menuCompleto = new FormularioMenu();
-            //menuCompleto.Show();
-            var PantallaInicial = new FormularioMenu();
-            PantallaInicial.Show();
-            
-        }
+        //*************************************
     }
 }
