@@ -8,12 +8,15 @@
 
   <ItemGroup>
     <Compile Remove="TicketsImpresos\**" />
+    <Compile Remove="Tickets\**" />
     <EmbeddedResource Remove="TicketsImpresos\**" />
+    <EmbeddedResource Remove="Tickets\**" />
     <None Remove="TicketsImpresos\**" />
+    <None Remove="Tickets\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Tickets\" />
+    <Folder Include="ImpresionTickets\" />
   </ItemGroup>
 
 </Project>

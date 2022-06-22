@@ -10,7 +10,7 @@ namespace ComidasRapidasPOOmBA.Clases
     {
         public Impresora(Ticket ticket, Pedido pedido)
         {
-            var pathArchivo = "..\\Tickets\\";
+            var pathArchivo = "..\\ImpresionTickets\\";
             var nomArchivo = pathArchivo + "Ticket_" + ticket.IdTicket + ".txt";
             var archivo = new System.IO.StreamWriter(nomArchivo);
 
