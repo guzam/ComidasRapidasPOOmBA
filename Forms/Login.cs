@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ComidasRapidasPOOmBA.Clases;
+using ComidasRapidasPOOmBA.Clases.Productos;
+using ComidasRapidasPOOmBA.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,13 +35,44 @@ namespace ComidasRapidasPOOmBA
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            //var menuCompleto = new FormularioMenu();
-            //menuCompleto.Show();
-            var PantallaInicial = new FormularioMenu();
-            PantallaInicial.Show();
-            
+
+        }
+
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            var registroNuevo = new registro();
+            registroNuevo.Show();
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {          
+            var objetobd = new BDInterna();
+            var lista = objetobd.initListaUsuarios();
+
+            var usuarioIngresando = new Usuario();
+            usuarioIngresando.Usu = txtUsuario.Text;
+            usuarioIngresando.Password = txtPass.Text;
+
+            var user = lista.Find(item => item.Usu == usuarioIngresando.Usu);
+            if (user == null) MessageBox.Show("Usuario/Password incorrecto. Cod 1");
+            else        
+            {
+                if (user.Password == usuarioIngresando.Password)
+                {
+                    var menu = new Menu();
+                    menu.Show();
+                } 
+                else MessageBox.Show("Usuario/Password incorrecto.Cod 2"); 
+            }
+                                            
+        }
+
+        private void btnAcercaDe_Click(object sender, EventArgs e)
+        {
+            var nosotros = new AcercaDe();
+            nosotros.Show();
         }
     }
 }
