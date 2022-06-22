@@ -8,7 +8,7 @@ namespace ComidasRapidasPOOmBA.Clases
 {
     public class Detalle
     {
-        int cantidad;
+        public int cantidad;
         Producto item;
         double subtotal;
 

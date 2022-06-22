@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ComidasRapidasPOOmBA.Clases
 {
-    internal class Pedido
+    public class Pedido
     {
         int idPedido;
         List<Detalle> listaDetalle;
