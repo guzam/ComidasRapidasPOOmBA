@@ -134,6 +134,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Registrase";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblConfirmar
             // 
@@ -172,6 +173,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(183, 30);
             this.txtUsuario.TabIndex = 11;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // registro
             // 

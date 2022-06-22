@@ -37,6 +37,7 @@ namespace ComidasRapidasPOOmBA
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.btnRegistro = new System.Windows.Forms.Button();
+            this.btnAcercaDe = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -115,6 +116,16 @@ namespace ComidasRapidasPOOmBA
             this.btnRegistro.UseVisualStyleBackColor = true;
             this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
             // 
+            // btnAcercaDe
+            // 
+            this.btnAcercaDe.Location = new System.Drawing.Point(174, 398);
+            this.btnAcercaDe.Name = "btnAcercaDe";
+            this.btnAcercaDe.Size = new System.Drawing.Size(94, 29);
+            this.btnAcercaDe.TabIndex = 8;
+            this.btnAcercaDe.Text = "Acerca de";
+            this.btnAcercaDe.UseVisualStyleBackColor = true;
+            this.btnAcercaDe.Click += new System.EventHandler(this.btnAcercaDe_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -123,6 +134,7 @@ namespace ComidasRapidasPOOmBA
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(808, 454);
+            this.Controls.Add(this.btnAcercaDe);
             this.Controls.Add(this.btnRegistro);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUsuario);
@@ -146,6 +158,7 @@ namespace ComidasRapidasPOOmBA
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Button btnRegistro;
+        private System.Windows.Forms.Button btnAcercaDe;
     }
 }
 

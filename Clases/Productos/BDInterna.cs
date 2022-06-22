@@ -8,6 +8,7 @@ namespace ComidasRapidasPOOmBA.Clases.Productos
 {
     public class BDInterna
     {
+        List<Usuario> usuariosComunes = new List<Usuario>();
         public List<Ingrediente> initListaIngredientes()
         {
             List<Ingrediente> listIngredientes = new List<Ingrediente>()
@@ -23,12 +24,26 @@ namespace ComidasRapidasPOOmBA.Clases.Productos
             new Ingrediente(){IdIngrediente = 09, Nombre = "Tomate", Tipo = "redondo", Cantidad = 200},
             new Ingrediente(){IdIngrediente = 10, Nombre = "Huevo", Tipo = "", Cantidad = 200},
             new Ingrediente(){IdIngrediente = 11, Nombre = "Queso", Tipo = "", Cantidad = 200}
-
             };
-
             return listIngredientes;
         }
+        public List<Usuario> initListaUsuarios()
+        {
+            List<Usuario> usuariosAdmin = new List<Usuario>();
 
+            usuariosAdmin.Add(new Usuario("Lucas", "luc012", "admin", "lucas@gmail.com", 41, "1234"));
+            usuariosAdmin.Add(new Usuario("Gustavo", "guszam", "admin", "gustavo@gmail.com", 36, "1234"));
+            usuariosAdmin.Add(new Usuario("Monica", "moni01", "admin", "monica@gmail.com", 36, "1234"));
+            usuariosAdmin.Add(new Usuario("Fede", "fede33", "admin", "fede@gmail.com", 41, "1234"));
+
+            return usuariosAdmin;                     
+        }
+        public int agregarUsuarios(Usuario usu)
+        {
+            usuariosComunes.Add(usu);
+            
+            return 1;            
+
+        }
     }
-
 }
