@@ -111,6 +111,7 @@ namespace ComidasRapidasPOOmBA.Forms
             // 
             // btnConfirmarPago
             // 
+            this.btnConfirmarPago.Enabled = false;
             this.btnConfirmarPago.Location = new System.Drawing.Point(422, 414);
             this.btnConfirmarPago.Name = "btnConfirmarPago";
             this.btnConfirmarPago.Size = new System.Drawing.Size(131, 37);
@@ -146,6 +147,7 @@ namespace ComidasRapidasPOOmBA.Forms
             this.txtCodSeguridad.Size = new System.Drawing.Size(53, 23);
             this.txtCodSeguridad.TabIndex = 11;
             this.txtCodSeguridad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCodSeguridad.TextChanged += new System.EventHandler(this.txtCodSeguridad_TextChanged);
             // 
             // lblDNI
             // 
@@ -191,10 +193,12 @@ namespace ComidasRapidasPOOmBA.Forms
             // txtVencimiento
             // 
             this.txtVencimiento.Location = new System.Drawing.Point(365, 246);
-            this.txtVencimiento.MaxLength = 4;
+            this.txtVencimiento.MaxLength = 7;
             this.txtVencimiento.Name = "txtVencimiento";
-            this.txtVencimiento.Size = new System.Drawing.Size(53, 23);
+            this.txtVencimiento.Size = new System.Drawing.Size(55, 23);
             this.txtVencimiento.TabIndex = 6;
+            this.txtVencimiento.TextChanged += new System.EventHandler(this.txtVencimiento_TextChanged);
+            this.txtVencimiento.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtVencimiento_KeyDown);
             // 
             // txtNroTarjeta4
             // 
@@ -204,6 +208,8 @@ namespace ComidasRapidasPOOmBA.Forms
             this.txtNroTarjeta4.Size = new System.Drawing.Size(53, 23);
             this.txtNroTarjeta4.TabIndex = 5;
             this.txtNroTarjeta4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNroTarjeta4.TextChanged += new System.EventHandler(this.txtNroTarjeta4_TextChanged);
+            this.txtNroTarjeta4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroTarjeta4_KeyPress);
             // 
             // txtNroTarjeta3
             // 
@@ -213,6 +219,8 @@ namespace ComidasRapidasPOOmBA.Forms
             this.txtNroTarjeta3.Size = new System.Drawing.Size(53, 23);
             this.txtNroTarjeta3.TabIndex = 4;
             this.txtNroTarjeta3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNroTarjeta3.TextChanged += new System.EventHandler(this.txtNroTarjeta3_TextChanged);
+            this.txtNroTarjeta3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroTarjeta3_KeyPress);
             // 
             // txtNroTarjeta2
             // 
@@ -222,6 +230,8 @@ namespace ComidasRapidasPOOmBA.Forms
             this.txtNroTarjeta2.Size = new System.Drawing.Size(53, 23);
             this.txtNroTarjeta2.TabIndex = 3;
             this.txtNroTarjeta2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNroTarjeta2.TextChanged += new System.EventHandler(this.txtNroTarjeta2_TextChanged);
+            this.txtNroTarjeta2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroTarjeta2_KeyPress);
             // 
             // txtNroTarjeta1
             // 
@@ -231,7 +241,9 @@ namespace ComidasRapidasPOOmBA.Forms
             this.txtNroTarjeta1.Size = new System.Drawing.Size(56, 23);
             this.txtNroTarjeta1.TabIndex = 2;
             this.txtNroTarjeta1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtNroTarjeta1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtNroTarjeta1.TextChanged += new System.EventHandler(this.txtNroTarjeta1_TextChanged);
+            this.txtNroTarjeta1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNroTarjeta1_KeyDown);
+            this.txtNroTarjeta1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroTarjeta1_KeyPress);
             // 
             // pictureBox1
             // 
@@ -242,6 +254,7 @@ namespace ComidasRapidasPOOmBA.Forms
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblMensajeBCRA
             // 
