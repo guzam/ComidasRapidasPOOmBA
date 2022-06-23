@@ -84,6 +84,7 @@
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(183, 30);
             this.txtEdad.TabIndex = 2;
+            this.txtEdad.TextChanged += new System.EventHandler(this.txtEdad_TextChanged);
             // 
             // lblMail
             // 

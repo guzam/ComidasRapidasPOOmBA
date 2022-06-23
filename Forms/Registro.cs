@@ -53,8 +53,13 @@ namespace ComidasRapidasPOOmBA.Forms
             BDInterna bd = new BDInterna();
             bd.agregarUsuarios(usuarioPorPantalla);
 
-            var menu = new Menu();
-            menu.Show();
+            //var menu = new FormularioMenu();
+            //menu.Show();
+
+            var loguear = new Login();
+            MessageBox.Show("Se registro correctamente \n Verifica tu correo electrónico y busca el mensaje de confirmación \n Ingrese");
+            loguear.Show();
+            this.Close();
 
         }
 
@@ -62,6 +67,11 @@ namespace ComidasRapidasPOOmBA.Forms
         {
             //hacer comparacion para ver si ya existe ese usuario?
             Console.WriteLine();
+        }
+
+        private void txtEdad_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

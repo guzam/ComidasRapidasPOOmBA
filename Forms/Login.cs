@@ -43,6 +43,7 @@ namespace ComidasRapidasPOOmBA
         private void btnRegistro_Click(object sender, EventArgs e)
         {
             var registroNuevo = new registro();
+            this.Hide();
             registroNuevo.Show();
         }
 
@@ -61,8 +62,9 @@ namespace ComidasRapidasPOOmBA
             {
                 if (user.Password == usuarioIngresando.Password)
                 {
-                    var menu = new Menu();
+                    var menu = new FormularioMenu();
                     menu.Show();
+                    this.Hide();                  
                 } 
                 else MessageBox.Show("Usuario/Password incorrecto.Cod 2"); 
             }
