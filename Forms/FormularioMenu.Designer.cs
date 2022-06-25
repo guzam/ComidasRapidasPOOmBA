@@ -539,9 +539,9 @@ namespace ComidasRapidasPOOmBA
             this.gbEnsaladas.Controls.Add(this.lblEnsaladaCaprese);
             this.gbEnsaladas.Controls.Add(this.btnAgregarEnsaladas);
             this.gbEnsaladas.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.gbEnsaladas.Location = new System.Drawing.Point(261, 174);
+            this.gbEnsaladas.Location = new System.Drawing.Point(260, 174);
             this.gbEnsaladas.Name = "gbEnsaladas";
-            this.gbEnsaladas.Size = new System.Drawing.Size(287, 142);
+            this.gbEnsaladas.Size = new System.Drawing.Size(280, 142);
             this.gbEnsaladas.TabIndex = 10;
             this.gbEnsaladas.TabStop = false;
             this.gbEnsaladas.Text = "Ensaladas";
@@ -550,7 +550,7 @@ namespace ComidasRapidasPOOmBA
             // numericUpDownensaladaItalianaVegana
             // 
             this.numericUpDownensaladaItalianaVegana.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDownensaladaItalianaVegana.Location = new System.Drawing.Point(219, 68);
+            this.numericUpDownensaladaItalianaVegana.Location = new System.Drawing.Point(219, 69);
             this.numericUpDownensaladaItalianaVegana.Name = "numericUpDownensaladaItalianaVegana";
             this.numericUpDownensaladaItalianaVegana.Size = new System.Drawing.Size(52, 25);
             this.numericUpDownensaladaItalianaVegana.TabIndex = 8;
@@ -575,7 +575,7 @@ namespace ComidasRapidasPOOmBA
             // 
             this.lblEnsaladaItalianaVegana.AutoSize = true;
             this.lblEnsaladaItalianaVegana.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblEnsaladaItalianaVegana.Location = new System.Drawing.Point(17, 67);
+            this.lblEnsaladaItalianaVegana.Location = new System.Drawing.Point(17, 68);
             this.lblEnsaladaItalianaVegana.Name = "lblEnsaladaItalianaVegana";
             this.lblEnsaladaItalianaVegana.Size = new System.Drawing.Size(202, 21);
             this.lblEnsaladaItalianaVegana.TabIndex = 5;
@@ -595,7 +595,7 @@ namespace ComidasRapidasPOOmBA
             // 
             this.lblEnsaladaCaprese.AutoSize = true;
             this.lblEnsaladaCaprese.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblEnsaladaCaprese.Location = new System.Drawing.Point(17, 25);
+            this.lblEnsaladaCaprese.Location = new System.Drawing.Point(17, 29);
             this.lblEnsaladaCaprese.Name = "lblEnsaladaCaprese";
             this.lblEnsaladaCaprese.Size = new System.Drawing.Size(142, 21);
             this.lblEnsaladaCaprese.TabIndex = 3;
@@ -605,7 +605,7 @@ namespace ComidasRapidasPOOmBA
             // 
             this.btnAgregarEnsaladas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregarEnsaladas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAgregarEnsaladas.Location = new System.Drawing.Point(55, 91);
+            this.btnAgregarEnsaladas.Location = new System.Drawing.Point(525, 105);
             this.btnAgregarEnsaladas.Name = "btnAgregarEnsaladas";
             this.btnAgregarEnsaladas.Size = new System.Drawing.Size(104, 31);
             this.btnAgregarEnsaladas.TabIndex = 2;
@@ -932,7 +932,7 @@ namespace ComidasRapidasPOOmBA
             this.gbPedido.Controls.Add(this.btnConfirmarPedido);
             this.gbPedido.Dock = System.Windows.Forms.DockStyle.Right;
             this.gbPedido.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.gbPedido.Location = new System.Drawing.Point(851, 0);
+            this.gbPedido.Location = new System.Drawing.Point(1150, 0);
             this.gbPedido.Name = "gbPedido";
             this.gbPedido.Size = new System.Drawing.Size(333, 758);
             this.gbPedido.TabIndex = 2;
@@ -1005,7 +1005,7 @@ namespace ComidasRapidasPOOmBA
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1184, 758);
+            this.ClientSize = new System.Drawing.Size(1483, 758);
             this.Controls.Add(this.gbGuarniciones);
             this.Controls.Add(this.gbPostres);
             this.Controls.Add(this.gbBebidas);

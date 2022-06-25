@@ -17,9 +17,8 @@ namespace ComidasRapidasPOOmBA
     public partial class FormularioMenu : Form
     {
         public List<Detalle> ListaD = new List<Detalle>();
+        Pedido pedido = new Pedido(new List<Detalle>());//se crea el objeto pedido
         Hamburguesa hC, hP, hV, h;
-
-        Pedido pedido = new Pedido();//se crea el objeto pedido
 
         public FormularioMenu()
         {
@@ -134,7 +133,7 @@ namespace ComidasRapidasPOOmBA
                     hC.Aderezo = checkBoxAderezoHdeCarne.Text;
 
                 h = hC;
-                
+             
                 MessageBox.Show("Codigo: " + h.Codigo + "-" + "Nombre: " + h.Nombre + "-" + "Stock: " + h.Stock + "-" + "Precio individual: " + h.Precio + "-" + "Medallones: " + h.CantHamburguesas + "-" + "Tipo: " + h.Tipo + "-" + "Cod.Tamanio: " + h.CodTamamio + "-" + "Tamanio: " + h.Tamanio + "-" + "Aderezo: " + h.Aderezo);
 
                 var cant = (int)numericUpDownHamburguesaDeCarne.Value;//cantidad de hamburguesas
@@ -142,15 +141,23 @@ namespace ComidasRapidasPOOmBA
                 var detalle = new Detalle(cant, h);
                 
                 var subTotal = detalle.subtotalPorProducto(cant, h);
-                
-                
-                pedido.ListaDetalle = ListaD;
+
+                ListaD = pedido.ListaDetalle;
+                //pedido.ListaDetalle = ListaD;
 
                 pedido.ingresarAPedido(detalle);
                 MessageBox.Show("Subtotal:" + subTotal);
 
+
+                List<string> listAux = new List<string>();
+
+                foreach (var det in ListaD)
+                {
+                    listAux.Add("Cantidad: "+det.Cantidad + " " + det.Item.Nombre + " " + det.Subtotal);
+                }
+
                 listBoxPedido.DataSource = null;
-                listBoxPedido.DataSource = ListaD;
+                listBoxPedido.DataSource = listAux;
                 //Pedido_01.ListaDetalle.Add(detalle);
                 //var Total=Pedido_01.sumaTotal(Pedido_01);
                 //MessageBox.Show("Total:"+Total);
