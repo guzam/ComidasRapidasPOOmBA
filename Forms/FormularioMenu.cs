@@ -115,11 +115,13 @@ namespace ComidasRapidasPOOmBA
         }
 
 
+        //*********************************************************************************************************************ORIGINAL
+
         private void btnAgregarHamburguesas_Click(object sender, EventArgs e)
         {
             gbHamburguesas.Visible = false; //escondo group box
 
-            if(numericUpDownHamburguesaDeCarne.Value != 0)//si marco carne y el numero es > que cero
+            if (numericUpDownHamburguesaDeCarne.Value != 0)//si marco carne y el numero es > que cero
             {
                 int code = 1;
                 creoUnObjeto(code);//envio el codigo
@@ -133,13 +135,13 @@ namespace ComidasRapidasPOOmBA
                     hC.Aderezo = checkBoxAderezoHdeCarne.Text;
 
                 h = hC;
-             
+
                 MessageBox.Show("Codigo: " + h.Codigo + "-" + "Nombre: " + h.Nombre + "-" + "Stock: " + h.Stock + "-" + "Precio individual: " + h.Precio + "-" + "Medallones: " + h.CantHamburguesas + "-" + "Tipo: " + h.Tipo + "-" + "Cod.Tamanio: " + h.CodTamamio + "-" + "Tamanio: " + h.Tamanio + "-" + "Aderezo: " + h.Aderezo);
 
                 var cant = (int)numericUpDownHamburguesaDeCarne.Value;//cantidad de hamburguesas
 
                 var detalle = new Detalle(cant, h);
-                
+
                 var subTotal = detalle.subtotalPorProducto(cant, h);
 
                 ListaD = pedido.ListaDetalle;
@@ -153,7 +155,7 @@ namespace ComidasRapidasPOOmBA
 
                 foreach (var det in ListaD)
                 {
-                    listAux.Add("Cantidad: "+det.Cantidad + " " + det.Item.Nombre + " " + det.Subtotal);
+                    listAux.Add("Cantidad: " + det.Cantidad + " " + det.Item.Nombre + " " + det.Subtotal);
                 }
 
                 listBoxPedido.DataSource = null;
@@ -181,6 +183,7 @@ namespace ComidasRapidasPOOmBA
             //hp = metodoParaEvaluarSiCreoOnoUnObjeto(numericUpDownHamburguesaDePollo.Value, txtCodigoHp.Text);
             //hv = metodoParaEvaluarSiCreoOnoUnObjeto(numericUpDownHamburguesaVeggie.Value, txtCodigoHv.Text);
         }
+        ////********************************************************************************************************************ORIGINAL
     }
 }
 
