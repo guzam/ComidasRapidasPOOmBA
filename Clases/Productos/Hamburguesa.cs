@@ -8,12 +8,12 @@ namespace ComidasRapidasPOOmBA.Clases
 {
     public class Hamburguesa : Comida
     {
-        int cantHamburguesas;
+        int cantMedallones;
 
-        public int CantHamburguesas
+        public int CantMedallones
         {
-            get => cantHamburguesas;
-            set => cantHamburguesas = value;
+            get => cantMedallones;
+            set => cantMedallones = value;
         }
     }
 }

@@ -9,9 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-
-
 namespace ComidasRapidasPOOmBA
 {
     public partial class FormularioMenu : Form
@@ -19,171 +16,264 @@ namespace ComidasRapidasPOOmBA
         public List<Detalle> ListaD = new List<Detalle>();
         Pedido pedido = new Pedido(new List<Detalle>());//se crea el objeto pedido
         Hamburguesa hC, hP, hV, h;
-
         public FormularioMenu()
         {
             InitializeComponent();
         }
 
-        //**************ocultar groupbox cuando selecciono uno
-        public void ocultarGroupBoxMenoselSeleccionado(GroupBox abrir, GroupBox cerrar1, GroupBox cerrar2, GroupBox cerrar3, GroupBox cerrar4, GroupBox cerrar5)
+        //*********************************************************************************
+        public void ocultarGroupBoxMenoselSeleccionado(GroupBox abrir, GroupBox cerrar1, GroupBox cerrar2, GroupBox cerrar3, GroupBox cerrar4)
         {
             abrir.Visible = true;
             cerrar1.Visible = false;
             cerrar2.Visible = false;
             cerrar3.Visible = false;
             cerrar4.Visible = false;
-            cerrar5.Visible = false;
-
         }
-
-        //*************Funcion para ver si creo o no el objeto hamburguesas
-        public bool creoUnObjeto(int code)    //le paso la cantidad de hamburgesas
-        {
-
-            switch (code)
-            {
-                case 1:
-                    {
-                        hC = new Hamburguesa();
-                        hC.Codigo = code;
-                        hC.Nombre = lblHdeCarne.Text;
-                        hC.Stock = 100;
-                        hC.Tipo = "Comida";
-                        hC.CodTamamio = 111;
-                        hC.Tamanio = "Chico";
-                        hC.Precio = 500;
-                        hC.CantHamburguesas = 1;//se refiere a medallones
-                        hC.Aderezo = "no tiene";
-                        return true;
-                    }
-                case 2:
-                    {
-                        hP = new Hamburguesa();
-                        hP.Nombre = lblHdeCarne.Text;
-                        hP.Stock = 150;
-                        hP.Tipo = "Comida";
-                        hP.CodTamamio = 111;
-                        hP.Tamanio = "Chico";
-                        hP.Precio = 500;
-                        hP.CantHamburguesas = 1;//se refiere a medallones
-                        hP.Aderezo = "no tiene";
-                        return true;
-                    }
-                case 3:
-                    {
-                        hV = new Hamburguesa();
-                        hV.Nombre = lblHdeCarne.Text;
-                        hV.Stock = 200;
-                        hV.Tipo = "Comida";
-                        hV.CodTamamio = 111;
-                        hV.Tamanio = "Chico";
-                        hV.Precio = 500;
-                        hV.CantHamburguesas = 1;//se refiere a medallones
-                        hV.Aderezo = "no tiene";
-                        return true;
-                    }
-                default:
-                    return false;
-            }
-        }
-
+        //***********************************************************************************
         private void btnHamburguesas_Click(object sender, EventArgs e)
         {
             //ocultar groupbox cuando selecciono uno
-            ocultarGroupBoxMenoselSeleccionado(gbHamburguesas, gbEnsaladas, gbGuarniciones, gbBebidas, gbPostres, gbSugerencia2);
+            ocultarGroupBoxMenoselSeleccionado(gbHamburguesas, gbEnsaladas, gbGuarniciones, gbBebidas, gbPostres);
         }
         private void btnEnsalada_Click(object sender, EventArgs e)
         {
-            ocultarGroupBoxMenoselSeleccionado(gbEnsaladas, gbGuarniciones, gbBebidas, gbPostres, gbSugerencia2, gbHamburguesas);
+            ocultarGroupBoxMenoselSeleccionado(gbEnsaladas, gbGuarniciones, gbBebidas, gbPostres, gbHamburguesas);
         }
         private void btnGuarniciones_Click(object sender, EventArgs e)
         {
-            ocultarGroupBoxMenoselSeleccionado(gbGuarniciones, gbBebidas, gbPostres, gbSugerencia2, gbHamburguesas, gbEnsaladas);
+            ocultarGroupBoxMenoselSeleccionado(gbGuarniciones, gbBebidas, gbPostres, gbHamburguesas, gbEnsaladas);
         }
         private void btnBebidas_Click(object sender, EventArgs e)
         {
-            ocultarGroupBoxMenoselSeleccionado(gbBebidas, gbPostres, gbSugerencia2, gbHamburguesas, gbEnsaladas, gbGuarniciones);
+            ocultarGroupBoxMenoselSeleccionado(gbBebidas, gbPostres, gbHamburguesas, gbEnsaladas, gbGuarniciones);
+        }
+
+        private void btnSugerencia_Click(object sender, EventArgs e)
+        {
+            ocultarGroupBoxMenoselSeleccionado(gbGuarniciones, gbHamburguesas, gbEnsaladas, gbBebidas, gbPostres);
         }
         private void btnPostres_Click(object sender, EventArgs e)
         {
-            ocultarGroupBoxMenoselSeleccionado(gbPostres, gbSugerencia2, gbHamburguesas, gbEnsaladas, gbGuarniciones, gbBebidas);
+            ocultarGroupBoxMenoselSeleccionado(gbPostres, gbHamburguesas, gbEnsaladas, gbGuarniciones, gbBebidas);
         }
-        private void btnSugerencia_Click(object sender, EventArgs e)
+       
+        //*************************************************************************
+        public Hamburguesa calculoParaDobleGrande(Hamburguesa h)
         {
-            ocultarGroupBoxMenoselSeleccionado(gbSugerencia2, gbHamburguesas, gbEnsaladas, gbGuarniciones, gbBebidas, gbPostres);
+            h.Precio = float.Parse(txtHamburguesaGrandeDoble.Text);
+            h.CantMedallones = 2;
+            h.Tamanio = "Grande";
+            h.CodTamanio = 2;
+            return h;
         }
-
-
-        //*********************************************************************************************************************ORIGINAL
-
-        private void btnAgregarHamburguesas_Click(object sender, EventArgs e)
+        public Hamburguesa calculoParaRegularDoble(Hamburguesa h)
         {
-            gbHamburguesas.Visible = false; //escondo group box
-
-            if (numericUpDownHamburguesaDeCarne.Value != 0)//si marco carne y el numero es > que cero
+            h.Precio = float.Parse(txtHamburguesaRegDoble.Text);
+            h.CantMedallones = 2;
+            h.Tamanio = "Regular";
+            h.CodTamanio = 1;
+            return h;
+        }
+        public Hamburguesa calculoParaGrandeSimple(Hamburguesa h)
+        {
+            h.Precio = float.Parse(txtHamburguesaGrandeSimple.Text);
+            h.CantMedallones = 1;
+            h.Tamanio = "Grande";
+            h.CodTamanio = 2;
+            return h;
+        }
+        public Hamburguesa calculoParaRegularsimple(Hamburguesa h)
+        {
+            h.Precio = float.Parse(txtHamburguesaRegSimple.Text);
+            h.CantMedallones = 1;
+            h.Tamanio = "Regular";
+            h.CodTamanio = 1;
+            return h;
+        }
+        
+        //*******************************************************************************
+        public Hamburguesa valoresHarcodeadosHcarne(Hamburguesa hC)
+        {
+            hC.Codigo = 111;
+            hC.Nombre = lblHdeCarne.Text;
+            hC.Stock = 100;
+            hC.Tipo = "Comida";
+            return hC;
+        }
+        public Hamburguesa valoresPorPantallaHcarne (Hamburguesa hC)
+        {
+            if (checkBoxDobleHdeCarne.Checked == true && checkHdeCarneGrande.Checked == true)
             {
-                int code = 1;
-                creoUnObjeto(code);//envio el codigo
-
-                if (checkBoxDobleHdeCarne.Checked == true)
-                {
-                    hC.Precio = 800;
-                    hC.CantHamburguesas = 2;//se refiere a medallones
-                }
-                if (checkBoxAderezoHdeCarne.Checked)
-                    hC.Aderezo = checkBoxAderezoHdeCarne.Text;
-
-                h = hC;
-
-                MessageBox.Show("Codigo: " + h.Codigo + "-" + "Nombre: " + h.Nombre + "-" + "Stock: " + h.Stock + "-" + "Precio individual: " + h.Precio + "-" + "Medallones: " + h.CantHamburguesas + "-" + "Tipo: " + h.Tipo + "-" + "Cod.Tamanio: " + h.CodTamamio + "-" + "Tamanio: " + h.Tamanio + "-" + "Aderezo: " + h.Aderezo);
-
-                var cant = (int)numericUpDownHamburguesaDeCarne.Value;//cantidad de hamburguesas
-
-                var detalle = new Detalle(cant, h);
-
-                var subTotal = detalle.subtotalPorProducto(cant, h);
-
-                ListaD = pedido.ListaDetalle;
-                //pedido.ListaDetalle = ListaD;
-
-                pedido.ingresarAPedido(detalle);
-                MessageBox.Show("Subtotal:" + subTotal);
-
-
-                List<string> listAux = new List<string>();
-
-                foreach (var det in ListaD)
-                {
-                    listAux.Add("Cantidad: " + det.Cantidad + " " + det.Item.Nombre + " " + det.Subtotal);
-                }
-
-                listBoxPedido.DataSource = null;
-                listBoxPedido.DataSource = listAux;
-                //Pedido_01.ListaDetalle.Add(detalle);
-                //var Total=Pedido_01.sumaTotal(Pedido_01);
-                //MessageBox.Show("Total:"+Total);
-
+                hC = calculoParaDobleGrande(hC);
             }
             else
-                MessageBox.Show("No hay objeto");
-
-            if (numericUpDownHamburguesaDePollo.Value != 0)
             {
-                //agregar h de poio
+                if (checkBoxDobleHdeCarne.Checked == true)
+                {
+                    hC = calculoParaRegularDoble(hC);
+                }
+                else
+                {
+                    if (checkHdeCarneGrande.Checked == true)
+                    {
+                        hC = calculoParaGrandeSimple(hC);
+                    }
+                    else
+                    {
+                        hC = calculoParaRegularsimple(hC);
+                    }
+                }
             }
+
+            if (checkBoxAderezoHdeCarne.Checked)
+                hC.Aderezo = "si";
+            else
+                hC.Aderezo = "no";
+            
+            return hC;
+        }
+        
+        //*****************************************************************************
+        public Hamburguesa valoresHarcodeadosHPollo(Hamburguesa hP)
+        {
+            hP.Codigo = 222;
+            hP.Nombre = lblHdePollo.Text;
+            hP.Stock = 200;
+            hP.Tipo = "Comida";
+            return hP;
+        }
+        public Hamburguesa valoresPorPantallaHPollo(Hamburguesa hP)
+        {
+            if (checkBoxDobleHdePollo.Checked == true && checkHdePolloGrande.Checked == true)
+            {
+                hP = calculoParaDobleGrande(hP);
+            }
+            else
+            {
+                if (checkBoxDobleHdePollo.Checked == true)
+                {
+                    hP = calculoParaRegularDoble(hP);
+                }
+                else
+                {
+                    if (checkHdePolloGrande.Checked == true)
+                    {
+                        hP = calculoParaGrandeSimple(hP);
+                    }
+                    else
+                    {
+                        hP = calculoParaRegularsimple(hP);
+                    }
+                }
+            }
+
+            if (checkBoxAderezoHdePollo.Checked)
+                hP.Aderezo = "si";
+            else
+                hP.Aderezo = "no";
+
+            return hP;
+        }
+        
+        //**********************************************************************
+        public Hamburguesa valoresHarcodeadosHVeggie(Hamburguesa hV)
+        {
+            hV.Codigo = 333;
+            hV.Nombre = lblHdeVeggan.Text;
+            hV.Stock = 300;
+            hV.Tipo = "Comida";
+            return hV;
+        }
+        public Hamburguesa valoresPorPantallaHVeggie(Hamburguesa hV)
+        {
+            if (checkBoxDobleHdeVeggie.Checked == true && checkHdeVeggieGrande.Checked == true)
+            {
+                hV = calculoParaDobleGrande(hV);
+            }
+            else
+            {
+                if (checkBoxDobleHdeVeggie.Checked == true)
+                {
+                    hV = calculoParaRegularDoble(hV);
+                }
+                else
+                {
+                    if (checkHdeVeggieGrande.Checked == true)
+                    {
+                        hV = calculoParaGrandeSimple(hV);
+                    }
+                    else
+                    {
+                        hV = calculoParaRegularsimple(hV);
+                    }
+                }
+            }
+
+            if (checkBoxAderezoHdeVeggie.Checked)
+                hV.Aderezo = "si";
+            else
+                hV.Aderezo = "no";
+
+            return hV;
+        }
+        
+        //*****************************************************************************************
+        private void btnAgregarHamburguesas_Click(object sender, EventArgs e)
+        {
+           if (numericUpDownHamburguesaDeCarne.Value != 0)//si marco carne y el numero es > que cero
+            {
+                gbHamburguesas.Visible = false; //escondo group box
+                hC = new Hamburguesa();
+                hC = valoresHarcodeadosHcarne(hC);
+                hC = valoresPorPantallaHcarne(hC);
+                var cant = (int)numericUpDownHamburguesaDeCarne.Value;//cantidad de hamburguesas
+                var detalle = new Detalle(cant, hC);//creo el objeto detalle
+                var subTotal = detalle.subtotalPorProducto(cant, hC);//calculo el subtotal de ese item
+                pedido.ingresarAPedido(detalle);//agrego el item a la lista
+                MessageBox.Show("Codigo: " + hC.Codigo + "-" + "Nombre: " + hC.Nombre + "-" + "Stock: " + hC.Stock + "-" + "Precio individual: " + hC.Precio + "-" + "Medallones: " + hC.CantMedallones + "-" + "Tipo: " + hC.Tipo + "-" + "Cod.Tamanio: " + hC.CodTamanio + "-" + "Tamanio: " + hC.Tamanio + "-" + "Aderezo: " + hC.Aderezo);
+            }
+            else
+                MessageBox.Show("No hay objeto de carne");
+            
+            if (numericUpDownHamburguesaDePollo.Value != 0)//si marco carne y el numero es > que cero
+            {
+                gbHamburguesas.Visible = false; //escondo group box
+                hP = new Hamburguesa();
+                hP = valoresHarcodeadosHPollo(hP);
+                hP = valoresPorPantallaHPollo(hP);
+                var cant = (int)numericUpDownHamburguesaDePollo.Value;//cantidad de hamburguesas
+                var detalle = new Detalle(cant, hP);//creo el objeto detalle
+                var subTotal = detalle.subtotalPorProducto(cant, hP);//calculo el subtotal de ese item
+                pedido.ingresarAPedido(detalle);//agrego el item a la lista
+                MessageBox.Show("Codigo: " + hP.Codigo + "-" + "Nombre: " + hP.Nombre + "-" + "Stock: " + hP.Stock + "-" + "Precio individual: " + hP.Precio + "-" + "Medallones: " + hP.CantMedallones + "-" + "Tipo: " + hP.Tipo + "-" + "Cod.Tamanio: " + hP.CodTamanio + "-" + "Tamanio: " + hP.Tamanio + "-" + "Aderezo: " + hP.Aderezo);
+            }
+            else
+                MessageBox.Show("No hay objeto de pollo");
+                        
             if (numericUpDownHamburguesaVeggie.Value != 0)
             {
-                //agregar h veggie
+                gbHamburguesas.Visible = false; //escondo group box
+                hV = new Hamburguesa();
+                hV = valoresHarcodeadosHVeggie(hV);
+                hV = valoresPorPantallaHVeggie(hV);
+                var cant = (int)numericUpDownHamburguesaVeggie.Value;//cantidad de hamburguesas
+                var detalle = new Detalle(cant, hV);//creo el objeto detalle
+                var subTotal = detalle.subtotalPorProducto(cant, hV);//calculo el subtotal de ese item
+                pedido.ingresarAPedido(detalle);//agrego el item a la lista
+                MessageBox.Show("Codigo: " + hV.Codigo + "-" + "Nombre: " + hV.Nombre + "-" + "Stock: " + hV.Stock + "-" + "Precio individual: " + hV.Precio + "-" + "Medallones: " + hV.CantMedallones + "-" + "Tipo: " + hV.Tipo + "-" + "Cod.Tamanio: " + hV.CodTamanio + "-" + "Tamanio: " + hV.Tamanio + "-" + "Aderezo: " + hV.Aderezo);
             }
-
-
-
-            //var detalle = new Detalle(2, h);
-            //hp = metodoParaEvaluarSiCreoOnoUnObjeto(numericUpDownHamburguesaDePollo.Value, txtCodigoHp.Text);
-            //hv = metodoParaEvaluarSiCreoOnoUnObjeto(numericUpDownHamburguesaVeggie.Value, txtCodigoHv.Text);
+            else
+                MessageBox.Show("No hay objeto veggie");
+            
+            ListaD = pedido.ListaDetalle;
+            List<string> listAux = new List<string>();
+            foreach (var det in ListaD)
+            {
+                listAux.Add(det.Item.Nombre + " " + "Cantidad: " + det.Cantidad + " " + "Subtotal: " + det.Subtotal);
+            }
+            listBoxPedido.DataSource = listAux;
         }
-        ////********************************************************************************************************************ORIGINAL
     }
 }
 

@@ -32,8 +32,8 @@ namespace ComidasRapidasPOOmBA.Clases.Productos
         {
             List<Producto> listProductos = new List<Producto>()
             {
-            new Producto(){Codigo = 01, Nombre = "Hamburguesa de Carne", Stock = 100, CodTamamio = 01, Tamanio = "chico", Precio = 500, Tipo = "300gr"},
-            new Producto(){Codigo = 01, Nombre = "Hamburguesa de Carne", Stock = 100, CodTamamio = 01, Tamanio = "chico", Precio = 500, Tipo = "300gr"}
+            new Producto(){Codigo = 01, Nombre = "Hamburguesa de Carne", Stock = 100, CodTamanio = 01, Tamanio = "chico", Precio = 500, Tipo = "300gr"},
+            new Producto(){Codigo = 01, Nombre = "Hamburguesa de Carne", Stock = 100, CodTamanio = 01, Tamanio = "chico", Precio = 500, Tipo = "300gr"}
             };
 
             return listProductos;

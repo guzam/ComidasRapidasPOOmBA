@@ -38,7 +38,7 @@ namespace ComidasRapidasPOOmBA.Clases
             get => tipo;
             set => tipo = value;
         }
-        public int CodTamamio
+        public int CodTamanio
         {
             get => codTamanio;
             set => codTamanio = value;
