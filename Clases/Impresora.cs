@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace ComidasRapidasPOOmBA.Clases
 {
@@ -10,10 +11,10 @@ namespace ComidasRapidasPOOmBA.Clases
     {
         public Impresora(Ticket ticket, Pedido pedido)
         {
-            var pathArchivo = "..\\ImpresionTickets\\";
+            var pathArchivo = "../../..\\ImpresionTickets\\";
             var nomArchivo = pathArchivo + "Ticket_" + ticket.IdTicket + ".txt";
-            var archivo = new System.IO.StreamWriter(nomArchivo);
-
+            TextWriter archivo = new StreamWriter(nomArchivo);
+            
             archivo.WriteLine(ticket.NombreFantasia);
             archivo.WriteLine(ticket.RazonSocial);
             archivo.WriteLine("CUIT Nro. " + ticket.Cuit);
@@ -40,7 +41,7 @@ namespace ComidasRapidasPOOmBA.Clases
             
             archivo.WriteLine("TOTAL " + pedido.TotalAPagar);
 
-            
+            archivo.Close();
 
         }
     }
