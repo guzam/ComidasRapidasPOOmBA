@@ -217,8 +217,18 @@ namespace ComidasRapidasPOOmBA
 
             return hV;
         }
-        
+
         //*****************************************************************************************
+
+        public Hamburguesa gestionDetalle(int c, Hamburguesa h)
+        {
+            var detalle = new Detalle(c, h);//creo el objeto detalle
+            var subTotal = detalle.subtotalPorProducto(c, h);//calculo el subtotal de ese item
+            pedido.ingresarAPedido(detalle);//agrego el item a la lista
+            return h;
+        }
+
+        //********************************************************************************************
         private void btnAgregarHamburguesas_Click(object sender, EventArgs e)
         {
            if (numericUpDownHamburguesaDeCarne.Value != 0)//si marco carne y el numero es > que cero
@@ -228,10 +238,9 @@ namespace ComidasRapidasPOOmBA
                 hC = valoresHarcodeadosHcarne(hC);
                 hC = valoresPorPantallaHcarne(hC);
                 var cant = (int)numericUpDownHamburguesaDeCarne.Value;//cantidad de hamburguesas
-                var detalle = new Detalle(cant, hC);//creo el objeto detalle
-                var subTotal = detalle.subtotalPorProducto(cant, hC);//calculo el subtotal de ese item
-                pedido.ingresarAPedido(detalle);//agrego el item a la lista
+                hC = gestionDetalle(cant, hC);
                 MessageBox.Show("Codigo: " + hC.Codigo + "-" + "Nombre: " + hC.Nombre + "-" + "Stock: " + hC.Stock + "-" + "Precio individual: " + hC.Precio + "-" + "Medallones: " + hC.CantMedallones + "-" + "Tipo: " + hC.Tipo + "-" + "Cod.Tamanio: " + hC.CodTamanio + "-" + "Tamanio: " + hC.Tamanio + "-" + "Aderezo: " + hC.Aderezo);
+
             }
             else
                 MessageBox.Show("No hay objeto de carne");
@@ -243,10 +252,9 @@ namespace ComidasRapidasPOOmBA
                 hP = valoresHarcodeadosHPollo(hP);
                 hP = valoresPorPantallaHPollo(hP);
                 var cant = (int)numericUpDownHamburguesaDePollo.Value;//cantidad de hamburguesas
-                var detalle = new Detalle(cant, hP);//creo el objeto detalle
-                var subTotal = detalle.subtotalPorProducto(cant, hP);//calculo el subtotal de ese item
-                pedido.ingresarAPedido(detalle);//agrego el item a la lista
+                hP = gestionDetalle(cant, hP);
                 MessageBox.Show("Codigo: " + hP.Codigo + "-" + "Nombre: " + hP.Nombre + "-" + "Stock: " + hP.Stock + "-" + "Precio individual: " + hP.Precio + "-" + "Medallones: " + hP.CantMedallones + "-" + "Tipo: " + hP.Tipo + "-" + "Cod.Tamanio: " + hP.CodTamanio + "-" + "Tamanio: " + hP.Tamanio + "-" + "Aderezo: " + hP.Aderezo);
+
             }
             else
                 MessageBox.Show("No hay objeto de pollo");
@@ -258,9 +266,7 @@ namespace ComidasRapidasPOOmBA
                 hV = valoresHarcodeadosHVeggie(hV);
                 hV = valoresPorPantallaHVeggie(hV);
                 var cant = (int)numericUpDownHamburguesaVeggie.Value;//cantidad de hamburguesas
-                var detalle = new Detalle(cant, hV);//creo el objeto detalle
-                var subTotal = detalle.subtotalPorProducto(cant, hV);//calculo el subtotal de ese item
-                pedido.ingresarAPedido(detalle);//agrego el item a la lista
+                hV = gestionDetalle(cant, hV);
                 MessageBox.Show("Codigo: " + hV.Codigo + "-" + "Nombre: " + hV.Nombre + "-" + "Stock: " + hV.Stock + "-" + "Precio individual: " + hV.Precio + "-" + "Medallones: " + hV.CantMedallones + "-" + "Tipo: " + hV.Tipo + "-" + "Cod.Tamanio: " + hV.CodTamanio + "-" + "Tamanio: " + hV.Tamanio + "-" + "Aderezo: " + hV.Aderezo);
             }
             else
@@ -273,6 +279,8 @@ namespace ComidasRapidasPOOmBA
                 listAux.Add(det.Item.Nombre + " " + "Cantidad: " + det.Cantidad + " " + "Subtotal: " + det.Subtotal);
             }
             listBoxPedido.DataSource = listAux;
+            var total=pedido.sumaTotal(pedido);
+            MessageBox.Show("Total: "+total);
         }
     }
 }
