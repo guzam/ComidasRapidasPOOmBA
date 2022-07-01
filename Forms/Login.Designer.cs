@@ -104,13 +104,14 @@ namespace ComidasRapidasPOOmBA
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(185, 38);
             this.txtPass.TabIndex = 6;
+            this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
             // 
             // btnRegistro
             // 
-            this.btnRegistro.Font = new System.Drawing.Font("Candara", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnRegistro.Location = new System.Drawing.Point(588, 367);
+            this.btnRegistro.Font = new System.Drawing.Font("Candara", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnRegistro.Location = new System.Drawing.Point(650, 398);
             this.btnRegistro.Name = "btnRegistro";
-            this.btnRegistro.Size = new System.Drawing.Size(167, 49);
+            this.btnRegistro.Size = new System.Drawing.Size(105, 29);
             this.btnRegistro.TabIndex = 7;
             this.btnRegistro.Text = "Registrarse";
             this.btnRegistro.UseVisualStyleBackColor = true;
@@ -118,7 +119,8 @@ namespace ComidasRapidasPOOmBA
             // 
             // btnAcercaDe
             // 
-            this.btnAcercaDe.Location = new System.Drawing.Point(174, 398);
+            this.btnAcercaDe.Font = new System.Drawing.Font("Candara", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnAcercaDe.Location = new System.Drawing.Point(173, 398);
             this.btnAcercaDe.Name = "btnAcercaDe";
             this.btnAcercaDe.Size = new System.Drawing.Size(94, 29);
             this.btnAcercaDe.TabIndex = 8;

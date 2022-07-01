@@ -14,8 +14,12 @@ namespace ComidasRapidasPOOmBA.Forms
 {
     public partial class registro : Form
     {
-        public registro()
+        BDInterna objetobd;
+        Form form;
+        public registro(BDInterna obj, Form login)
         {
+            objetobd = obj;
+            form = login;
             InitializeComponent();
         }
 
@@ -36,33 +40,54 @@ namespace ComidasRapidasPOOmBA.Forms
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            if (txtNombre.Text == null) MessageBox.Show("Debe ingresar un nombre");
+         //if (txtNombre.Text == null) MessageBox.Show("Debe ingresar un nombre");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            var lista = objetobd.getUsuarios();
             var usuarioPorPantalla = new Usuario();
-            usuarioPorPantalla.Nombre = txtNombre.Text;
-            usuarioPorPantalla.Usu = txtUsuario.Text;
-            usuarioPorPantalla.Email = txtMail.Text;
-            usuarioPorPantalla.Password = txtPass.Text;
-            usuarioPorPantalla.TipoUsuario = "Comun";
-            var aux = int.Parse(txtEdad.Text);
-            usuarioPorPantalla.Edad = aux;
+            
+            try
+            {
+                if(!txtNombre.Text.Equals("") && !txtUsuario.Text.Equals("") && !txtMail.Text.Equals("") ) 
+                {
+                    usuarioPorPantalla.Nombre = txtNombre.Text;
+                    usuarioPorPantalla.Usu = txtUsuario.Text;
+                    usuarioPorPantalla.Email = txtMail.Text;
+                    usuarioPorPantalla.Password = txtPass.Text;
+                    usuarioPorPantalla.TipoUsuario = "Comun";
+                    usuarioPorPantalla.Edad = int.Parse(txtEdad.Text);
+
+
+                    if (txtPass.Text.Equals(txtConfirmar.Text) && !txtPass.Text.Equals(""))
+                    {
+                        var us = lista.Find(item => item.Usu == usuarioPorPantalla.Usu);
+                        if (us == null)
+                        {
+                            objetobd.agregarUsuarios(usuarioPorPantalla);
+                            MessageBox.Show("Se registro correctamente \n Verifica en tu correo electrónico el mensaje de confirmación \n Ingrese");
+                            form.Show();
+                            this.Close();
+                        }
+                        else MessageBox.Show("El usuario ya se encunetra registrado \n Ingrese otro usuario");
+                    }
+                    else MessageBox.Show("Las contraseñas no coinciden");
+                }
+                else { MessageBox.Show("Completar campo vacio"); }
+
+                
+            }
+
+            catch (FormatException)
+            {
+                MessageBox.Show("Debe ingresar un numero \n En el campo edad");
+            }
          
-            BDInterna bd = new BDInterna();
-            bd.agregarUsuarios(usuarioPorPantalla);
-
-            //var menu = new FormularioMenu();
-            //menu.Show();
-
-            var loguear = new Login();
-            MessageBox.Show("Se registro correctamente \n Verifica tu correo electrónico y busca el mensaje de confirmación \n Ingrese");
-            loguear.Show();
-            this.Close();
-
         }
 
+        //private bool validarCampos() { }
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
             //hacer comparacion para ver si ya existe ese usuario?
@@ -71,7 +96,26 @@ namespace ComidasRapidasPOOmBA.Forms
 
         private void txtEdad_TextChanged(object sender, EventArgs e)
         {
-            
+           // validarNumerico(sender, e);
+        }
+
+       /* private void validarNumerico(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }*/
+
+        private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           // validarNumerico(sender, e);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)//boton volver
+        {
+            form.Show();
+            this.Close();
         }
     }
 }

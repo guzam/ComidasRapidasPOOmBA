@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ComidasRapidasPOOmBA.Clases
 {
-    public class Usuario //: IComparable;
+    public class Usuario : IComparable
     {
         string nombre;
         string usuario;
@@ -37,15 +37,20 @@ namespace ComidasRapidasPOOmBA.Clases
         public string Email { get => email; set => email = value; }
         public string Password { get => password; set => password = value; }
         public int Edad { get => edad; set => edad = value; }
-        public string TipoUsuario { get => usuario; set => usuario = value; }
+        public string TipoUsuario { get => tipoUsuario; set => tipoUsuario = value; }
 
-        /*public int ComparteTo( object? item ) //compara por usuario
+        public int ComparteTo( object? item ) //compara por usuario
         {
             if ( item == null)
                 return 1;
             var aux = (Usuario) item; //var aux = item as Usuario;
             return String.Compare(this.usuario, aux.usuario);
-        }*/
+        }
+
+        public int CompareTo(object obj)
+        {
+            return usuario.CompareTo(obj);
+        }
 
         // var us = usuarios.Find( item => item.user == txtUsuario ) si ecunetra un usuario igual que mande alert
         // if (us == null){ entonces puede seguir registrandose}
@@ -53,7 +58,7 @@ namespace ComidasRapidasPOOmBA.Clases
 
 
 
-        //para validad usuario cuando esta ingresando
-        
+    
+
     }
 }

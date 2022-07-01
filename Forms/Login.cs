@@ -15,8 +15,10 @@ namespace ComidasRapidasPOOmBA
 {
     public partial class Login : Form
     {
+        BDInterna objetobd;
         public Login()
         {
+            objetobd = new BDInterna();
             InitializeComponent();
         }
 
@@ -41,16 +43,16 @@ namespace ComidasRapidasPOOmBA
         }
 
         private void btnRegistro_Click(object sender, EventArgs e)
-        {
-            var registroNuevo = new registro();
+        {           
+            var registroNuevo = new registro(objetobd, this);//?????
             this.Hide();
             registroNuevo.Show();
         }
 
         private void btnOk_Click(object sender, EventArgs e)
         {          
-            var objetobd = new BDInterna();
-            var lista = objetobd.initListaUsuarios();
+            
+            var lista = objetobd.getUsuarios();
 
             var usuarioIngresando = new Usuario();
             usuarioIngresando.Usu = txtUsuario.Text;
@@ -75,6 +77,11 @@ namespace ComidasRapidasPOOmBA
         {
             var nosotros = new AcercaDe();
             nosotros.Show();
+        }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
