@@ -1,32 +1,72 @@
-﻿using System;
+﻿using ComidasRapidasPOOmBA.Clases.Helper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ComidasRapidasPOOmBA.Clases
 {
-    class Pago
+    public class Pago
     {
         int idPago;
+        DateTime fechaCreacionPago;
         DateTime fechaPago;
         float montoTotal;
         bool pagado;
 
         public Pago()
         {
-
+            //IdPago++;
+            FechaCreacionPago = DateTime.Now;
+            Pagado = false;
         }
 
         public Pago(float monto)
         {
-            IdPago++;
+            //IdPago++;
             MontoTotal = monto;
+            FechaCreacionPago = DateTime.Now;
+            Pagado = false;
         }
 
         public int IdPago { get => idPago; set => idPago = value; }
+        public DateTime FechaCreacionPago { get => fechaCreacionPago; set => fechaCreacionPago = value; }
         public DateTime FechaPago { get => fechaPago; set => fechaPago = value; }
         public float MontoTotal { get => montoTotal; set => montoTotal = value; }
         public bool Pagado { get => pagado; set => pagado = value; }
+
+        public void nuevoPago()
+        {
+            idPago++;
+        }
+
+        public void validarPago()
+        {
+
+        }
+
+        public bool realizarPago(float monto, Pedido pedido)
+        {
+            nuevoPago();
+            TarjetaCredito tc = new TarjetaCredito();
+
+            if (tc.realizarPagoTarjeta(monto))
+            {
+                MessageBox.Show("El pago se realizó correctamente con la Tarjeta. \n");
+                fechaPago = DateTime.Now;
+                pagado = true;
+                Impresora imp = new Impresora(new Ticket(),pedido);
+
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("El pago no se pudo realizar.\n");
+                pagado = false;
+                return false;
+            }
+        }
     }
 }

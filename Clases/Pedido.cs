@@ -11,6 +11,8 @@ namespace ComidasRapidasPOOmBA.Clases
         int idPedido;
         List<Detalle> listaDetalle;
         double totalAPagar;
+
+        public Pedido() { }
         public Pedido(int id)
         {
             IdPedido = id;
