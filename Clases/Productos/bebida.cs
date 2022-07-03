@@ -8,21 +8,21 @@ namespace ComidasRapidasPOOmBA.Clases
 {
     public class bebida : Producto
     {
-        bool conHielo;
-        bool diet;
-        bool alcoholica;
+        string conHielo;
+        string diet;
+        string alcoholica;
 
-        public bool ConHielo
+        public string ConHielo
         {
             get => conHielo;
             set => conHielo = value;
         }
-        public bool Diet
+        public string Diet
         {
             get => diet;
             set => diet = value;
         }
-        public bool Alcoholica
+        public string Alcoholica
         {
             get => alcoholica;
             set => alcoholica = value;

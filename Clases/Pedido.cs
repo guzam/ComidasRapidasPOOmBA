@@ -64,7 +64,8 @@ namespace ComidasRapidasPOOmBA.Clases
             {
                 aux += item.Subtotal;
             }
-            return aux;
+            TotalAPagar = aux;
+            return TotalAPagar;
         }
 
     }
