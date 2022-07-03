@@ -710,7 +710,7 @@ namespace ComidasRapidasPOOmBA
         //*****************************BOTON AGREGAR BEBIDAS**********************************************
         private void btnAgregarBebidas_Click(object sender, EventArgs e)
         {
-            if (numericUpDownGaseosa.Value != 0)
+            /*if (numericUpDownGaseosa.Value != 0)
             {
                 gbBebidas.Visible = false;
                 gaseosa = new bebida();
@@ -757,7 +757,7 @@ namespace ComidasRapidasPOOmBA
                                 "Tamanio: " + cerveza.Tamanio);
             }
             else
-                MessageBox.Show("No hay objeto Bebida Cerveza");
+                MessageBox.Show("No hay objeto Bebida Cerveza");*/
         }
 
         public void actualizarListaDetalle()

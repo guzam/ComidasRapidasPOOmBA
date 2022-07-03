@@ -60,7 +60,7 @@ namespace ComidasRapidasPOOmBA
             this.btnOk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(108, 46);
-            this.btnOk.TabIndex = 2;
+            this.btnOk.TabIndex = 3;
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
@@ -93,7 +93,7 @@ namespace ComidasRapidasPOOmBA
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(185, 38);
-            this.txtUsuario.TabIndex = 5;
+            this.txtUsuario.TabIndex = 0;
             // 
             // txtPass
             // 
@@ -103,7 +103,7 @@ namespace ComidasRapidasPOOmBA
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(185, 38);
-            this.txtPass.TabIndex = 6;
+            this.txtPass.TabIndex = 1;
             this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
             // 
             // btnRegistro
@@ -112,7 +112,7 @@ namespace ComidasRapidasPOOmBA
             this.btnRegistro.Location = new System.Drawing.Point(650, 398);
             this.btnRegistro.Name = "btnRegistro";
             this.btnRegistro.Size = new System.Drawing.Size(105, 29);
-            this.btnRegistro.TabIndex = 7;
+            this.btnRegistro.TabIndex = 4;
             this.btnRegistro.Text = "Registrarse";
             this.btnRegistro.UseVisualStyleBackColor = true;
             this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
@@ -123,7 +123,7 @@ namespace ComidasRapidasPOOmBA
             this.btnAcercaDe.Location = new System.Drawing.Point(173, 398);
             this.btnAcercaDe.Name = "btnAcercaDe";
             this.btnAcercaDe.Size = new System.Drawing.Size(94, 29);
-            this.btnAcercaDe.TabIndex = 8;
+            this.btnAcercaDe.TabIndex = 5;
             this.btnAcercaDe.Text = "Acerca de";
             this.btnAcercaDe.UseVisualStyleBackColor = true;
             this.btnAcercaDe.Click += new System.EventHandler(this.btnAcercaDe_Click);
