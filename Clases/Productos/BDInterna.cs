@@ -33,6 +33,7 @@ namespace ComidasRapidasPOOmBA.Clases.Productos
             new Ingrediente(){IdIngrediente = 10, Nombre = "Huevo", Tipo = "", Cantidad = 200},
             new Ingrediente(){IdIngrediente = 11, Nombre = "Queso", Tipo = "", Cantidad = 200}
             };
+
             return listIngredientes;
         }
         public List<Usuario> getUsuarios()
@@ -44,6 +45,16 @@ namespace ComidasRapidasPOOmBA.Clases.Productos
             listaUsuarios.Add(usu);
             
             return 1;            
+        public List<Producto> initListaProductos()
+        {
+            List<Producto> listProductos = new List<Producto>()
+            {
+            new Producto(){Codigo = 01, Nombre = "Hamburguesa de Carne", Stock = 100, CodTamanio = 01, Tamanio = "chico", Precio = 500, Tipo = "300gr"},
+            new Producto(){Codigo = 01, Nombre = "Hamburguesa de Carne", Stock = 100, CodTamanio = 01, Tamanio = "chico", Precio = 500, Tipo = "300gr"}
+            };
+
+            return listProductos;
+        }
 
         }
     }

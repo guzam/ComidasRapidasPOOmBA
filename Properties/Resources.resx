@@ -133,6 +133,9 @@
   <data name="imagenCierreDeVentana" xml:space="preserve">
     <value />
   </data>
+  <data name="Papas_POOmBA_ParaSugerencia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Papas_POOmBA_ParaSugerencia.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Platos_Recomendados" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Platos_Recomendados.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

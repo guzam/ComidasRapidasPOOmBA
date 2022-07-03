@@ -11,6 +11,11 @@ namespace ComidasRapidasPOOmBA.Clases
         public int cantidad;
         Producto item;
         double subtotal;
+        public override string ToString()
+        {
+            return "Item: "+ item + "Cantidad: "+cantidad;
+
+        }
 
         public Detalle(int cant, Producto item)
         {

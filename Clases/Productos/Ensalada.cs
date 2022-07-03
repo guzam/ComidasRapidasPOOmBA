@@ -8,8 +8,8 @@ namespace ComidasRapidasPOOmBA.Clases
 {
     public class Ensalada : Comida
     {
-        bool sal;
-        public bool Sal
+        string sal;
+        public string Sal
         {
             get => sal;
             set => sal = value;

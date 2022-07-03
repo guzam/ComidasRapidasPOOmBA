@@ -112,6 +112,16 @@ namespace ComidasRapidasPOOmBA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Papas_POOmBA_ParaSugerencia {
+            get {
+                object obj = ResourceManager.GetObject("Papas_POOmBA_ParaSugerencia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Platos_Recomendados {
             get {
                 object obj = ResourceManager.GetObject("Platos_Recomendados", resourceCulture);
