@@ -28,18 +28,19 @@ namespace ComidasRapidasPOOmBA.Clases
             archivo.WriteLine();
 
             archivo.WriteLine("Nro. Pedido " + pedido.IdPedido);
-            
+            archivo.WriteLine();
+            archivo.WriteLine("----------------------------------------");
             archivo.WriteLine();
 
             
             foreach (var detalle in pedido.ListaDetalle)
             {
-                archivo.WriteLine(detalle.Cantidad + " x " + detalle.Item.Precio);
-                archivo.WriteLine(detalle.Item.Nombre + "       " + detalle.Subtotal);
+                archivo.WriteLine(detalle.Item.Nombre);
+                archivo.WriteLine(detalle.Cantidad + " x " + detalle.Item.Precio + "\t \t \t \t   $" + detalle.Subtotal);
             }
             archivo.WriteLine();
-            
-            archivo.WriteLine("TOTAL " + pedido.TotalAPagar);
+
+            archivo.WriteLine("     \t\tTOTAL $" + pedido.TotalAPagar);
 
             archivo.Close();
 
