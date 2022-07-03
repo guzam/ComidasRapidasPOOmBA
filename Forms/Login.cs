@@ -67,7 +67,7 @@ namespace ComidasRapidasPOOmBA
             {
                 if (user.Password == usuarioIngresando.Password)
                 {
-                    var menu = new FormularioMenu();
+                    var menu = new FormularioMenu(user);
                     menu.Show();
                     this.Hide();                  
                 } 
