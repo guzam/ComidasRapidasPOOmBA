@@ -33,6 +33,7 @@ namespace ComidasRapidasPOOmBA.Forms
             pedido = ped;
             usuLogueado = usu;
             seteoUsuarioLogueado(usuLogueado);
+            lblTotalDetalle.Text = ped.TotalAPagar.ToString();
         }
 
         private void label1_Click(object sender, EventArgs e)

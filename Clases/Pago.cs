@@ -61,13 +61,13 @@ namespace ComidasRapidasPOOmBA.Clases
                 Impresora imp = new Impresora();
                 imp.imprimir(new Ticket(), pedido);
 
-                return true;
+                return pagado;
             }
             else
             {
                 MessageBox.Show("El pago no se pudo realizar.\n");
                 pagado = false;
-                return false;
+                return pagado;
             }
         }
     }

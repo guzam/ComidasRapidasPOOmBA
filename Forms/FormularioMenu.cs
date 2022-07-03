@@ -469,7 +469,7 @@ namespace ComidasRapidasPOOmBA
         public Hamburguesa gestionDetalle(int c, Hamburguesa h)
         {
             var detalle = new Detalle(c, h);//creo el objeto detalle
-            var subTotal = detalle.subtotalPorProducto(c, h);//calculo el subtotal de ese item
+            var subtotal = detalle.subtotalPorProducto(c, h);//calculo el subtotal de ese item
             pedido.ingresarAPedido(detalle);//agrego el item a la lista
             return h;
         }
