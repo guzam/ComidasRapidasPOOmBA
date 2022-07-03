@@ -11,17 +11,21 @@ using System.Windows.Forms;
 
 namespace ComidasRapidasPOOmBA
 {
+    
     public partial class FormularioMenu : Form
     {
         public List<Detalle> ListaD = new List<Detalle>();
         Pedido pedido = new Pedido(new List<Detalle>());//se crea el objeto pedido
         Hamburguesa hC, hP, hV, h;
+        Ensalada eC, eG, eIv;
+        Guarnicion pFritas, pCheddar, pPoomba;
+        bebida gaseosa, agua, cerveza;
+        Postre helado, budin, flan;
         public FormularioMenu()
         {
             InitializeComponent();
         }
-
-        //*********************************************************************************
+        //*****************************METODO OCULTAR GROUPBOX********************************************
         public void ocultarGroupBoxMenoselSeleccionado(GroupBox abrir, GroupBox cerrar1, GroupBox cerrar2, GroupBox cerrar3, GroupBox cerrar4)
         {
             abrir.Visible = true;
@@ -30,7 +34,7 @@ namespace ComidasRapidasPOOmBA
             cerrar3.Visible = false;
             cerrar4.Visible = false;
         }
-        //***********************************************************************************
+        //*****************************BOTONES CLICK QUE USAN EL METODO OCULTAR GROUPBOX******************
         private void btnHamburguesas_Click(object sender, EventArgs e)
         {
             //ocultar groupbox cuando selecciono uno
@@ -48,7 +52,6 @@ namespace ComidasRapidasPOOmBA
         {
             ocultarGroupBoxMenoselSeleccionado(gbBebidas, gbPostres, gbHamburguesas, gbEnsaladas, gbGuarniciones);
         }
-
         private void btnSugerencia_Click(object sender, EventArgs e)
         {
             ocultarGroupBoxMenoselSeleccionado(gbGuarniciones, gbHamburguesas, gbEnsaladas, gbBebidas, gbPostres);
@@ -57,9 +60,8 @@ namespace ComidasRapidasPOOmBA
         {
             ocultarGroupBoxMenoselSeleccionado(gbPostres, gbHamburguesas, gbEnsaladas, gbGuarniciones, gbBebidas);
         }
-       
-        //*************************************************************************
-        public Hamburguesa calculoParaDobleGrande(Hamburguesa h)
+       //******************************METODOS HAMBURGUESAS PARA PRECIO Y ETC*****************************
+        public Hamburguesa calculoParaGrandeDoble(Hamburguesa h)
         {
             h.Precio = float.Parse(txtHamburguesaGrandeDoble.Text);
             h.CantMedallones = 2;
@@ -83,7 +85,7 @@ namespace ComidasRapidasPOOmBA
             h.CodTamanio = 2;
             return h;
         }
-        public Hamburguesa calculoParaRegularsimple(Hamburguesa h)
+        public Hamburguesa calculoParaRegularSimple(Hamburguesa h)
         {
             h.Precio = float.Parse(txtHamburguesaRegSimple.Text);
             h.CantMedallones = 1;
@@ -92,20 +94,20 @@ namespace ComidasRapidasPOOmBA
             return h;
         }
         
-        //*******************************************************************************
+        //*****************************VALORES HAMBURGUESAS DE CARNE**************************************
         public Hamburguesa valoresHarcodeadosHcarne(Hamburguesa hC)
         {
             hC.Codigo = 111;
-            hC.Nombre = lblHdeCarne.Text;
             hC.Stock = 100;
             hC.Tipo = "Comida";
             return hC;
         }
-        public Hamburguesa valoresPorPantallaHcarne (Hamburguesa hC)
+        public Hamburguesa valoresPorPantallaHcarne(Hamburguesa hC)
         {
+            hC.Nombre = lblHdeCarne.Text;
             if (checkBoxDobleHdeCarne.Checked == true && checkHdeCarneGrande.Checked == true)
             {
-                hC = calculoParaDobleGrande(hC);
+                hC = calculoParaGrandeDoble(hC);
             }
             else
             {
@@ -121,7 +123,7 @@ namespace ComidasRapidasPOOmBA
                     }
                     else
                     {
-                        hC = calculoParaRegularsimple(hC);
+                        hC = calculoParaRegularSimple(hC);
                     }
                 }
             }
@@ -134,20 +136,20 @@ namespace ComidasRapidasPOOmBA
             return hC;
         }
         
-        //*****************************************************************************
+        //*****************************VALORES HAMBURGUESAS DE POLLO**************************************
         public Hamburguesa valoresHarcodeadosHPollo(Hamburguesa hP)
         {
             hP.Codigo = 222;
-            hP.Nombre = lblHdePollo.Text;
             hP.Stock = 200;
             hP.Tipo = "Comida";
             return hP;
         }
         public Hamburguesa valoresPorPantallaHPollo(Hamburguesa hP)
         {
+            hP.Nombre = lblHdePollo.Text;
             if (checkBoxDobleHdePollo.Checked == true && checkHdePolloGrande.Checked == true)
             {
-                hP = calculoParaDobleGrande(hP);
+                hP = calculoParaGrandeDoble(hP);
             }
             else
             {
@@ -163,7 +165,7 @@ namespace ComidasRapidasPOOmBA
                     }
                     else
                     {
-                        hP = calculoParaRegularsimple(hP);
+                        hP = calculoParaRegularSimple(hP);
                     }
                 }
             }
@@ -175,21 +177,21 @@ namespace ComidasRapidasPOOmBA
 
             return hP;
         }
-        
-        //**********************************************************************
+
+        //*****************************VALORES HAMBURGUESAS VEGGIE****************************************
         public Hamburguesa valoresHarcodeadosHVeggie(Hamburguesa hV)
         {
             hV.Codigo = 333;
-            hV.Nombre = lblHdeVeggan.Text;
             hV.Stock = 300;
             hV.Tipo = "Comida";
             return hV;
         }
         public Hamburguesa valoresPorPantallaHVeggie(Hamburguesa hV)
         {
+            hV.Nombre = lblHdeVeggan.Text;
             if (checkBoxDobleHdeVeggie.Checked == true && checkHdeVeggieGrande.Checked == true)
             {
-                hV = calculoParaDobleGrande(hV);
+                hV = calculoParaGrandeDoble(hV);
             }
             else
             {
@@ -205,7 +207,7 @@ namespace ComidasRapidasPOOmBA
                     }
                     else
                     {
-                        hV = calculoParaRegularsimple(hV);
+                        hV = calculoParaRegularSimple(hV);
                     }
                 }
             }
@@ -218,8 +220,226 @@ namespace ComidasRapidasPOOmBA
             return hV;
         }
 
-        //*****************************************************************************************
+        //*****************************VALORES ENSALADA CAPRESE*******************************************
+        public Ensalada valoresHarcodeadosEcaprese(Ensalada eC)
+        {
+            eC.Codigo = 444;
+            eC.Stock = 400;
+            eC.Tipo = "Comida";
+            return eC;
+        }
+        public Ensalada valoresPorPantallaEcaprese(Ensalada eC)
+        {
+            eC.Nombre = lblEnsaladaCaprese.Text;
+            if (checkBoxAderezoCaprese.Checked)
+                eC.Aderezo = "si";
+            else
+                eC.Aderezo = "no";
+            if (checkBoxCapreseGrande.Checked)
+            {
+                eC.Tamanio = "Grande";
+                eC.CodTamanio = 2;
+                eC.Precio = int.Parse(txtEnsaladaGrande.Text);
+            }
+            else
+            {
+                eC.Tamanio = "Regular";
+                eC.CodTamanio = 1;
+                eC.Precio = int.Parse(txtEnsaladaRegular.Text);
+            }
+            if (checkBoxSalCaprese.Checked)
+                eC.Sal = "si";
+            else
+                eC.Sal = "no";
+            return eC;
+        }
+        
+        //*****************************VALORES ENSALADA GRIEGA********************************************
+        public Ensalada valoresHarcodeadosEgriega(Ensalada eG)
+        {
+            eG.Codigo = 555;
+            eG.Stock = 500;
+            eG.Tipo = "Comida";
+            return eG;
+        }
+        public Ensalada valoresPorPantallaEgriega(Ensalada eG)
+        {
+            eG.Nombre = lblEnsaladaGriega.Text;
+            if (checkBoxAderezoGriega.Checked)
+                eG.Aderezo = "si";
+            else
+                eG.Aderezo = "no";
+            if (checkBoxGriegaGrande.Checked)
+            {
+                eG.Tamanio = "Grande";
+                eG.CodTamanio = 2;
+                eG.Precio = int.Parse(txtEnsaladaGrande.Text);
+            }
+            else
+            {
+                eG.Tamanio = "Regular";
+                eG.CodTamanio = 1;
+                eG.Precio = int.Parse(txtEnsaladaRegular.Text);
+            }
+            if (checkBoxSalGriega.Checked)
+                eG.Sal = "si";
+            else
+                eG.Sal = "no";
+            return eG;
+        }
+        
+        //*****************************VALORES ENSALADA ITALIANA VEGANA***********************************
+        public Ensalada valoresHarcodeadosEiV(Ensalada eIv)
+        {
+            eIv.Codigo = 666;
+            eIv.Stock = 600;
+            eIv.Tipo = "Comida";
+            return eIv;
+        }
+        public Ensalada valoresPorPantallaEiV(Ensalada eIv)
+        {
+            eIv.Nombre = lblEnsaladaGriega.Text;
+            if (checkBoxAderezoItaliana.Checked)
+                eIv.Aderezo = "si";
+            else
+                eIv.Aderezo = "no";
+            if (checkBoxItalianaGrande.Checked)
+            {
+                eIv.Tamanio = "Grande";
+                eIv.CodTamanio = 2;
+                eIv.Precio = int.Parse(txtEnsaladaGrande.Text);
+            }
+            else
+            {
+                eIv.Tamanio = "Regular";
+                eIv.CodTamanio = 1;
+                eIv.Precio = int.Parse(txtEnsaladaRegular.Text);
+            }
+            if (checkBoxSalItaliana.Checked)
+                eIv.Sal = "si";
+            else
+                eIv.Sal = "no";
+            return eIv;
+        }
 
+        //*****************************VALORES GUARNICION PAPAS FRITAS************************************
+        public Guarnicion valoresHarcodeadosPfritas(Guarnicion pFritas)
+        {
+            pFritas.Codigo = 777;
+            pFritas.Stock = 700;
+            pFritas.Tipo = "Comida";
+            return pFritas;
+        }
+
+        public Guarnicion valoresPorPantallaPfritas(Guarnicion pFritas)
+        {
+            pFritas.Nombre = lblPapasFritas.Text;
+            if (checkBoxAderezoPapas.Checked)
+                pFritas.Aderezo = "si";
+            else
+                pFritas.Aderezo = "no";
+            if (checkBoxPapasGrande.Checked)
+            {
+                pFritas.Tamanio = "Grande";
+                pFritas.CodTamanio = 2;
+                pFritas.Precio = int.Parse(txtGuarnicionGrande.Text);
+            }
+            else
+            {
+                pFritas.Tamanio = "Regular";
+                pFritas.CodTamanio = 1;
+                pFritas.Precio = int.Parse(txtGuarnicionRegular.Text);
+            }
+            if (checkBoxSalPapas.Checked)
+                pFritas.Sal = "si";
+            else
+                pFritas.Sal = "no";
+            return pFritas;
+        }
+        
+        //*****************************VALORES GUARNICION PAPAS CHEDDAR***********************************
+        public Guarnicion valoresHarcodeadosPcheddar(Guarnicion pCheddar)
+        {
+            pCheddar.Codigo = 888;
+            pCheddar.Stock = 800;
+            pCheddar.Tipo = "Comida";
+            return pCheddar;
+        }
+        public Guarnicion valoresPorPantallaPcheddar(Guarnicion pCheddar)
+        {
+            pCheddar.Nombre = lblPapasFritasConCheddar.Text;
+            if (checkBoxSalPapasCheddar.Checked)
+                pCheddar.Aderezo = "si";
+            else
+                pCheddar.Aderezo = "no";
+            if (checkBoxPapasCheddarGrande.Checked)
+            {
+                pCheddar.Tamanio = "Grande";
+                pCheddar.CodTamanio = 2;
+                pCheddar.Precio = int.Parse(txtGuarnicionGrande.Text);
+            }
+            else
+            {
+                pCheddar.Tamanio = "Regular";
+                pCheddar.CodTamanio = 1;
+                pCheddar.Precio = int.Parse(txtGuarnicionRegular.Text);
+            }
+            if (checkBoxSalPapasCheddar.Checked)
+                pCheddar.Sal = "si";
+            else
+                pCheddar.Sal = "no";
+            return pCheddar;
+        }
+        
+        //*****************************VALORES GUARNICION PAPAS POOMBA************************************
+        public Guarnicion valoresHarcodeadosPpoomba(Guarnicion pPoomba)
+        {
+            pPoomba.Codigo = 999;
+            pPoomba.Stock = 900;
+            pPoomba.Tipo = "Comida";
+            return pPoomba;
+        }
+        public Guarnicion valoresPorPantallaPpoomba(Guarnicion pPoomba)
+        {
+            pPoomba.Nombre = lblPapasFritasPoomba.Text;
+            if (checkBoxAderezoPapasPoomba.Checked)
+                pPoomba.Aderezo = "si";
+            else
+                pPoomba.Aderezo = "no";
+            if (checkBoxPapasPoombaGrande.Checked)
+            {
+                pPoomba.Tamanio = "Grande";
+                pPoomba.CodTamanio = 2;
+                pPoomba.Precio = int.Parse(txtGuarnicionGrande.Text);
+            }
+            else
+            {
+                pPoomba.Tamanio = "Regular";
+                pPoomba.CodTamanio = 1;
+                pPoomba.Precio = int.Parse(txtGuarnicionRegular.Text);
+            }
+            if (checkBoxSalPapasCheddar.Checked)
+                pPoomba.Sal = "si";
+            else
+                pPoomba.Sal = "no";
+            return pPoomba;
+        }
+
+        ////*****************************VALORES BEBIDA GASEOSA*********************************************
+        //public bebida valoresHarcodeadosGaseosa(bebida gaseosa)
+        //{
+        //    gaseosa.Codigo = 1122;
+        //    gaseosa.Stock = 100;
+        //    gaseosa.Tipo = "Comida";
+        //    return gaseosa;
+        //}
+        //public bebida valoresPorPantallaGaseosa(bebida gaseosa)
+        //{
+
+        //    return gaseosa;
+        //}
+
+        //*****************************METODOS DETALLE****************************************************
         public Hamburguesa gestionDetalle(int c, Hamburguesa h)
         {
             var detalle = new Detalle(c, h);//creo el objeto detalle
@@ -227,8 +447,22 @@ namespace ComidasRapidasPOOmBA
             pedido.ingresarAPedido(detalle);//agrego el item a la lista
             return h;
         }
+        public Ensalada gestionDetalle(int c, Ensalada e)
+        {
+            var detalle = new Detalle(c, e);//creo el objeto detalle
+            var subTotal = detalle.subtotalPorProducto(c, e);//calculo el subtotal de ese item
+            pedido.ingresarAPedido(detalle);//agrego el item a la lista
+            return e;
+        }
+        public Guarnicion gestionDetalle(int c, Guarnicion g)
+        {
+            var detalle = new Detalle(c, g);//creo el objeto detalle
+            var subTotal = detalle.subtotalPorProducto(c, g);//calculo el subtotal de ese item
+            pedido.ingresarAPedido(detalle);//agrego el item a la lista
+            return g;
+        }
 
-        //********************************************************************************************
+        //*****************************BOTON CLICK HAMBURGUESAS*******************************************
         private void btnAgregarHamburguesas_Click(object sender, EventArgs e)
         {
            if (numericUpDownHamburguesaDeCarne.Value != 0)//si marco carne y el numero es > que cero
@@ -245,7 +479,7 @@ namespace ComidasRapidasPOOmBA
             else
                 MessageBox.Show("No hay objeto de carne");
             
-            if (numericUpDownHamburguesaDePollo.Value != 0)//si marco carne y el numero es > que cero
+            if (numericUpDownHamburguesaDePollo.Value != 0)//si marco pollo y el numero es > que cero
             {
                 gbHamburguesas.Visible = false; //escondo group box
                 hP = new Hamburguesa();
@@ -281,7 +515,163 @@ namespace ComidasRapidasPOOmBA
             listBoxPedido.DataSource = listAux;
             var total=pedido.sumaTotal(pedido);
             MessageBox.Show("Total: "+total);
+            txtTotal.Text = total.ToString();
         }
+        
+        //*****************************BOTON CLICK ENSALADAS**********************************************
+        private void btnAgregarEnsaladas_Click(object sender, EventArgs e)
+        {
+            if (numericUpDownEnsaladaCaprese.Value != 0)
+            {
+                gbEnsaladas.Visible = false;
+                eC = new Ensalada();
+                valoresHarcodeadosEcaprese(eC);
+                valoresPorPantallaEcaprese(eC);
+                var cant = (int)numericUpDownEnsaladaCaprese.Value;
+                eC = gestionDetalle(cant, eC);
+                MessageBox.Show("Codigo: " + eC.Codigo + "-" + "Nombre: " + eC.Nombre + "-" +
+                                "Stock: " + eC.Stock + "-" + "Precio individual: " + eC.Precio + "-" +
+                                "Tipo: " + eC.Tipo + "-" + "Cod.Tamanio: " + eC.CodTamanio + "-" +
+                                "Tamanio: " + eC.Tamanio + "-" + "Aderezo: " + eC.Aderezo + "-" +
+                                "Sal: " + eC.Sal);
+            }
+            else
+                MessageBox.Show("No hay objeto Ensalada Caprese");
+
+            if (numericUpDownensaladaGriega.Value != 0)
+            {
+                gbEnsaladas.Visible = false;
+                eG = new Ensalada();
+                valoresHarcodeadosEgriega(eG);
+                valoresPorPantallaEgriega(eG);
+                var cant = (int)numericUpDownensaladaGriega.Value;
+                eG = gestionDetalle(cant, eG);
+                MessageBox.Show("Codigo: " + eG.Codigo + "-" + "Nombre: " + eG.Nombre + "-" +
+                                "Stock: " + eG.Stock + "-" + "Precio individual: " + eG.Precio + "-" +
+                                "Tipo: " + eG.Tipo + "-" + "Cod.Tamanio: " + eG.CodTamanio + "-" +
+                                "Tamanio: " + eG.Tamanio + "-" + "Aderezo: " + eG.Aderezo + "-" +
+                                "Sal: " + eG.Sal);
+            }
+            else
+                MessageBox.Show("No hay objeto Ensalada Griega");
+
+            if (numericUpDownensaladaItalianaVegana.Value != 0)
+            {
+                gbEnsaladas.Visible = false;
+                eIv = new Ensalada();
+                valoresHarcodeadosEiV(eIv);
+                valoresPorPantallaEiV(eIv);
+                var cant = (int)numericUpDownensaladaGriega.Value;
+                eIv = gestionDetalle(cant, eIv);
+                MessageBox.Show("Codigo: " + eIv.Codigo + "-" + "Nombre: " + eIv.Nombre + "-" +
+                                "Stock: " + eIv.Stock + "-" + "Precio individual: " + eIv.Precio + "-" +
+                                "Tipo: " + eIv.Tipo + "-" + "Cod.Tamanio: " + eIv.CodTamanio + "-" +
+                                "Tamanio: " + eIv.Tamanio + "-" + "Aderezo: " + eIv.Aderezo + "-" +
+                                "Sal: " + eIv.Sal);
+            }
+            else
+                MessageBox.Show("No hay objeto Ensalada Italiana Vegana");
+
+            ListaD = pedido.ListaDetalle;
+            List<string> listAux = new List<string>();
+            foreach (var det in ListaD)
+            {
+                listAux.Add(det.Item.Nombre + " " + "Cantidad: " + det.Cantidad + " " + "Subtotal: " + det.Subtotal);
+            }
+            listBoxPedido.DataSource = listAux;
+            var total = pedido.sumaTotal(pedido);
+            MessageBox.Show("Total: " + total);
+            txtTotal.Text = total.ToString();
+        }
+        
+        //*****************************BOTON CLICK GUARNICIONES*******************************************
+        private void btnAgregarGuarniciones_Click(object sender, EventArgs e)
+        {
+
+            if (numericUpDownPapasFritas.Value != 0)
+            {
+                gbGuarniciones.Visible = false;
+                pFritas = new Guarnicion();
+                valoresHarcodeadosPfritas(pFritas);
+                valoresPorPantallaPfritas(pFritas);
+                var cant = (int)numericUpDownPapasFritas.Value;
+                pFritas = gestionDetalle(cant, pFritas);
+                MessageBox.Show("Codigo: " + pFritas.Codigo + "-" + "Nombre: " + pFritas.Nombre + "-" +
+                                "Stock: " + pFritas.Stock + "-" + "Precio individual: " + pFritas.Precio + "-" +
+                                "Tipo: " + pFritas.Tipo + "-" + "Cod.Tamanio: " + pFritas.CodTamanio + "-" +
+                                "Tamanio: " + pFritas.Tamanio + "-" + "Aderezo: " + pFritas.Aderezo + "-" +
+                                "Sal: " + pFritas.Sal);
+            }
+            else
+                MessageBox.Show("No hay objeto Guarnicion Papas Fritas");
+
+            if (numericUpDownPapasFritasConCheddar.Value != 0)
+            {
+                gbGuarniciones.Visible = false;
+                pCheddar = new Guarnicion();
+                valoresHarcodeadosPcheddar(pCheddar);
+                valoresPorPantallaPcheddar(pCheddar);
+                var cant = (int)numericUpDownPapasFritasPoomba.Value;
+                pCheddar = gestionDetalle(cant, pCheddar);
+                MessageBox.Show("Codigo: " + pCheddar.Codigo + "-" + "Nombre: " + pCheddar.Nombre + "-" +
+                                "Stock: " + pCheddar.Stock + "-" + "Precio individual: " + pCheddar.Precio + "-" +
+                                "Tipo: " + pCheddar.Tipo + "-" + "Cod.Tamanio: " + pCheddar.CodTamanio + "-" +
+                                "Tamanio: " + pCheddar.Tamanio + "-" + "Aderezo: " + pCheddar.Aderezo + "-" +
+                                "Sal: " + pCheddar.Sal);
+            }
+            else
+                MessageBox.Show("No hay objeto Guarnicion Papas Cheddar");
+
+            if (numericUpDownPapasFritasPoomba.Value != 0)
+            {
+                gbGuarniciones.Visible = false;
+                pPoomba = new Guarnicion();
+                valoresHarcodeadosPpoomba(pPoomba);
+                valoresPorPantallaPpoomba(pPoomba);
+                var cant = (int)numericUpDownPapasFritasPoomba.Value;
+                pPoomba = gestionDetalle(cant, pPoomba);
+                MessageBox.Show("Codigo: " + pPoomba.Codigo + "-" + "Nombre: " + pPoomba.Nombre + "-" +
+                                "Stock: " + pPoomba.Stock + "-" + "Precio individual: " + pPoomba.Precio + "-" +
+                                "Tipo: " + pPoomba.Tipo + "-" + "Cod.Tamanio: " + pPoomba.CodTamanio + "-" +
+                                "Tamanio: " + pPoomba.Tamanio + "-" + "Aderezo: " + pPoomba.Aderezo + "-" +
+                                "Sal: " + pPoomba.Sal);
+            }
+            else
+                MessageBox.Show("No hay objeto Guarnicion Papas Poomba");
+
+            ListaD = pedido.ListaDetalle;
+            List<string> listAux = new List<string>();
+            foreach (var det in ListaD)
+            {
+                listAux.Add(det.Item.Nombre + " " + "Cantidad: " + det.Cantidad + " " + "Subtotal: " + det.Subtotal);
+            }
+            listBoxPedido.DataSource = listAux;
+            var total = pedido.sumaTotal(pedido);
+            MessageBox.Show("Total: " + total);
+            txtTotal.Text = total.ToString();
+        }
+        //*************************************************************************************************
+        //private void btnAgregarBebidas_Click(object sender, EventArgs e)
+        //{
+        //    if (numericUpDownGaseosa.Value != 0)
+        //    {
+        //        gbBebidas.Visible = false;
+        //        gaseosa = new bebida();
+        //        valoresHarcodeadosGaseosa(gaseosa);
+        //        valoresPorPantallaGaseosa(gaseosa);
+        //        var cant = (int)numericUpDownGaseosa.Value;
+        //        gaseosa = gestionDetalle(cant, gaseosa);
+        //        MessageBox.Show("Codigo: " + gaseosa.Codigo + "-" + "Nombre: " + gaseosa.Nombre + "-" +
+        //                        "Stock: " + gaseosa.Stock + "-" + "Precio individual: " + gaseosa.Precio + "-" +
+        //                        "Tipo: " + gaseosa.Tipo + "-" + "Cod.Tamanio: " + gaseosa.CodTamanio + "-" +
+        //                        "Tamanio: " + gaseosa.Tamanio + "-" + "Hielo: " + gaseosa.ConHielo + "-" +
+        //                        "Light: " + gaseosa.Diet);
+        //    }
+        //    else
+        //        MessageBox.Show("No hay objeto Bebida Gaseosa");
+        //}
+
     }
+    
 }
 

@@ -121,6 +121,13 @@ namespace ComidasRapidasPOOmBA
             this.lblEnsaladaCaprese = new System.Windows.Forms.Label();
             this.btnAgregarEnsaladas = new System.Windows.Forms.Button();
             this.gbHamburguesas = new System.Windows.Forms.GroupBox();
+            this.lblHdoble = new System.Windows.Forms.Label();
+            this.lblHsimple = new System.Windows.Forms.Label();
+            this.txtHamburguesaGrandeDoble = new System.Windows.Forms.TextBox();
+            this.txtHamburguesaRegDoble = new System.Windows.Forms.TextBox();
+            this.checkHdeVeggieGrande = new System.Windows.Forms.CheckBox();
+            this.checkHdePolloGrande = new System.Windows.Forms.CheckBox();
+            this.checkHdeCarneGrande = new System.Windows.Forms.CheckBox();
             this.lblHdeVeggan = new System.Windows.Forms.Label();
             this.lblHdePollo = new System.Windows.Forms.Label();
             this.lblHdeCarne = new System.Windows.Forms.Label();
@@ -140,18 +147,13 @@ namespace ComidasRapidasPOOmBA
             this.numericUpDownHamburguesaDeCarne = new System.Windows.Forms.NumericUpDown();
             this.btnAgregarHamburguesas = new System.Windows.Forms.Button();
             this.gbPedido = new System.Windows.Forms.GroupBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             this.listBoxPedido = new System.Windows.Forms.ListBox();
             this.btnConfirmarPedido = new System.Windows.Forms.Button();
             this.gbSugerencia1 = new System.Windows.Forms.GroupBox();
             this.lblSugerencia1 = new System.Windows.Forms.Label();
             this.btnSugerencia = new System.Windows.Forms.Button();
-            this.checkHdeVeggieGrande = new System.Windows.Forms.CheckBox();
-            this.checkHdePolloGrande = new System.Windows.Forms.CheckBox();
-            this.checkHdeCarneGrande = new System.Windows.Forms.CheckBox();
-            this.txtHamburguesaGrandeDoble = new System.Windows.Forms.TextBox();
-            this.txtHamburguesaRegDoble = new System.Windows.Forms.TextBox();
-            this.lblHsimple = new System.Windows.Forms.Label();
-            this.lblHdoble = new System.Windows.Forms.Label();
             this.gbMenuCompleto.SuspendLayout();
             this.gbPostres.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQueremosFlan)).BeginInit();
@@ -352,7 +354,7 @@ namespace ComidasRapidasPOOmBA
             this.txtPostreGrande.Name = "txtPostreGrande";
             this.txtPostreGrande.Size = new System.Drawing.Size(46, 27);
             this.txtPostreGrande.TabIndex = 49;
-            this.txtPostreGrande.Text = "800";
+            this.txtPostreGrande.Text = "750";
             // 
             // txtPostreRegular
             // 
@@ -361,7 +363,7 @@ namespace ComidasRapidasPOOmBA
             this.txtPostreRegular.Name = "txtPostreRegular";
             this.txtPostreRegular.Size = new System.Drawing.Size(46, 27);
             this.txtPostreRegular.TabIndex = 48;
-            this.txtPostreRegular.Text = "500";
+            this.txtPostreRegular.Text = "550";
             // 
             // lblPgrande
             // 
@@ -529,7 +531,7 @@ namespace ComidasRapidasPOOmBA
             this.txtBebidaGrande.Name = "txtBebidaGrande";
             this.txtBebidaGrande.Size = new System.Drawing.Size(46, 27);
             this.txtBebidaGrande.TabIndex = 44;
-            this.txtBebidaGrande.Text = "800";
+            this.txtBebidaGrande.Text = "300";
             // 
             // txtBebidaRegular
             // 
@@ -538,7 +540,7 @@ namespace ComidasRapidasPOOmBA
             this.txtBebidaRegular.Name = "txtBebidaRegular";
             this.txtBebidaRegular.Size = new System.Drawing.Size(46, 27);
             this.txtBebidaRegular.TabIndex = 43;
-            this.txtBebidaRegular.Text = "500";
+            this.txtBebidaRegular.Text = "200";
             // 
             // lblBgrande
             // 
@@ -701,6 +703,7 @@ namespace ComidasRapidasPOOmBA
             this.btnAgregarBebidas.TabIndex = 2;
             this.btnAgregarBebidas.Text = "Agregar";
             this.btnAgregarBebidas.UseVisualStyleBackColor = true;
+            //this.btnAgregarBebidas.Click += new System.EventHandler(this.btnAgregarBebidas_Click);
             // 
             // gbGuarniciones
             // 
@@ -742,7 +745,7 @@ namespace ComidasRapidasPOOmBA
             this.txtGuarnicionGrande.Name = "txtGuarnicionGrande";
             this.txtGuarnicionGrande.Size = new System.Drawing.Size(46, 27);
             this.txtGuarnicionGrande.TabIndex = 39;
-            this.txtGuarnicionGrande.Text = "800";
+            this.txtGuarnicionGrande.Text = "550";
             // 
             // txtGuarnicionRegular
             // 
@@ -751,7 +754,7 @@ namespace ComidasRapidasPOOmBA
             this.txtGuarnicionRegular.Name = "txtGuarnicionRegular";
             this.txtGuarnicionRegular.Size = new System.Drawing.Size(46, 27);
             this.txtGuarnicionRegular.TabIndex = 38;
-            this.txtGuarnicionRegular.Text = "500";
+            this.txtGuarnicionRegular.Text = "450";
             // 
             // lblGgrande
             // 
@@ -947,6 +950,7 @@ namespace ComidasRapidasPOOmBA
             this.btnAgregarGuarniciones.TabIndex = 2;
             this.btnAgregarGuarniciones.Text = "Agregar";
             this.btnAgregarGuarniciones.UseVisualStyleBackColor = true;
+            this.btnAgregarGuarniciones.Click += new System.EventHandler(this.btnAgregarGuarniciones_Click);
             // 
             // gbEnsaladas
             // 
@@ -988,7 +992,7 @@ namespace ComidasRapidasPOOmBA
             this.txtEnsaladaGrande.Name = "txtEnsaladaGrande";
             this.txtEnsaladaGrande.Size = new System.Drawing.Size(46, 27);
             this.txtEnsaladaGrande.TabIndex = 34;
-            this.txtEnsaladaGrande.Text = "800";
+            this.txtEnsaladaGrande.Text = "750";
             // 
             // checkBoxSalItaliana
             // 
@@ -1008,7 +1012,7 @@ namespace ComidasRapidasPOOmBA
             this.txtEnsaladaRegular.Name = "txtEnsaladaRegular";
             this.txtEnsaladaRegular.Size = new System.Drawing.Size(46, 27);
             this.txtEnsaladaRegular.TabIndex = 33;
-            this.txtEnsaladaRegular.Text = "500";
+            this.txtEnsaladaRegular.Text = "600";
             // 
             // checkBoxSalGriega
             // 
@@ -1193,6 +1197,7 @@ namespace ComidasRapidasPOOmBA
             this.btnAgregarEnsaladas.TabIndex = 2;
             this.btnAgregarEnsaladas.Text = "Agregar";
             this.btnAgregarEnsaladas.UseVisualStyleBackColor = true;
+            this.btnAgregarEnsaladas.Click += new System.EventHandler(this.btnAgregarEnsaladas_Click);
             // 
             // gbHamburguesas
             // 
@@ -1230,6 +1235,77 @@ namespace ComidasRapidasPOOmBA
             this.gbHamburguesas.TabStop = false;
             this.gbHamburguesas.Text = "Hamburguesas";
             this.gbHamburguesas.Visible = false;
+            // 
+            // lblHdoble
+            // 
+            this.lblHdoble.AutoSize = true;
+            this.lblHdoble.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblHdoble.Location = new System.Drawing.Point(493, 37);
+            this.lblHdoble.Name = "lblHdoble";
+            this.lblHdoble.Size = new System.Drawing.Size(50, 20);
+            this.lblHdoble.TabIndex = 36;
+            this.lblHdoble.Text = "Doble";
+            // 
+            // lblHsimple
+            // 
+            this.lblHsimple.AutoSize = true;
+            this.lblHsimple.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblHsimple.Location = new System.Drawing.Point(437, 37);
+            this.lblHsimple.Name = "lblHsimple";
+            this.lblHsimple.Size = new System.Drawing.Size(55, 20);
+            this.lblHsimple.TabIndex = 35;
+            this.lblHsimple.Text = "Simple";
+            // 
+            // txtHamburguesaGrandeDoble
+            // 
+            this.txtHamburguesaGrandeDoble.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtHamburguesaGrandeDoble.Location = new System.Drawing.Point(497, 87);
+            this.txtHamburguesaGrandeDoble.Name = "txtHamburguesaGrandeDoble";
+            this.txtHamburguesaGrandeDoble.Size = new System.Drawing.Size(46, 27);
+            this.txtHamburguesaGrandeDoble.TabIndex = 34;
+            this.txtHamburguesaGrandeDoble.Text = "1000";
+            // 
+            // txtHamburguesaRegDoble
+            // 
+            this.txtHamburguesaRegDoble.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtHamburguesaRegDoble.Location = new System.Drawing.Point(497, 57);
+            this.txtHamburguesaRegDoble.Name = "txtHamburguesaRegDoble";
+            this.txtHamburguesaRegDoble.Size = new System.Drawing.Size(46, 27);
+            this.txtHamburguesaRegDoble.TabIndex = 33;
+            this.txtHamburguesaRegDoble.Text = "700";
+            // 
+            // checkHdeVeggieGrande
+            // 
+            this.checkHdeVeggieGrande.AutoSize = true;
+            this.checkHdeVeggieGrande.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkHdeVeggieGrande.Location = new System.Drawing.Point(296, 92);
+            this.checkHdeVeggieGrande.Name = "checkHdeVeggieGrande";
+            this.checkHdeVeggieGrande.Size = new System.Drawing.Size(77, 23);
+            this.checkHdeVeggieGrande.TabIndex = 32;
+            this.checkHdeVeggieGrande.Text = "Grande";
+            this.checkHdeVeggieGrande.UseVisualStyleBackColor = true;
+            // 
+            // checkHdePolloGrande
+            // 
+            this.checkHdePolloGrande.AutoSize = true;
+            this.checkHdePolloGrande.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkHdePolloGrande.Location = new System.Drawing.Point(296, 63);
+            this.checkHdePolloGrande.Name = "checkHdePolloGrande";
+            this.checkHdePolloGrande.Size = new System.Drawing.Size(77, 23);
+            this.checkHdePolloGrande.TabIndex = 31;
+            this.checkHdePolloGrande.Text = "Grande";
+            this.checkHdePolloGrande.UseVisualStyleBackColor = true;
+            // 
+            // checkHdeCarneGrande
+            // 
+            this.checkHdeCarneGrande.AutoSize = true;
+            this.checkHdeCarneGrande.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkHdeCarneGrande.Location = new System.Drawing.Point(296, 34);
+            this.checkHdeCarneGrande.Name = "checkHdeCarneGrande";
+            this.checkHdeCarneGrande.Size = new System.Drawing.Size(77, 23);
+            this.checkHdeCarneGrande.TabIndex = 30;
+            this.checkHdeCarneGrande.Text = "Grande";
+            this.checkHdeCarneGrande.UseVisualStyleBackColor = true;
             // 
             // lblHdeVeggan
             // 
@@ -1404,7 +1480,7 @@ namespace ComidasRapidasPOOmBA
             // 
             this.btnAgregarHamburguesas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregarHamburguesas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAgregarHamburguesas.Location = new System.Drawing.Point(548, 103);
+            this.btnAgregarHamburguesas.Location = new System.Drawing.Point(548, 97);
             this.btnAgregarHamburguesas.Name = "btnAgregarHamburguesas";
             this.btnAgregarHamburguesas.Size = new System.Drawing.Size(85, 29);
             this.btnAgregarHamburguesas.TabIndex = 2;
@@ -1415,6 +1491,8 @@ namespace ComidasRapidasPOOmBA
             // gbPedido
             // 
             this.gbPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gbPedido.Controls.Add(this.lblTotal);
+            this.gbPedido.Controls.Add(this.txtTotal);
             this.gbPedido.Controls.Add(this.listBoxPedido);
             this.gbPedido.Controls.Add(this.btnConfirmarPedido);
             this.gbPedido.Dock = System.Windows.Forms.DockStyle.Right;
@@ -1425,6 +1503,23 @@ namespace ComidasRapidasPOOmBA
             this.gbPedido.TabIndex = 2;
             this.gbPedido.TabStop = false;
             this.gbPedido.Text = "Pedido";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(54, 366);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(66, 28);
+            this.lblTotal.TabIndex = 6;
+            this.lblTotal.Text = "Total:";
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTotal.Location = new System.Drawing.Point(126, 364);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(100, 34);
+            this.txtTotal.TabIndex = 5;
             // 
             // listBoxPedido
             // 
@@ -1441,11 +1536,11 @@ namespace ComidasRapidasPOOmBA
             // 
             this.btnConfirmarPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnConfirmarPedido.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnConfirmarPedido.Location = new System.Drawing.Point(167, 356);
+            this.btnConfirmarPedido.Location = new System.Drawing.Point(71, 414);
             this.btnConfirmarPedido.Name = "btnConfirmarPedido";
-            this.btnConfirmarPedido.Size = new System.Drawing.Size(105, 32);
+            this.btnConfirmarPedido.Size = new System.Drawing.Size(155, 36);
             this.btnConfirmarPedido.TabIndex = 3;
-            this.btnConfirmarPedido.Text = "CONFIRMAR";
+            this.btnConfirmarPedido.Text = "CONFIRMAR PEDIDO";
             this.btnConfirmarPedido.UseVisualStyleBackColor = false;
             // 
             // gbSugerencia1
@@ -1486,77 +1581,6 @@ namespace ComidasRapidasPOOmBA
             this.btnSugerencia.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSugerencia.UseVisualStyleBackColor = true;
             this.btnSugerencia.Click += new System.EventHandler(this.btnSugerencia_Click);
-            // 
-            // checkHdeVeggieGrande
-            // 
-            this.checkHdeVeggieGrande.AutoSize = true;
-            this.checkHdeVeggieGrande.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkHdeVeggieGrande.Location = new System.Drawing.Point(296, 92);
-            this.checkHdeVeggieGrande.Name = "checkHdeVeggieGrande";
-            this.checkHdeVeggieGrande.Size = new System.Drawing.Size(77, 23);
-            this.checkHdeVeggieGrande.TabIndex = 32;
-            this.checkHdeVeggieGrande.Text = "Grande";
-            this.checkHdeVeggieGrande.UseVisualStyleBackColor = true;
-            // 
-            // checkHdePolloGrande
-            // 
-            this.checkHdePolloGrande.AutoSize = true;
-            this.checkHdePolloGrande.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkHdePolloGrande.Location = new System.Drawing.Point(296, 63);
-            this.checkHdePolloGrande.Name = "checkHdePolloGrande";
-            this.checkHdePolloGrande.Size = new System.Drawing.Size(77, 23);
-            this.checkHdePolloGrande.TabIndex = 31;
-            this.checkHdePolloGrande.Text = "Grande";
-            this.checkHdePolloGrande.UseVisualStyleBackColor = true;
-            // 
-            // checkHdeCarneGrande
-            // 
-            this.checkHdeCarneGrande.AutoSize = true;
-            this.checkHdeCarneGrande.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkHdeCarneGrande.Location = new System.Drawing.Point(296, 34);
-            this.checkHdeCarneGrande.Name = "checkHdeCarneGrande";
-            this.checkHdeCarneGrande.Size = new System.Drawing.Size(77, 23);
-            this.checkHdeCarneGrande.TabIndex = 30;
-            this.checkHdeCarneGrande.Text = "Grande";
-            this.checkHdeCarneGrande.UseVisualStyleBackColor = true;
-            // 
-            // txtHamburguesaGrandeDoble
-            // 
-            this.txtHamburguesaGrandeDoble.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtHamburguesaGrandeDoble.Location = new System.Drawing.Point(497, 87);
-            this.txtHamburguesaGrandeDoble.Name = "txtHamburguesaGrandeDoble";
-            this.txtHamburguesaGrandeDoble.Size = new System.Drawing.Size(46, 27);
-            this.txtHamburguesaGrandeDoble.TabIndex = 34;
-            this.txtHamburguesaGrandeDoble.Text = "1000";
-            // 
-            // txtHamburguesaRegDoble
-            // 
-            this.txtHamburguesaRegDoble.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtHamburguesaRegDoble.Location = new System.Drawing.Point(497, 57);
-            this.txtHamburguesaRegDoble.Name = "txtHamburguesaRegDoble";
-            this.txtHamburguesaRegDoble.Size = new System.Drawing.Size(46, 27);
-            this.txtHamburguesaRegDoble.TabIndex = 33;
-            this.txtHamburguesaRegDoble.Text = "700";
-            // 
-            // lblHsimple
-            // 
-            this.lblHsimple.AutoSize = true;
-            this.lblHsimple.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblHsimple.Location = new System.Drawing.Point(437, 37);
-            this.lblHsimple.Name = "lblHsimple";
-            this.lblHsimple.Size = new System.Drawing.Size(55, 20);
-            this.lblHsimple.TabIndex = 35;
-            this.lblHsimple.Text = "Simple";
-            // 
-            // lblHdoble
-            // 
-            this.lblHdoble.AutoSize = true;
-            this.lblHdoble.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblHdoble.Location = new System.Drawing.Point(493, 37);
-            this.lblHdoble.Name = "lblHdoble";
-            this.lblHdoble.Size = new System.Drawing.Size(50, 20);
-            this.lblHdoble.TabIndex = 36;
-            this.lblHdoble.Text = "Doble";
             // 
             // FormularioMenu
             // 
@@ -1602,6 +1626,7 @@ namespace ComidasRapidasPOOmBA
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHamburguesaDePollo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHamburguesaDeCarne)).EndInit();
             this.gbPedido.ResumeLayout(false);
+            this.gbPedido.PerformLayout();
             this.gbSugerencia1.ResumeLayout(false);
             this.gbSugerencia1.PerformLayout();
             this.ResumeLayout(false);
@@ -1732,5 +1757,7 @@ namespace ComidasRapidasPOOmBA
         private System.Windows.Forms.CheckBox checkHdeVeggieGrande;
         private System.Windows.Forms.CheckBox checkHdePolloGrande;
         private System.Windows.Forms.CheckBox checkHdeCarneGrande;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.TextBox txtTotal;
     }
 }
