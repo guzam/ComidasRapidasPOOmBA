@@ -14,7 +14,7 @@ namespace ComidasRapidasPOOmBA
     
     public partial class FormularioMenu : Form
     {
-        public List<Detalle> ListaD = new List<Detalle>();
+        
         Pedido pedido = new Pedido(new List<Detalle>());//se crea el objeto pedido
         Hamburguesa hC, hP, hV, h;
         Ensalada eC, eG, eIv;
@@ -425,20 +425,78 @@ namespace ComidasRapidasPOOmBA
             return pPoomba;
         }
 
-        ////*****************************VALORES BEBIDA GASEOSA*********************************************
-        //public bebida valoresHarcodeadosGaseosa(bebida gaseosa)
-        //{
-        //    gaseosa.Codigo = 1122;
-        //    gaseosa.Stock = 100;
-        //    gaseosa.Tipo = "Comida";
-        //    return gaseosa;
-        //}
-        //public bebida valoresPorPantallaGaseosa(bebida gaseosa)
-        //{
+        //*****************************VALORES BEBIDA GASEOSA*********************************************
+        public bebida valoresHarcodeadosGaseosa(bebida gaseosa)
+        {
+            gaseosa.Codigo = 1122;
+            gaseosa.Stock = 100;
+            gaseosa.Tipo = "Comida";
+            gaseosa.Tamanio = "Regular";
+            gaseosa.CodTamanio = 1;
+            gaseosa.Diet = "No";
+            gaseosa.ConHielo = "No";
+            
+            return gaseosa;
+        }
+        public bebida valoresPorPantallaGaseosa(bebida gaseosa)
+        {
 
-        //    return gaseosa;
-        //}
+            if (checkBoxGaseosaGrande.Checked)
+            {
+                gaseosa.Tamanio = "Grande";
+                gaseosa.CodTamanio = 2;
+            }
+            if (checkBoxHieloGaseosa.Checked)
+                gaseosa.ConHielo = "Si";
+            if (checkBoxLightGaseosa.Checked)
+                gaseosa.Diet = "Si";
+            return gaseosa;
+        }
+        //*****************************VALORES BEBIDA AGUA*********************************************
+        public bebida valoresHarcodeadosAgua(bebida agua)
+        {
+            agua.Codigo = 1133;
+            agua.Stock = 200;
+            agua.Tipo = "Comida";
+            agua.Tamanio = "Regular";
+            agua.CodTamanio = 1;
+            agua.ConHielo = "No";
+            return agua;
+        }
+        public bebida valoresPorPantallaAgua(bebida agua)
+        {
 
+            if (checkBoxAguaGrande.Checked)
+            {
+                agua.Tamanio = "Grande";
+                agua.CodTamanio = 2;
+            }
+            if (checkBoxHieloAgua.Checked)
+                agua.ConHielo = "Si";
+            
+            return agua;
+        }
+        //*****************************VALORES BEBIDA CERVEZA*********************************************
+        public bebida valoresHarcodeadosCerveza(bebida cerveza)
+        {
+            cerveza.Codigo = 1144;
+            cerveza.Stock = 300;
+            cerveza.Tipo = "Comida";
+            cerveza.Tamanio = "Regular";
+            cerveza.CodTamanio = 1;
+            return cerveza;
+        }
+        public bebida valoresPorPantallaCerveza(bebida cerveza)
+        {
+
+            if (checkBoxCervezaGrande.Checked)
+            {
+                cerveza.Tamanio = "Grande";
+                cerveza.CodTamanio = 2;
+            }
+            return cerveza;
+        }
+        
         //*****************************METODOS DETALLE****************************************************
         public Hamburguesa gestionDetalle(int c, Hamburguesa h)
         {
@@ -462,7 +520,7 @@ namespace ComidasRapidasPOOmBA
             return g;
         }
 
-        //*****************************BOTON CLICK HAMBURGUESAS*******************************************
+        //*****************************BOTON AGREGAR HAMBURGUESAS*****************************************
         private void btnAgregarHamburguesas_Click(object sender, EventArgs e)
         {
            if (numericUpDownHamburguesaDeCarne.Value != 0)//si marco carne y el numero es > que cero
@@ -505,20 +563,11 @@ namespace ComidasRapidasPOOmBA
             }
             else
                 MessageBox.Show("No hay objeto veggie");
-            
-            ListaD = pedido.ListaDetalle;
-            List<string> listAux = new List<string>();
-            foreach (var det in ListaD)
-            {
-                listAux.Add(det.Item.Nombre + " " + "Cantidad: " + det.Cantidad + " " + "Subtotal: " + det.Subtotal);
-            }
-            listBoxPedido.DataSource = listAux;
-            var total=pedido.sumaTotal(pedido);
-            MessageBox.Show("Total: "+total);
-            txtTotal.Text = total.ToString();
+
+            actualizarListaDetalle();
         }
         
-        //*****************************BOTON CLICK ENSALADAS**********************************************
+        //*****************************BOTON AGREGAR ENSALADAS********************************************
         private void btnAgregarEnsaladas_Click(object sender, EventArgs e)
         {
             if (numericUpDownEnsaladaCaprese.Value != 0)
@@ -572,19 +621,10 @@ namespace ComidasRapidasPOOmBA
             else
                 MessageBox.Show("No hay objeto Ensalada Italiana Vegana");
 
-            ListaD = pedido.ListaDetalle;
-            List<string> listAux = new List<string>();
-            foreach (var det in ListaD)
-            {
-                listAux.Add(det.Item.Nombre + " " + "Cantidad: " + det.Cantidad + " " + "Subtotal: " + det.Subtotal);
-            }
-            listBoxPedido.DataSource = listAux;
-            var total = pedido.sumaTotal(pedido);
-            MessageBox.Show("Total: " + total);
-            txtTotal.Text = total.ToString();
+            actualizarListaDetalle();
         }
         
-        //*****************************BOTON CLICK GUARNICIONES*******************************************
+        //*****************************BOTON AGREGAR GUARNICIONES*****************************************
         private void btnAgregarGuarniciones_Click(object sender, EventArgs e)
         {
 
@@ -639,9 +679,65 @@ namespace ComidasRapidasPOOmBA
             else
                 MessageBox.Show("No hay objeto Guarnicion Papas Poomba");
 
-            ListaD = pedido.ListaDetalle;
+            actualizarListaDetalle();
+        }
+        //*****************************BOTON AGREGAR BEBIDAS**********************************************
+        private void btnAgregarBebidas_Click(object sender, EventArgs e)
+        {
+            if (numericUpDownGaseosa.Value != 0)
+            {
+                gbBebidas.Visible = false;
+                gaseosa = new bebida();
+                valoresHarcodeadosGaseosa(gaseosa);
+                valoresPorPantallaGaseosa(gaseosa);
+                var cant = (int)numericUpDownGaseosa.Value;
+                gaseosa = gestionDetalle(cant, gaseosa);
+                MessageBox.Show("Codigo: " + gaseosa.Codigo + "-" + "Nombre: " + gaseosa.Nombre + "-" +
+                                "Stock: " + gaseosa.Stock + "-" + "Precio individual: " + gaseosa.Precio + "-" +
+                                "Tipo: " + gaseosa.Tipo + "-" + "Cod.Tamanio: " + gaseosa.CodTamanio + "-" +
+                                "Tamanio: " + gaseosa.Tamanio + "-" + "Hielo: " + gaseosa.ConHielo + "-" +
+                                "Light: " + gaseosa.Diet);
+            }
+            else
+                MessageBox.Show("No hay objeto Bebida Gaseosa");
+
+            if (numericUpDownAguaMineral.Value != 0)
+            {
+                gbBebidas.Visible = false;
+                agua = new bebida();
+                valoresHarcodeadosAgua(agua);
+                valoresPorPantallaAgua(agua);
+                var cant = (int)numericUpDownAguaMineral.Value;
+                agua = gestionDetalle(cant, agua);
+                MessageBox.Show("Codigo: " + agua.Codigo + "-" + "Nombre: " + agua.Nombre + "-" +
+                                "Stock: " + agua.Stock + "-" + "Precio individual: " + agua.Precio + "-" +
+                                "Tipo: " + agua.Tipo + "-" + "Cod.Tamanio: " + agua.CodTamanio + "-" +
+                                "Tamanio: " + agua.Tamanio + "-" + "Hielo: " + agua.ConHielo + "-");
+            }
+            else
+                MessageBox.Show("No hay objeto Bebida Agua");
+           
+            if(numericUpDownCerveza.Value!=0 )
+            {
+                gbBebidas.Visible = false;
+                cerveza = new bebida();
+                valoresHarcodeadosCerveza(cerveza);
+                valoresPorPantallaCerveza(cerveza);
+                var cant = (int)numericUpDownCerveza.Value;
+                cerveza = gestionDetalle(cant, cerveza);
+                MessageBox.Show("Codigo: " + cerveza.Codigo + "-" + "Nombre: " + cerveza.Nombre + "-" +
+                                "Stock: " + cerveza.Stock + "-" + "Precio individual: " + cerveza.Precio + "-" +
+                                "Tipo: " + cerveza.Tipo + "-" + "Cod.Tamanio: " + cerveza.CodTamanio + "-" +
+                                "Tamanio: " + cerveza.Tamanio);
+            }
+            else
+                MessageBox.Show("No hay objeto Bebida Cerveza");
+        }
+
+        public void actualizarListaDetalle()
+        {
             List<string> listAux = new List<string>();
-            foreach (var det in ListaD)
+            foreach (var det in pedido.ListaDetalle)
             {
                 listAux.Add(det.Item.Nombre + " " + "Cantidad: " + det.Cantidad + " " + "Subtotal: " + det.Subtotal);
             }
@@ -650,28 +746,11 @@ namespace ComidasRapidasPOOmBA
             MessageBox.Show("Total: " + total);
             txtTotal.Text = total.ToString();
         }
-        //*************************************************************************************************
-        //private void btnAgregarBebidas_Click(object sender, EventArgs e)
-        //{
-        //    if (numericUpDownGaseosa.Value != 0)
-        //    {
-        //        gbBebidas.Visible = false;
-        //        gaseosa = new bebida();
-        //        valoresHarcodeadosGaseosa(gaseosa);
-        //        valoresPorPantallaGaseosa(gaseosa);
-        //        var cant = (int)numericUpDownGaseosa.Value;
-        //        gaseosa = gestionDetalle(cant, gaseosa);
-        //        MessageBox.Show("Codigo: " + gaseosa.Codigo + "-" + "Nombre: " + gaseosa.Nombre + "-" +
-        //                        "Stock: " + gaseosa.Stock + "-" + "Precio individual: " + gaseosa.Precio + "-" +
-        //                        "Tipo: " + gaseosa.Tipo + "-" + "Cod.Tamanio: " + gaseosa.CodTamanio + "-" +
-        //                        "Tamanio: " + gaseosa.Tamanio + "-" + "Hielo: " + gaseosa.ConHielo + "-" +
-        //                        "Light: " + gaseosa.Diet);
-        //    }
-        //    else
-        //        MessageBox.Show("No hay objeto Bebida Gaseosa");
-        //}
+
+    }
+        
 
     }
     
-}
+
 
