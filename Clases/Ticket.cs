@@ -66,12 +66,7 @@ namespace ComidasRapidasPOOmBA.Clases
         {
             return fecha;
         }
-        /*
-        public void imprimir()
-        {
-
-        }
-        */
+        
 
     }
 }
