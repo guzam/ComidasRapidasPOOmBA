@@ -34,10 +34,11 @@ namespace ComidasRapidasPOOmBA
             
             
         }
-        
-        
+
+
         //*******************ver de que es esto
         private void label1_Click(object sender, EventArgs e)
+        { }
 
         private void label2_Click(object sender, EventArgs e)
         {

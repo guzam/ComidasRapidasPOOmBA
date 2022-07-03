@@ -43,8 +43,9 @@ namespace ComidasRapidasPOOmBA.Clases.Productos
         public int agregarUsuarios(Usuario usu)
         {
             listaUsuarios.Add(usu);
-            
-            return 1;            
+
+            return 1;
+        }
         public List<Producto> initListaProductos()
         {
             List<Producto> listProductos = new List<Producto>()
@@ -58,4 +59,4 @@ namespace ComidasRapidasPOOmBA.Clases.Productos
 
         }
     }
-}
+
