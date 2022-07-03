@@ -10,6 +10,7 @@ namespace ComidasRapidasPOOmBA.Clases
     {
         string nombre;
         string usuario;
+        string _dni;
         string email;
         string password;
         int edad;
@@ -17,15 +18,15 @@ namespace ComidasRapidasPOOmBA.Clases
         static int idUsuarioGeneral;
         string tipoUsuario;
 
-        
         public Usuario()
         {
             
         }
-        public Usuario(string nom, string usu, string tipoU, string em, int edad, string pass)
+        public Usuario(string nom, string usu,string dni, string tipoU, string em, int edad, string pass)
         {
             nombre = nom;
             usuario = usu;
+            _dni = dni;
             tipoUsuario = tipoU;
             email = em;
             password = pass;
@@ -38,6 +39,7 @@ namespace ComidasRapidasPOOmBA.Clases
         public string Password { get => password; set => password = value; }
         public int Edad { get => edad; set => edad = value; }
         public string TipoUsuario { get => tipoUsuario; set => tipoUsuario = value; }
+        public string DNI { get => _dni; set => _dni = value; }
 
         public int ComparteTo( object? item ) //compara por usuario
         {

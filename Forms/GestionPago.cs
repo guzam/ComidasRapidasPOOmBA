@@ -16,6 +16,7 @@ namespace ComidasRapidasPOOmBA.Forms
         
         bool efectivo = false;
         Pedido pedido = new Pedido();
+        Usuario usuLogueado = new Usuario();
         public GestionPago()
         {
             InitializeComponent();
@@ -24,6 +25,15 @@ namespace ComidasRapidasPOOmBA.Forms
         {
             InitializeComponent();
             pedido = ped;
+        }
+
+        public GestionPago(Pedido ped, Usuario usu)
+        {
+            InitializeComponent();
+            pedido = ped;
+            usuLogueado = usu;
+            seteoUsuarioLogueado(usuLogueado);
+            lblTotalDetalle.Text = ped.TotalAPagar.ToString();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -300,6 +310,13 @@ namespace ComidasRapidasPOOmBA.Forms
         private void lblTotalDetalle_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void seteoUsuarioLogueado(Usuario usuLogueado)
+        {
+            lblUsuarioGP.Text = usuLogueado.Usu;
+            lblNombreYApellido.Text = usuLogueado.Nombre;
+            lblDNI.Text = usuLogueado.DNI;
         }
     }
 }

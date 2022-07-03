@@ -1,4 +1,5 @@
 ﻿using ComidasRapidasPOOmBA.Clases;
+using ComidasRapidasPOOmBA.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,14 +17,22 @@ namespace ComidasRapidasPOOmBA
     {
         
         Pedido pedido = new Pedido(new List<Detalle>());//se crea el objeto pedido
+        Usuario usuLogueado = new Usuario();
         Hamburguesa hC, hP, hV, h;
         Ensalada eC, eG, eIv;
         Guarnicion pFritas, pCheddar, pPoomba;
         bebida gaseosa, agua, cerveza;
         Postre helado, budin, flan;
+
         public FormularioMenu()
         {
             InitializeComponent();
+        }
+
+        public FormularioMenu(Usuario usu)
+        {
+            InitializeComponent();
+            usuLogueado = usu;
         }
         //*****************************METODO OCULTAR GROUPBOX********************************************
         public void ocultarGroupBoxMenoselSeleccionado(GroupBox abrir, GroupBox cerrar1, GroupBox cerrar2, GroupBox cerrar3, GroupBox cerrar4)
@@ -331,6 +340,23 @@ namespace ComidasRapidasPOOmBA
             return pFritas;
         }
 
+        private void btnConfirmarPedido_Click(object sender, EventArgs e)
+        {
+            GestionPago gp = new GestionPago(pedido,usuLogueado);
+            gp.Show();
+        }
+
+        private void FormularioMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConfirmarPedido_Click_1(object sender, EventArgs e)
+        {
+            GestionPago gp = new GestionPago(pedido, usuLogueado);
+            gp.Show();
+        }
+
         public Guarnicion valoresPorPantallaPfritas(Guarnicion pFritas)
         {
             pFritas.Nombre = lblPapasFritas.Text;
@@ -501,7 +527,7 @@ namespace ComidasRapidasPOOmBA
         public Hamburguesa gestionDetalle(int c, Hamburguesa h)
         {
             var detalle = new Detalle(c, h);//creo el objeto detalle
-            var subTotal = detalle.subtotalPorProducto(c, h);//calculo el subtotal de ese item
+            var subtotal = detalle.subtotalPorProducto(c, h);//calculo el subtotal de ese item
             pedido.ingresarAPedido(detalle);//agrego el item a la lista
             return h;
         }

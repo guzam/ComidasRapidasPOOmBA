@@ -57,15 +57,17 @@ namespace ComidasRapidasPOOmBA.Clases
                 MessageBox.Show("El pago se realizó correctamente con la Tarjeta. \n");
                 fechaPago = DateTime.Now;
                 pagado = true;
-                Impresora imp = new Impresora(new Ticket(),pedido);
+                //Impresora imp = new Impresora(new Ticket(),pedido);
+                Impresora imp = new Impresora();
+                imp.imprimir(new Ticket(), pedido);
 
-                return true;
+                return pagado;
             }
             else
             {
                 MessageBox.Show("El pago no se pudo realizar.\n");
                 pagado = false;
-                return false;
+                return pagado;
             }
         }
     }
