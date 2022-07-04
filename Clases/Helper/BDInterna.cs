@@ -12,9 +12,10 @@ namespace ComidasRapidasPOOmBA.Clases.Productos
         public BDInterna()
         {          
             listaUsuarios.Add(new Usuario("Lucas M P", "luc012", "33.123.456","admin", "lucas@gmail.com", 41, "1234"));
-            listaUsuarios.Add(new Usuario("Gustavo Z", "guszam", "34.456.456", "admin", "gustavo@gmail.com", 36, "1234"));
-            listaUsuarios.Add(new Usuario("Monica N", "moni01", "40.123.345", "admin", "monica@gmail.com", 36, "1234"));
+            listaUsuarios.Add(new Usuario("Gustavo Z", "guszam", "34.456.456", "admin", "gustavo@gmail.com", 32, "1234"));
+            listaUsuarios.Add(new Usuario("Monica N", "moni01", "40.123.345", "admin", "monica@gmail.com", 38, "1234"));
             listaUsuarios.Add(new Usuario("Fede B", "fede33", "39.888.789", "admin", "fede@gmail.com", 41, "1234"));
+            listaUsuarios.Add(new Usuario("Nene", "nene10", "48.000.000", "admin", "nene@gmail.com", 11, "1234"));
         }
         
         public List<Ingrediente> initListaIngredientes()
