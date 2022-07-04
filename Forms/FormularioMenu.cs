@@ -16,7 +16,7 @@ namespace ComidasRapidasPOOmBA
     public partial class FormularioMenu : Form
     {
         
-        Pedido pedido = new Pedido(new List<Detalle>());//se crea el objeto pedido
+        Pedido pedido = new Pedido(new List<Detalle>());
         Usuario usuLogueado = new Usuario();
         Hamburguesa hC, hP, hV, h;
         Ensalada eC, eG, eIv;
@@ -339,24 +339,6 @@ namespace ComidasRapidasPOOmBA
             pFritas.Tipo = "Comida";
             return pFritas;
         }
-
-        private void btnConfirmarPedido_Click(object sender, EventArgs e)
-        {
-            GestionPago gp = new GestionPago(pedido,usuLogueado);
-            gp.Show();
-        }
-
-        private void FormularioMenu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnConfirmarPedido_Click_1(object sender, EventArgs e)
-        {
-            GestionPago gp = new GestionPago(pedido, usuLogueado);
-            gp.Show();
-        }
-
         public Guarnicion valoresPorPantallaPfritas(Guarnicion pFritas)
         {
             pFritas.Nombre = lblPapasFritas.Text;
@@ -456,21 +438,23 @@ namespace ComidasRapidasPOOmBA
         {
             gaseosa.Codigo = 1122;
             gaseosa.Stock = 100;
-            gaseosa.Tipo = "Comida";
+            gaseosa.Tipo = "Bebida";
             gaseosa.Tamanio = "Regular";
             gaseosa.CodTamanio = 1;
             gaseosa.Diet = "No";
             gaseosa.ConHielo = "No";
-            
             return gaseosa;
         }
         public bebida valoresPorPantallaGaseosa(bebida gaseosa)
         {
+            gaseosa.Nombre = lblGaseosa.Text;
+            gaseosa.Precio=int.Parse(txtBebidaRegular.Text);
 
             if (checkBoxGaseosaGrande.Checked)
             {
                 gaseosa.Tamanio = "Grande";
                 gaseosa.CodTamanio = 2;
+                gaseosa.Precio = int.Parse(txtBebidaGrande.Text);
             }
             if (checkBoxHieloGaseosa.Checked)
                 gaseosa.ConHielo = "Si";
@@ -483,7 +467,7 @@ namespace ComidasRapidasPOOmBA
         {
             agua.Codigo = 1133;
             agua.Stock = 200;
-            agua.Tipo = "Comida";
+            agua.Tipo = "Bebida";
             agua.Tamanio = "Regular";
             agua.CodTamanio = 1;
             agua.ConHielo = "No";
@@ -491,11 +475,14 @@ namespace ComidasRapidasPOOmBA
         }
         public bebida valoresPorPantallaAgua(bebida agua)
         {
+            agua.Nombre = lblAguaMineral.Text;
+            agua.Precio = int.Parse(txtBebidaRegular.Text);
 
             if (checkBoxAguaGrande.Checked)
             {
                 agua.Tamanio = "Grande";
                 agua.CodTamanio = 2;
+                agua.Precio = int.Parse(txtBebidaGrande.Text);
             }
             if (checkBoxHieloAgua.Checked)
                 agua.ConHielo = "Si";
@@ -507,35 +494,107 @@ namespace ComidasRapidasPOOmBA
         {
             cerveza.Codigo = 1144;
             cerveza.Stock = 300;
-            cerveza.Tipo = "Comida";
+            cerveza.Tipo = "Bebida";
             cerveza.Tamanio = "Regular";
             cerveza.CodTamanio = 1;
             return cerveza;
         }
         public bebida valoresPorPantallaCerveza(bebida cerveza)
         {
-
+            cerveza.Nombre = lblCerveza.Text;
+            cerveza.Precio = int.Parse(txtBebidaRegular.Text);
             if (checkBoxCervezaGrande.Checked)
             {
                 cerveza.Tamanio = "Grande";
                 cerveza.CodTamanio = 2;
+                cerveza.Precio = int.Parse(txtBebidaGrande.Text);
             }
             return cerveza;
         }
+
+        //*****************************VALORES POSTRE HELADO**********************************************
+        public Postre valoresHarcodeadosHelado(Postre helado)
+        {
+            helado.Codigo = 5555;
+            helado.Stock = 100;
+            helado.Tipo = "Postre";
+            helado.Tamanio = "Regular";
+            helado.CodTamanio = 1;
+            return helado;
+        }
+        public Postre valoresPorPantallaHelado(Postre helado)
+        {
+            helado.Nombre = lblHelado.Text;
+            helado.Precio = int.Parse(txtPostreRegular.Text);
+
+            if (checkBoxHeladoGrande.Checked)
+            {
+                helado.Tamanio = "Grande";
+                helado.CodTamanio = 2;
+                helado.Precio = int.Parse(txtPostreGrande.Text);
+            }
+            return helado;
+        }
+        //*****************************VALORES POSTRE BUDIN***********************************************
+        public Postre valoresHarcodeadosBudin(Postre budin)
+        {
+            budin.Codigo = 6666;
+            budin.Stock = 100;
+            budin.Tipo = "Postre";
+            budin.Tamanio = "Regular";
+            budin.CodTamanio = 1;
+            return budin;
+        }
+        public Postre valoresPorPantallaBudin(Postre budin)
+        {
+            budin.Nombre = lblBudinDePan.Text;
+            budin.Precio = int.Parse(txtPostreRegular.Text);
+            if (checkBoxBudinGrande.Checked)
+            {
+                budin.Tamanio = "Grande";
+                budin.CodTamanio = 2;
+                budin.Precio = int.Parse(txtPostreGrande.Text);
+            }
+            return budin;
+        }
+        //*****************************VALORES POSTRE QUEREMOS FLAN***************************************
+        public Postre valoresHarcodeadosFlan(Postre flan)
+        {
+            flan.Codigo = 7777;
+            flan.Stock = 100;
+            flan.Tipo = "Postre";
+            flan.Tamanio = "Regular";
+            flan.CodTamanio = 1;
+            return flan;
+        }
+        public Postre valoresPorPantallaFlan(Postre flan)
+        {
+            flan.Nombre = lblQueremosFlan.Text;
+            flan.Precio = int.Parse(txtPostreRegular.Text);
+            if (checkBoxFlanGrande.Checked)
+            {
+                flan.Tamanio = "Grande";
+                flan.CodTamanio = 2;
+                flan.Precio = int.Parse(txtPostreGrande.Text);
+            }
+            return flan;
+        }
+
         
+
         //*****************************METODOS DETALLE****************************************************
         public Hamburguesa gestionDetalle(int c, Hamburguesa h)
         {
-            var detalle = new Detalle(c, h);//creo el objeto detalle
-            var subtotal = detalle.subtotalPorProducto(c, h);//calculo el subtotal de ese item
-            pedido.ingresarAPedido(detalle);//agrego el item a la lista
+            var detalle = new Detalle(c, h);
+            var subtotal = detalle.subtotalPorProducto(c, h);
+            pedido.ingresarAPedido(detalle);
             return h;
         }
         public Ensalada gestionDetalle(int c, Ensalada e)
         {
-            var detalle = new Detalle(c, e);//creo el objeto detalle
-            var subTotal = detalle.subtotalPorProducto(c, e);//calculo el subtotal de ese item
-            pedido.ingresarAPedido(detalle);//agrego el item a la lista
+            var detalle = new Detalle(c, e);
+            var subTotal = detalle.subtotalPorProducto(c, e);
+            pedido.ingresarAPedido(detalle);
             return e;
         }
         public Guarnicion gestionDetalle(int c, Guarnicion g)
@@ -545,50 +604,53 @@ namespace ComidasRapidasPOOmBA
             pedido.ingresarAPedido(detalle);//agrego el item a la lista
             return g;
         }
+        public bebida gestionDetalle(int c, bebida b)
+        {
+            var detalle = new Detalle(c, b);
+            var subTotal = detalle.subtotalPorProducto(c, b);
+            pedido.ingresarAPedido(detalle);
+            return b;
+        }
+        public Postre gestionDetalle(int c, Postre p)
+        {
+            var detalle = new Detalle(c, p);
+            var subTotal = detalle.subtotalPorProducto(c, p);
+            pedido.ingresarAPedido(detalle);
+            return p;
+        }
 
         //*****************************BOTON AGREGAR HAMBURGUESAS*****************************************
         private void btnAgregarHamburguesas_Click(object sender, EventArgs e)
         {
-           if (numericUpDownHamburguesaDeCarne.Value != 0)//si marco carne y el numero es > que cero
+           if (numericUpDownHamburguesaDeCarne.Value != 0)
             {
-                gbHamburguesas.Visible = false; //escondo group box
+                gbHamburguesas.Visible = false;
                 hC = new Hamburguesa();
                 hC = valoresHarcodeadosHcarne(hC);
                 hC = valoresPorPantallaHcarne(hC);
-                var cant = (int)numericUpDownHamburguesaDeCarne.Value;//cantidad de hamburguesas
+                var cant = (int)numericUpDownHamburguesaDeCarne.Value;
                 hC = gestionDetalle(cant, hC);
-                MessageBox.Show("Codigo: " + hC.Codigo + "-" + "Nombre: " + hC.Nombre + "-" + "Stock: " + hC.Stock + "-" + "Precio individual: " + hC.Precio + "-" + "Medallones: " + hC.CantMedallones + "-" + "Tipo: " + hC.Tipo + "-" + "Cod.Tamanio: " + hC.CodTamanio + "-" + "Tamanio: " + hC.Tamanio + "-" + "Aderezo: " + hC.Aderezo);
-
             }
-            else
-                MessageBox.Show("No hay objeto de carne");
             
-            if (numericUpDownHamburguesaDePollo.Value != 0)//si marco pollo y el numero es > que cero
+            if (numericUpDownHamburguesaDePollo.Value != 0)
             {
-                gbHamburguesas.Visible = false; //escondo group box
+                gbHamburguesas.Visible = false;
                 hP = new Hamburguesa();
                 hP = valoresHarcodeadosHPollo(hP);
                 hP = valoresPorPantallaHPollo(hP);
-                var cant = (int)numericUpDownHamburguesaDePollo.Value;//cantidad de hamburguesas
+                var cant = (int)numericUpDownHamburguesaDePollo.Value;
                 hP = gestionDetalle(cant, hP);
-                MessageBox.Show("Codigo: " + hP.Codigo + "-" + "Nombre: " + hP.Nombre + "-" + "Stock: " + hP.Stock + "-" + "Precio individual: " + hP.Precio + "-" + "Medallones: " + hP.CantMedallones + "-" + "Tipo: " + hP.Tipo + "-" + "Cod.Tamanio: " + hP.CodTamanio + "-" + "Tamanio: " + hP.Tamanio + "-" + "Aderezo: " + hP.Aderezo);
-
             }
-            else
-                MessageBox.Show("No hay objeto de pollo");
                         
             if (numericUpDownHamburguesaVeggie.Value != 0)
             {
-                gbHamburguesas.Visible = false; //escondo group box
+                gbHamburguesas.Visible = false;
                 hV = new Hamburguesa();
                 hV = valoresHarcodeadosHVeggie(hV);
                 hV = valoresPorPantallaHVeggie(hV);
-                var cant = (int)numericUpDownHamburguesaVeggie.Value;//cantidad de hamburguesas
+                var cant = (int)numericUpDownHamburguesaVeggie.Value;
                 hV = gestionDetalle(cant, hV);
-                MessageBox.Show("Codigo: " + hV.Codigo + "-" + "Nombre: " + hV.Nombre + "-" + "Stock: " + hV.Stock + "-" + "Precio individual: " + hV.Precio + "-" + "Medallones: " + hV.CantMedallones + "-" + "Tipo: " + hV.Tipo + "-" + "Cod.Tamanio: " + hV.CodTamanio + "-" + "Tamanio: " + hV.Tamanio + "-" + "Aderezo: " + hV.Aderezo);
             }
-            else
-                MessageBox.Show("No hay objeto veggie");
 
             actualizarListaDetalle();
         }
@@ -604,14 +666,7 @@ namespace ComidasRapidasPOOmBA
                 valoresPorPantallaEcaprese(eC);
                 var cant = (int)numericUpDownEnsaladaCaprese.Value;
                 eC = gestionDetalle(cant, eC);
-                MessageBox.Show("Codigo: " + eC.Codigo + "-" + "Nombre: " + eC.Nombre + "-" +
-                                "Stock: " + eC.Stock + "-" + "Precio individual: " + eC.Precio + "-" +
-                                "Tipo: " + eC.Tipo + "-" + "Cod.Tamanio: " + eC.CodTamanio + "-" +
-                                "Tamanio: " + eC.Tamanio + "-" + "Aderezo: " + eC.Aderezo + "-" +
-                                "Sal: " + eC.Sal);
             }
-            else
-                MessageBox.Show("No hay objeto Ensalada Caprese");
 
             if (numericUpDownensaladaGriega.Value != 0)
             {
@@ -621,14 +676,7 @@ namespace ComidasRapidasPOOmBA
                 valoresPorPantallaEgriega(eG);
                 var cant = (int)numericUpDownensaladaGriega.Value;
                 eG = gestionDetalle(cant, eG);
-                MessageBox.Show("Codigo: " + eG.Codigo + "-" + "Nombre: " + eG.Nombre + "-" +
-                                "Stock: " + eG.Stock + "-" + "Precio individual: " + eG.Precio + "-" +
-                                "Tipo: " + eG.Tipo + "-" + "Cod.Tamanio: " + eG.CodTamanio + "-" +
-                                "Tamanio: " + eG.Tamanio + "-" + "Aderezo: " + eG.Aderezo + "-" +
-                                "Sal: " + eG.Sal);
             }
-            else
-                MessageBox.Show("No hay objeto Ensalada Griega");
 
             if (numericUpDownensaladaItalianaVegana.Value != 0)
             {
@@ -636,16 +684,9 @@ namespace ComidasRapidasPOOmBA
                 eIv = new Ensalada();
                 valoresHarcodeadosEiV(eIv);
                 valoresPorPantallaEiV(eIv);
-                var cant = (int)numericUpDownensaladaGriega.Value;
+                var cant = (int)numericUpDownensaladaItalianaVegana.Value;
                 eIv = gestionDetalle(cant, eIv);
-                MessageBox.Show("Codigo: " + eIv.Codigo + "-" + "Nombre: " + eIv.Nombre + "-" +
-                                "Stock: " + eIv.Stock + "-" + "Precio individual: " + eIv.Precio + "-" +
-                                "Tipo: " + eIv.Tipo + "-" + "Cod.Tamanio: " + eIv.CodTamanio + "-" +
-                                "Tamanio: " + eIv.Tamanio + "-" + "Aderezo: " + eIv.Aderezo + "-" +
-                                "Sal: " + eIv.Sal);
             }
-            else
-                MessageBox.Show("No hay objeto Ensalada Italiana Vegana");
 
             actualizarListaDetalle();
         }
@@ -662,14 +703,7 @@ namespace ComidasRapidasPOOmBA
                 valoresPorPantallaPfritas(pFritas);
                 var cant = (int)numericUpDownPapasFritas.Value;
                 pFritas = gestionDetalle(cant, pFritas);
-                MessageBox.Show("Codigo: " + pFritas.Codigo + "-" + "Nombre: " + pFritas.Nombre + "-" +
-                                "Stock: " + pFritas.Stock + "-" + "Precio individual: " + pFritas.Precio + "-" +
-                                "Tipo: " + pFritas.Tipo + "-" + "Cod.Tamanio: " + pFritas.CodTamanio + "-" +
-                                "Tamanio: " + pFritas.Tamanio + "-" + "Aderezo: " + pFritas.Aderezo + "-" +
-                                "Sal: " + pFritas.Sal);
             }
-            else
-                MessageBox.Show("No hay objeto Guarnicion Papas Fritas");
 
             if (numericUpDownPapasFritasConCheddar.Value != 0)
             {
@@ -677,16 +711,9 @@ namespace ComidasRapidasPOOmBA
                 pCheddar = new Guarnicion();
                 valoresHarcodeadosPcheddar(pCheddar);
                 valoresPorPantallaPcheddar(pCheddar);
-                var cant = (int)numericUpDownPapasFritasPoomba.Value;
+                var cant = (int)numericUpDownPapasFritasConCheddar.Value;
                 pCheddar = gestionDetalle(cant, pCheddar);
-                MessageBox.Show("Codigo: " + pCheddar.Codigo + "-" + "Nombre: " + pCheddar.Nombre + "-" +
-                                "Stock: " + pCheddar.Stock + "-" + "Precio individual: " + pCheddar.Precio + "-" +
-                                "Tipo: " + pCheddar.Tipo + "-" + "Cod.Tamanio: " + pCheddar.CodTamanio + "-" +
-                                "Tamanio: " + pCheddar.Tamanio + "-" + "Aderezo: " + pCheddar.Aderezo + "-" +
-                                "Sal: " + pCheddar.Sal);
             }
-            else
-                MessageBox.Show("No hay objeto Guarnicion Papas Cheddar");
 
             if (numericUpDownPapasFritasPoomba.Value != 0)
             {
@@ -696,19 +723,12 @@ namespace ComidasRapidasPOOmBA
                 valoresPorPantallaPpoomba(pPoomba);
                 var cant = (int)numericUpDownPapasFritasPoomba.Value;
                 pPoomba = gestionDetalle(cant, pPoomba);
-                MessageBox.Show("Codigo: " + pPoomba.Codigo + "-" + "Nombre: " + pPoomba.Nombre + "-" +
-                                "Stock: " + pPoomba.Stock + "-" + "Precio individual: " + pPoomba.Precio + "-" +
-                                "Tipo: " + pPoomba.Tipo + "-" + "Cod.Tamanio: " + pPoomba.CodTamanio + "-" +
-                                "Tamanio: " + pPoomba.Tamanio + "-" + "Aderezo: " + pPoomba.Aderezo + "-" +
-                                "Sal: " + pPoomba.Sal);
             }
-            else
-                MessageBox.Show("No hay objeto Guarnicion Papas Poomba");
 
             actualizarListaDetalle();
         }
         //*****************************BOTON AGREGAR BEBIDAS**********************************************
-        private void btnAgregarBebidas_Click(object sender, EventArgs e)
+       private void btnAgregarBebidas_Click_1(object sender, EventArgs e)
         {
             if (numericUpDownGaseosa.Value != 0)
             {
@@ -718,14 +738,7 @@ namespace ComidasRapidasPOOmBA
                 valoresPorPantallaGaseosa(gaseosa);
                 var cant = (int)numericUpDownGaseosa.Value;
                 gaseosa = gestionDetalle(cant, gaseosa);
-                MessageBox.Show("Codigo: " + gaseosa.Codigo + "-" + "Nombre: " + gaseosa.Nombre + "-" +
-                                "Stock: " + gaseosa.Stock + "-" + "Precio individual: " + gaseosa.Precio + "-" +
-                                "Tipo: " + gaseosa.Tipo + "-" + "Cod.Tamanio: " + gaseosa.CodTamanio + "-" +
-                                "Tamanio: " + gaseosa.Tamanio + "-" + "Hielo: " + gaseosa.ConHielo + "-" +
-                                "Light: " + gaseosa.Diet);
             }
-            else
-                MessageBox.Show("No hay objeto Bebida Gaseosa");
 
             if (numericUpDownAguaMineral.Value != 0)
             {
@@ -735,30 +748,66 @@ namespace ComidasRapidasPOOmBA
                 valoresPorPantallaAgua(agua);
                 var cant = (int)numericUpDownAguaMineral.Value;
                 agua = gestionDetalle(cant, agua);
-                MessageBox.Show("Codigo: " + agua.Codigo + "-" + "Nombre: " + agua.Nombre + "-" +
-                                "Stock: " + agua.Stock + "-" + "Precio individual: " + agua.Precio + "-" +
-                                "Tipo: " + agua.Tipo + "-" + "Cod.Tamanio: " + agua.CodTamanio + "-" +
-                                "Tamanio: " + agua.Tamanio + "-" + "Hielo: " + agua.ConHielo + "-");
             }
-            else
-                MessageBox.Show("No hay objeto Bebida Agua");
-           
-            if(numericUpDownCerveza.Value!=0 )
+
+            if (numericUpDownCerveza.Value != 0)
             {
-                gbBebidas.Visible = false;
-                cerveza = new bebida();
-                valoresHarcodeadosCerveza(cerveza);
-                valoresPorPantallaCerveza(cerveza);
-                var cant = (int)numericUpDownCerveza.Value;
-                cerveza = gestionDetalle(cant, cerveza);
-                MessageBox.Show("Codigo: " + cerveza.Codigo + "-" + "Nombre: " + cerveza.Nombre + "-" +
-                                "Stock: " + cerveza.Stock + "-" + "Precio individual: " + cerveza.Precio + "-" +
-                                "Tipo: " + cerveza.Tipo + "-" + "Cod.Tamanio: " + cerveza.CodTamanio + "-" +
-                                "Tamanio: " + cerveza.Tamanio);
+                if (usuLogueado.Edad >= 18)
+                {
+                    gbBebidas.Visible = false;
+                    cerveza = new bebida();
+                    valoresHarcodeadosCerveza(cerveza);
+                    valoresPorPantallaCerveza(cerveza);
+                    var cant = (int)numericUpDownCerveza.Value;
+                    cerveza = gestionDetalle(cant, cerveza);
+                }
+                else
+                {
+                    MessageBox.Show("Para comprar cerveza debe ser mayor de 18 años, por favor seleccione otra bebida");
+                }
             }
-            else
-                MessageBox.Show("No hay objeto Bebida Cerveza");
+
+            actualizarListaDetalle();
         }
+
+
+        //*****************************BOTON AGREGAR POSTRES**********************************************
+        private void btnAgregarPostres_Click(object sender, EventArgs e)
+        {
+            if (numericUpDownHelado.Value != 0)
+            {
+                gbPostres.Visible = false;
+                helado = new Postre();
+                valoresHarcodeadosHelado(helado);
+                valoresPorPantallaHelado(helado);
+                var cant = (int)numericUpDownHelado.Value;
+                helado = gestionDetalle(cant, helado);
+            }
+            
+            if (numericUpDownBudinDePan.Value != 0)
+            {
+                gbPostres.Visible = false;
+                budin = new Postre();
+                valoresHarcodeadosBudin(budin);
+                valoresPorPantallaBudin(budin);
+                var cant = (int)numericUpDownBudinDePan.Value;
+                budin = gestionDetalle(cant, budin);
+            }
+
+            if (numericUpDownQueremosFlan.Value != 0)
+            {
+                gbPostres.Visible = false;
+                flan = new Postre();
+                valoresHarcodeadosFlan(flan);
+                valoresPorPantallaFlan(flan);
+                var cant = (int)numericUpDownQueremosFlan.Value;
+                flan = gestionDetalle(cant, flan);
+            }
+           
+            actualizarListaDetalle();
+        }
+
+        //*****************************METODO ACTUALIZAR LISTA DETALLE************************************
 
         public void actualizarListaDetalle()
         {
@@ -773,10 +822,26 @@ namespace ComidasRapidasPOOmBA
             txtTotal.Text = total.ToString();
         }
 
-    }
-        
+        //************************************************************************************************
+        private void btnConfirmarPedido_Click(object sender, EventArgs e)
+        {
+            GestionPago gp = new GestionPago(pedido, usuLogueado);
+            gp.Show();
+        }
+
+        private void FormularioMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConfirmarPedido_Click_1(object sender, EventArgs e)
+        {
+            GestionPago gp = new GestionPago(pedido, usuLogueado);
+            gp.Show();
+        }
 
     }
+}
     
 
 

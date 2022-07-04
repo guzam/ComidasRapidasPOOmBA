@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ComidasRapidasPOOmBA.Clases
 {
-    internal class Postre : Producto
+    public class Postre : Producto
     {
     }
 }

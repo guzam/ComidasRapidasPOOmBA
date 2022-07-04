@@ -13,7 +13,7 @@ namespace ComidasRapidasPOOmBA.Clases
         string _dni;
         string email;
         string password;
-        int edad;
+        int _edad;
         int idUsuario;
         static int idUsuarioGeneral;
         string tipoUsuario;
@@ -31,13 +31,14 @@ namespace ComidasRapidasPOOmBA.Clases
             email = em;
             password = pass;
             idUsuarioGeneral++;
-            idUsuario = idUsuarioGeneral;           
+            idUsuario = idUsuarioGeneral;
+            _edad = edad;
         }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Usu { get => usuario; set => usuario = value; }
         public string Email { get => email; set => email = value; }
         public string Password { get => password; set => password = value; }
-        public int Edad { get => edad; set => edad = value; }
+        public int Edad { get => _edad; set => _edad = value; }
         public string TipoUsuario { get => tipoUsuario; set => tipoUsuario = value; }
         public string DNI { get => _dni; set => _dni = value; }
 
