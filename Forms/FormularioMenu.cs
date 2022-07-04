@@ -473,6 +473,12 @@ namespace ComidasRapidasPOOmBA
             agua.ConHielo = "No";
             return agua;
         }
+
+        private void gbPedido_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         public bebida valoresPorPantallaAgua(bebida agua)
         {
             agua.Nombre = lblAguaMineral.Text;

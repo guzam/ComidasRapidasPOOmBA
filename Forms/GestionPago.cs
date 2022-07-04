@@ -34,6 +34,7 @@ namespace ComidasRapidasPOOmBA.Forms
             usuLogueado = usu;
             seteoUsuarioLogueado(usuLogueado);
             lblTotalDetalle.Text = ped.TotalAPagar.ToString();
+            actualizarListaDetalle();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -71,17 +72,21 @@ namespace ComidasRapidasPOOmBA.Forms
         {
             try
             {
+                var total = float.Parse(lblTotalDetalle.Text);
+                Pago pago = new Pago(total);
+
                 if (efectivo)
                 {
-                    MessageBox.Show("Se realizará la impresión del ticket \n Por favor retire el ticket y dirijase a una de las cajas para realizar el pago y retirar el pedido ");
+                    pago.realizarPagoEfectivo(total, pedido);
                     this.Close();
                 }
                 else
                 {
-                    var total = float.Parse(lblTotalDetalle.Text);
-                    Pago pago = new Pago(total);
-
-                    pago.realizarPago(total,pedido);
+                    //Se asume que si no se paga con efectivo se paga con tarjeta
+                    if (pago.realizarPago(total, pedido))
+                    {
+                        this.Close();
+                    }
                 }
             }
             catch (Exception)
@@ -317,6 +322,26 @@ namespace ComidasRapidasPOOmBA.Forms
             lblUsuarioGP.Text = usuLogueado.Usu;
             lblNombreYApellido.Text = usuLogueado.Nombre;
             lblDNI.Text = usuLogueado.DNI;
+        }
+
+        public void actualizarListaDetalle()
+        {
+            List<string> listAux = new List<string>();
+            foreach (var det in pedido.ListaDetalle)
+            {
+                listAux.Add(det.Item.Nombre + " " + "Cantidad: " + det.Cantidad + " " + "Subtotal: " + det.Subtotal);
+                txtDescripcion.AppendText(det.Item.Nombre + " " + "Cantidad: " + det.Cantidad + " " + "Subtotal: " + det.Subtotal + "\r\n");
+            }
+        }
+
+        private void lblDescripcionComida_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

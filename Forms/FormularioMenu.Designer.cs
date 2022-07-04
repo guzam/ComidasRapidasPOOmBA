@@ -1504,6 +1504,7 @@ namespace ComidasRapidasPOOmBA
             this.gbPedido.TabIndex = 2;
             this.gbPedido.TabStop = false;
             this.gbPedido.Text = "Pedido";
+            this.gbPedido.Enter += new System.EventHandler(this.gbPedido_Enter);
             // 
             // lblTotal
             // 
