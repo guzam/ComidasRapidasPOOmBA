@@ -65,7 +65,10 @@ namespace ComidasRapidasPOOmBA.Forms
 
         private void btnVolverGP_Click(object sender, EventArgs e)
         {
+
             this.Close();
+            FormularioMenu menu = new FormularioMenu(usuLogueado);
+            menu.Show();
         }
 
         private void btnConfirmarPago_Click(object sender, EventArgs e)
@@ -90,6 +93,11 @@ namespace ComidasRapidasPOOmBA.Forms
                         this.Close();
                         FormularioMenu menu = new FormularioMenu(usuLogueado);
                         menu.Show();
+                    }
+                    else 
+                    {
+                        gbMedioPago.Visible = true;
+                        gbTarjeta.Visible = false;
                     }
                 }
             }
