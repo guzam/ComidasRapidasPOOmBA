@@ -54,17 +54,9 @@ namespace ComidasRapidasPOOmBA.Forms
             this.btnConfirmarPago = new System.Windows.Forms.Button();
             this.btnVolverGP = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblSubTotalPostre = new System.Windows.Forms.Label();
-            this.lblDescripcionPostre = new System.Windows.Forms.Label();
-            this.lblSubTotalBebida = new System.Windows.Forms.Label();
-            this.lblDescripcionBebida = new System.Windows.Forms.Label();
-            this.lblSubTotalComida = new System.Windows.Forms.Label();
-            this.lblDescripcionComida = new System.Windows.Forms.Label();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblTotalDetalle = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -333,79 +325,27 @@ namespace ComidasRapidasPOOmBA.Forms
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.lblSubTotalPostre);
-            this.panel2.Controls.Add(this.lblDescripcionPostre);
-            this.panel2.Controls.Add(this.lblSubTotalBebida);
-            this.panel2.Controls.Add(this.lblDescripcionBebida);
-            this.panel2.Controls.Add(this.lblSubTotalComida);
-            this.panel2.Controls.Add(this.lblDescripcionComida);
+            this.panel2.Controls.Add(this.txtDescripcion);
             this.panel2.Controls.Add(this.lblTotalDetalle);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Location = new System.Drawing.Point(621, 64);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(282, 463);
             this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // lblSubTotalPostre
+            // txtDescripcion
             // 
-            this.lblSubTotalPostre.AutoSize = true;
-            this.lblSubTotalPostre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblSubTotalPostre.Location = new System.Drawing.Point(142, 274);
-            this.lblSubTotalPostre.Name = "lblSubTotalPostre";
-            this.lblSubTotalPostre.Size = new System.Drawing.Size(14, 15);
-            this.lblSubTotalPostre.TabIndex = 25;
-            this.lblSubTotalPostre.Text = "$";
-            // 
-            // lblDescripcionPostre
-            // 
-            this.lblDescripcionPostre.AutoSize = true;
-            this.lblDescripcionPostre.Location = new System.Drawing.Point(29, 274);
-            this.lblDescripcionPostre.Name = "lblDescripcionPostre";
-            this.lblDescripcionPostre.Size = new System.Drawing.Size(104, 15);
-            this.lblDescripcionPostre.TabIndex = 24;
-            this.lblDescripcionPostre.Text = "descripción postre";
-            // 
-            // lblSubTotalBebida
-            // 
-            this.lblSubTotalBebida.AutoSize = true;
-            this.lblSubTotalBebida.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblSubTotalBebida.Location = new System.Drawing.Point(142, 183);
-            this.lblSubTotalBebida.Name = "lblSubTotalBebida";
-            this.lblSubTotalBebida.Size = new System.Drawing.Size(14, 15);
-            this.lblSubTotalBebida.TabIndex = 23;
-            this.lblSubTotalBebida.Text = "$";
-            // 
-            // lblDescripcionBebida
-            // 
-            this.lblDescripcionBebida.AutoSize = true;
-            this.lblDescripcionBebida.Location = new System.Drawing.Point(29, 183);
-            this.lblDescripcionBebida.Name = "lblDescripcionBebida";
-            this.lblDescripcionBebida.Size = new System.Drawing.Size(107, 15);
-            this.lblDescripcionBebida.TabIndex = 22;
-            this.lblDescripcionBebida.Text = "descripción bebida";
-            // 
-            // lblSubTotalComida
-            // 
-            this.lblSubTotalComida.AutoSize = true;
-            this.lblSubTotalComida.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblSubTotalComida.Location = new System.Drawing.Point(142, 90);
-            this.lblSubTotalComida.Name = "lblSubTotalComida";
-            this.lblSubTotalComida.Size = new System.Drawing.Size(14, 15);
-            this.lblSubTotalComida.TabIndex = 16;
-            this.lblSubTotalComida.Text = "$";
-            // 
-            // lblDescripcionComida
-            // 
-            this.lblDescripcionComida.AutoSize = true;
-            this.lblDescripcionComida.Location = new System.Drawing.Point(29, 90);
-            this.lblDescripcionComida.Name = "lblDescripcionComida";
-            this.lblDescripcionComida.Size = new System.Drawing.Size(111, 15);
-            this.lblDescripcionComida.TabIndex = 15;
-            this.lblDescripcionComida.Text = "descripción comida";
+            this.txtDescripcion.BackColor = System.Drawing.SystemColors.Control;
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcion.Location = new System.Drawing.Point(6, 46);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.ReadOnly = true;
+            this.txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtDescripcion.Size = new System.Drawing.Size(266, 283);
+            this.txtDescripcion.TabIndex = 22;
             // 
             // lblTotalDetalle
             // 
@@ -427,38 +367,6 @@ namespace ComidasRapidasPOOmBA.Forms
             this.label8.Size = new System.Drawing.Size(54, 20);
             this.label8.TabIndex = 20;
             this.label8.Text = "TOTAL";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(11, 226);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 20);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "POSTRE";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(11, 130);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 20);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "BEBIDA";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(11, 50);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 20);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "COMIDA";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label7
             // 
@@ -532,5 +440,6 @@ namespace ComidasRapidasPOOmBA.Forms
         private System.Windows.Forms.TextBox txtNroTarjeta1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblMensajeBCRA;
+        private System.Windows.Forms.TextBox txtDescripcion;
     }
 }

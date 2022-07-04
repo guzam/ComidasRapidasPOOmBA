@@ -70,5 +70,17 @@ namespace ComidasRapidasPOOmBA.Clases
                 return pagado;
             }
         }
+
+        public bool realizarPagoEfectivo(float monto, Pedido pedido)
+        {
+            nuevoPago();
+            MessageBox.Show("Se realizará la impresión del ticket \n Por favor retire el ticket y dirijase a una de las cajas para realizar el pago y retirar el pedido ");
+            fechaPago = DateTime.Now;
+            pagado = false;
+            Impresora imp = new Impresora();
+            imp.imprimir(new Ticket(), pedido);
+
+            return pagado;
+        }
     }
 }

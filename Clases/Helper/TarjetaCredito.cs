@@ -10,7 +10,7 @@ namespace ComidasRapidasPOOmBA.Clases.Helper
     public class TarjetaCredito
     {
         bool pagoAprobado;
-        float limiteDisponible = 100000;
+        float limiteDisponible = 10000;
 
         public bool PagoAprobado { get => pagoAprobado; set => pagoAprobado = value; }
         public float LimiteDisponible { get => limiteDisponible; }
@@ -24,7 +24,7 @@ namespace ComidasRapidasPOOmBA.Clases.Helper
             }
             else
             {
-                MessageBox.Show("El limite disponible de la tarjeta no alcanza para realizar el pago \n Por favor intente con otra tarjeta.");
+                MessageBox.Show("El limite disponible de la tarjeta no alcanza para realizar el pago \n Por favor intente con otra tarjeta, o realice el pago en efectivo.");
                 return false;
             }
         }
