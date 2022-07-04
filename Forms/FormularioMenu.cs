@@ -730,7 +730,7 @@ namespace ComidasRapidasPOOmBA
         //*****************************BOTON AGREGAR BEBIDAS**********************************************
        private void btnAgregarBebidas_Click_1(object sender, EventArgs e)
         {
-            if (numericUpDownGaseosa.Value != 0)
+            /*if (numericUpDownGaseosa.Value != 0)
             {
                 gbBebidas.Visible = false;
                 gaseosa = new bebida();

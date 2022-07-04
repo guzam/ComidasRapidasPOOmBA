@@ -43,13 +43,15 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.lblDni = new System.Windows.Forms.Label();
+            this.txtDni = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNombre.Location = new System.Drawing.Point(447, 61);
+            this.txtNombre.Location = new System.Drawing.Point(408, 51);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(183, 30);
             this.txtNombre.TabIndex = 0;
@@ -59,7 +61,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNombre.Location = new System.Drawing.Point(302, 63);
+            this.lblNombre.Location = new System.Drawing.Point(263, 53);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(89, 28);
             this.lblNombre.TabIndex = 1;
@@ -70,7 +72,7 @@
             // 
             this.lblEdad.AutoSize = true;
             this.lblEdad.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblEdad.Location = new System.Drawing.Point(302, 135);
+            this.lblEdad.Location = new System.Drawing.Point(263, 178);
             this.lblEdad.Name = "lblEdad";
             this.lblEdad.Size = new System.Drawing.Size(58, 28);
             this.lblEdad.TabIndex = 3;
@@ -81,10 +83,10 @@
             // 
             this.txtEdad.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtEdad.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtEdad.Location = new System.Drawing.Point(447, 133);
+            this.txtEdad.Location = new System.Drawing.Point(408, 176);
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(183, 30);
-            this.txtEdad.TabIndex = 2;
+            this.txtEdad.TabIndex = 3;
             this.txtEdad.TextChanged += new System.EventHandler(this.txtEdad_TextChanged);
             this.txtEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdad_KeyPress);
             // 
@@ -92,7 +94,7 @@
             // 
             this.lblMail.AutoSize = true;
             this.lblMail.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMail.Location = new System.Drawing.Point(302, 183);
+            this.lblMail.Location = new System.Drawing.Point(263, 214);
             this.lblMail.Name = "lblMail";
             this.lblMail.Size = new System.Drawing.Size(64, 28);
             this.lblMail.TabIndex = 5;
@@ -103,7 +105,7 @@
             // 
             this.txtMail.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtMail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMail.Location = new System.Drawing.Point(447, 181);
+            this.txtMail.Location = new System.Drawing.Point(408, 212);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(183, 30);
             this.txtMail.TabIndex = 4;
@@ -112,7 +114,7 @@
             // 
             this.lblpass.AutoSize = true;
             this.lblpass.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblpass.Location = new System.Drawing.Point(302, 230);
+            this.lblpass.Location = new System.Drawing.Point(263, 269);
             this.lblpass.Name = "lblpass";
             this.lblpass.Size = new System.Drawing.Size(118, 28);
             this.lblpass.TabIndex = 7;
@@ -122,20 +124,20 @@
             // 
             this.txtPass.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtPass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPass.Location = new System.Drawing.Point(447, 228);
+            this.txtPass.Location = new System.Drawing.Point(408, 267);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(183, 30);
-            this.txtPass.TabIndex = 6;
+            this.txtPass.TabIndex = 5;
             // 
             // btnRegistrarse
             // 
             this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnRegistrarse.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRegistrarse.Location = new System.Drawing.Point(399, 333);
+            this.btnRegistrarse.Location = new System.Drawing.Point(431, 359);
             this.btnRegistrarse.Name = "btnRegistrarse";
             this.btnRegistrarse.Size = new System.Drawing.Size(133, 48);
-            this.btnRegistrarse.TabIndex = 8;
+            this.btnRegistrarse.TabIndex = 7;
             this.btnRegistrarse.Text = "Registrase";
             this.btnRegistrarse.UseVisualStyleBackColor = true;
             this.btnRegistrarse.Click += new System.EventHandler(this.button1_Click);
@@ -144,7 +146,7 @@
             // 
             this.lblConfirmar.AutoSize = true;
             this.lblConfirmar.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblConfirmar.Location = new System.Drawing.Point(302, 266);
+            this.lblConfirmar.Location = new System.Drawing.Point(263, 305);
             this.lblConfirmar.Name = "lblConfirmar";
             this.lblConfirmar.Size = new System.Drawing.Size(107, 28);
             this.lblConfirmar.TabIndex = 10;
@@ -154,17 +156,17 @@
             // 
             this.txtConfirmar.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtConfirmar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtConfirmar.Location = new System.Drawing.Point(447, 264);
+            this.txtConfirmar.Location = new System.Drawing.Point(408, 303);
             this.txtConfirmar.Name = "txtConfirmar";
             this.txtConfirmar.PasswordChar = '*';
             this.txtConfirmar.Size = new System.Drawing.Size(183, 30);
-            this.txtConfirmar.TabIndex = 9;
+            this.txtConfirmar.TabIndex = 6;
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblUsuario.Location = new System.Drawing.Point(302, 99);
+            this.lblUsuario.Location = new System.Drawing.Point(263, 89);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(84, 28);
             this.lblUsuario.TabIndex = 12;
@@ -174,10 +176,10 @@
             // 
             this.txtUsuario.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtUsuario.Location = new System.Drawing.Point(447, 97);
+            this.txtUsuario.Location = new System.Drawing.Point(408, 87);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(183, 30);
-            this.txtUsuario.TabIndex = 11;
+            this.txtUsuario.TabIndex = 1;
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // btnVolver
@@ -186,10 +188,29 @@
             this.btnVolver.Location = new System.Drawing.Point(137, 384);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(94, 29);
-            this.btnVolver.TabIndex = 13;
+            this.btnVolver.TabIndex = 9;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // lblDni
+            // 
+            this.lblDni.AutoSize = true;
+            this.lblDni.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDni.Location = new System.Drawing.Point(263, 142);
+            this.lblDni.Name = "lblDni";
+            this.lblDni.Size = new System.Drawing.Size(63, 28);
+            this.lblDni.TabIndex = 15;
+            this.lblDni.Text = "D.N.I.";
+            // 
+            // txtDni
+            // 
+            this.txtDni.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtDni.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDni.Location = new System.Drawing.Point(408, 140);
+            this.txtDni.Name = "txtDni";
+            this.txtDni.Size = new System.Drawing.Size(183, 30);
+            this.txtDni.TabIndex = 2;
             // 
             // registro
             // 
@@ -198,6 +219,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblDni);
+            this.Controls.Add(this.txtDni);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.txtUsuario);
@@ -235,5 +258,7 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Label lblDni;
+        private System.Windows.Forms.TextBox txtDni;
     }
 }

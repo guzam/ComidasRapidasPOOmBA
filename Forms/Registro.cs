@@ -51,10 +51,11 @@ namespace ComidasRapidasPOOmBA.Forms
             
             try
             {
-                if(!txtNombre.Text.Equals("") && !txtUsuario.Text.Equals("") && !txtMail.Text.Equals("") ) 
+                if(!txtNombre.Text.Equals("") && !txtUsuario.Text.Equals("") && !txtDni.Text.Equals("") && !txtMail.Text.Equals("")) 
                 {
                     usuarioPorPantalla.Nombre = txtNombre.Text;
                     usuarioPorPantalla.Usu = txtUsuario.Text;
+                    usuarioPorPantalla.DNI = txtDni.Text;
                     usuarioPorPantalla.Email = txtMail.Text;
                     usuarioPorPantalla.Password = txtPass.Text;
                     usuarioPorPantalla.TipoUsuario = "Comun";
@@ -90,8 +91,7 @@ namespace ComidasRapidasPOOmBA.Forms
         //private bool validarCampos() { }
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
-            //hacer comparacion para ver si ya existe ese usuario?
-            Console.WriteLine();
+            
         }
 
         private void txtEdad_TextChanged(object sender, EventArgs e)
