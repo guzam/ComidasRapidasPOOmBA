@@ -67,9 +67,11 @@ namespace ComidasRapidasPOOmBA
             {
                 if (user.Password == usuarioIngresando.Password)
                 {
-                    var menu = new FormularioMenu(user);
+                    var menu = new FormularioMenu(user, this);
                     menu.Show();
-                    this.Hide();                  
+                    this.Hide();
+                    txtPass.Text = "";
+                    txtUsuario.Text = "";
                 } 
                 else MessageBox.Show("Usuario/Password incorrecto.Cod 2"); 
             }

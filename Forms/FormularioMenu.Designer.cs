@@ -147,6 +147,7 @@ namespace ComidasRapidasPOOmBA
             this.numericUpDownHamburguesaDeCarne = new System.Windows.Forms.NumericUpDown();
             this.btnAgregarHamburguesas = new System.Windows.Forms.Button();
             this.gbPedido = new System.Windows.Forms.GroupBox();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.listBoxPedido = new System.Windows.Forms.ListBox();
@@ -154,6 +155,7 @@ namespace ComidasRapidasPOOmBA
             this.gbSugerencia1 = new System.Windows.Forms.GroupBox();
             this.lblSugerencia1 = new System.Windows.Forms.Label();
             this.btnSugerencia = new System.Windows.Forms.Button();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.gbMenuCompleto.SuspendLayout();
             this.gbPostres.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQueremosFlan)).BeginInit();
@@ -670,7 +672,7 @@ namespace ComidasRapidasPOOmBA
             this.lblCerveza.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCerveza.Location = new System.Drawing.Point(19, 94);
             this.lblCerveza.Name = "lblCerveza";
-            this.lblCerveza.Size = new System.Drawing.Size(63, 19);
+            this.lblCerveza.Size = new System.Drawing.Size(64, 19);
             this.lblCerveza.TabIndex = 5;
             this.lblCerveza.Text = "Cerveza";
             // 
@@ -1164,7 +1166,7 @@ namespace ComidasRapidasPOOmBA
             this.lblEnsaladaItalianaVegana.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblEnsaladaItalianaVegana.Location = new System.Drawing.Point(18, 93);
             this.lblEnsaladaItalianaVegana.Name = "lblEnsaladaItalianaVegana";
-            this.lblEnsaladaItalianaVegana.Size = new System.Drawing.Size(112, 19);
+            this.lblEnsaladaItalianaVegana.Size = new System.Drawing.Size(111, 19);
             this.lblEnsaladaItalianaVegana.TabIndex = 5;
             this.lblEnsaladaItalianaVegana.Text = "Italiana Vegana";
             // 
@@ -1314,7 +1316,7 @@ namespace ComidasRapidasPOOmBA
             this.lblHdeVeggan.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblHdeVeggan.Location = new System.Drawing.Point(6, 93);
             this.lblHdeVeggan.Name = "lblHdeVeggan";
-            this.lblHdeVeggan.Size = new System.Drawing.Size(79, 19);
+            this.lblHdeVeggan.Size = new System.Drawing.Size(78, 19);
             this.lblHdeVeggan.TabIndex = 29;
             this.lblHdeVeggan.Text = "H. Veggan";
             // 
@@ -1492,6 +1494,8 @@ namespace ComidasRapidasPOOmBA
             // gbPedido
             // 
             this.gbPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gbPedido.Controls.Add(this.btnCerrarSesion);
+            this.gbPedido.Controls.Add(this.btnSalir);
             this.gbPedido.Controls.Add(this.lblTotal);
             this.gbPedido.Controls.Add(this.txtTotal);
             this.gbPedido.Controls.Add(this.listBoxPedido);
@@ -1506,12 +1510,24 @@ namespace ComidasRapidasPOOmBA
             this.gbPedido.Text = "Pedido";
             this.gbPedido.Enter += new System.EventHandler(this.gbPedido_Enter);
             // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSalir.Location = new System.Drawing.Point(71, 550);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(155, 39);
+            this.btnSalir.TabIndex = 7;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Location = new System.Drawing.Point(54, 366);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(66, 28);
+            this.lblTotal.Size = new System.Drawing.Size(64, 28);
             this.lblTotal.TabIndex = 6;
             this.lblTotal.Text = "Total:";
             // 
@@ -1537,6 +1553,7 @@ namespace ComidasRapidasPOOmBA
             // btnConfirmarPedido
             // 
             this.btnConfirmarPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnConfirmarPedido.Enabled = false;
             this.btnConfirmarPedido.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnConfirmarPedido.Location = new System.Drawing.Point(71, 414);
             this.btnConfirmarPedido.Name = "btnConfirmarPedido";
@@ -1567,7 +1584,7 @@ namespace ComidasRapidasPOOmBA
             this.lblSugerencia1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblSugerencia1.Location = new System.Drawing.Point(53, 120);
             this.lblSugerencia1.Name = "lblSugerencia1";
-            this.lblSugerencia1.Size = new System.Drawing.Size(471, 37);
+            this.lblSugerencia1.Size = new System.Drawing.Size(470, 37);
             this.lblSugerencia1.TabIndex = 1;
             this.lblSugerencia1.Text = "¡¡¡Probá nuestras Papas POOmBA!!!";
             // 
@@ -1584,6 +1601,18 @@ namespace ComidasRapidasPOOmBA
             this.btnSugerencia.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSugerencia.UseVisualStyleBackColor = true;
             this.btnSugerencia.Click += new System.EventHandler(this.btnSugerencia_Click);
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(71, 479);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(155, 39);
+            this.btnCerrarSesion.TabIndex = 9;
+            this.btnCerrarSesion.Text = "Cerrar Sesion";
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // FormularioMenu
             // 
@@ -1762,5 +1791,7 @@ namespace ComidasRapidasPOOmBA
         private System.Windows.Forms.CheckBox checkHdeCarneGrande;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnCerrarSesion;
     }
 }

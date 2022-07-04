@@ -79,6 +79,8 @@ namespace ComidasRapidasPOOmBA.Forms
                 {
                     pago.realizarPagoEfectivo(total, pedido);
                     this.Close();
+                    FormularioMenu menu = new FormularioMenu(usuLogueado);
+                    menu.Show();
                 }
                 else
                 {
@@ -86,6 +88,8 @@ namespace ComidasRapidasPOOmBA.Forms
                     if (pago.realizarPago(total, pedido))
                     {
                         this.Close();
+                        FormularioMenu menu = new FormularioMenu(usuLogueado);
+                        menu.Show();
                     }
                 }
             }

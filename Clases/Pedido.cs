@@ -11,6 +11,7 @@ namespace ComidasRapidasPOOmBA.Clases
         int idPedido;
         List<Detalle> listaDetalle;
         double totalAPagar;
+        static int incrementarId;
         public Pedido()
         {
             pedidoNuevo();
@@ -38,7 +39,8 @@ namespace ComidasRapidasPOOmBA.Clases
 
         public void pedidoNuevo()
         {
-            idPedido++;
+            incrementarId++;
+            idPedido = incrementarId ;
         }
 
         public void ingresarAPedido(Detalle item)

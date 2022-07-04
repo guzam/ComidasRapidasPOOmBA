@@ -18,6 +18,7 @@ namespace ComidasRapidasPOOmBA
         
         Pedido pedido = new Pedido(new List<Detalle>());
         Usuario usuLogueado = new Usuario();
+        Login login = new Login();
         Hamburguesa hC, hP, hV, h;
         Ensalada eC, eG, eIv;
         Guarnicion pFritas, pCheddar, pPoomba;
@@ -33,6 +34,13 @@ namespace ComidasRapidasPOOmBA
         {
             InitializeComponent();
             usuLogueado = usu;
+        }
+
+        public FormularioMenu(Usuario usu, Login log)
+        {
+            InitializeComponent();
+            usuLogueado = usu;
+            login = log;
         }
         //*****************************METODO OCULTAR GROUPBOX********************************************
         public void ocultarGroupBoxMenoselSeleccionado(GroupBox abrir, GroupBox cerrar1, GroupBox cerrar2, GroupBox cerrar3, GroupBox cerrar4)
@@ -610,6 +618,19 @@ namespace ComidasRapidasPOOmBA
             pedido.ingresarAPedido(detalle);//agrego el item a la lista
             return g;
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            login.Show();
+            
+        }
+
         public bebida gestionDetalle(int c, bebida b)
         {
             var detalle = new Detalle(c, b);
@@ -657,8 +678,7 @@ namespace ComidasRapidasPOOmBA
                 var cant = (int)numericUpDownHamburguesaVeggie.Value;
                 hV = gestionDetalle(cant, hV);
             }
-
-            actualizarListaDetalle();
+                actualizarListaDetalle();
         }
         
         //*****************************BOTON AGREGAR ENSALADAS********************************************
@@ -826,6 +846,8 @@ namespace ComidasRapidasPOOmBA
             var total = pedido.sumaTotal(pedido);
             MessageBox.Show("Total: " + total);
             txtTotal.Text = total.ToString();
+
+            btnConfirmarPedido.Enabled = true;
         }
 
         //************************************************************************************************
@@ -844,6 +866,7 @@ namespace ComidasRapidasPOOmBA
         {
             GestionPago gp = new GestionPago(pedido, usuLogueado);
             gp.Show();
+            this.Close();
         }
 
     }
